@@ -430,7 +430,7 @@ const countries = [
     population: "65110000",
     latlng: ["51.509865", "-0.118092"],
     area: "242900.0",
-    capitalTimezone: "UTC +0",
+    capitalTimezone: "UTC",
     bordersEN: ["Ireland"],
     bordersRU: ["Ирландия"],
     currencies: [
@@ -518,6 +518,128 @@ const countries = [
         photo:
           "https://employeebenefits.co.uk/content/uploads/2019/08/National-Gallery.jpg",
         link: "https://www.nationalgallery.org.uk/",
+      },
+    ],
+  },
+  {
+    id: "6",
+    nameEN: "Germany",
+    nameRU: "Германия",
+    capitalEN: "Berlin",
+    capitalRU: "Берлин",
+    regionEN: "Europe",
+    regionRU: "Европа",
+    population: "81770900",
+    latlng: ["52.520008", "13.404954"],
+    area: "357114.0",
+    capitalTimezone: "UTC+01:00",
+    bordersEN: [
+      "Austria",
+      "Belgium",
+      "Czech Republic",
+      "Denmark",
+      "France",
+      "Luxembourg",
+      "The Netherlands",
+      "Poland",
+      "Switzerland",
+    ],
+    bordersRU: [
+      "Австрия",
+      "Бельгия",
+      "Чехия",
+      "Дания",
+      "Франция",
+      "Люксембург",
+      "Нидерланды",
+      "Польша",
+      "Швейцария",
+    ],
+    currencies: [
+      {
+        code: "EUR",
+        nameEN: "Euro",
+        nameRU: "Евро",
+        symbol: "€",
+      },
+    ],
+    languages: [
+      {
+        nameEN: "German",
+        nameRU: "Немецкий",
+        nativeName: "Deutsch",
+      },
+    ],
+    flag: "https://restcountries.eu/data/deu.svg",
+    photo:
+      "https://www.tripsavvy.com/thmb/J2P2GH5Rf3RczztSYN3--82ziEQ=/3865x2576/filters:no_upscale():max_bytes(150000):strip_icc()/berlin-skyline-at-dusk-with-tv-tower-626130734-5aca350f18ba0100368e15ae.jpg",
+    video: "https://youtu.be/ZHHbpy91O2E",
+    attractions: [
+      {
+        "attraction-nameEN": "Berlin's Brandenburg Gate",
+        "attraction-nameRU": "Бранденбургские ворота",
+        descriptionEN:
+          "Modeled on the Acropolis in Athens and built for King Frederick William II in 1791, the monumental sandstone Brandenburg Gate in Berlin's Mitte district was the city's first Neoclassical structure. Measuring an impressive 26 meters in height - including the Quadriga, the spectacular four-horse chariot carrying the goddess of victory perched atop - its six huge columns on each side of the structure form five impressive passages: four were used by regular traffic, while the center was reserved for the royal carriages. Huge Doric columns also decorate the two buildings at each side of the Gate, once used by toll-collectors and guards.",
+        descriptionRU:
+          "Бранденбу́ргские воро́та (нем. Brandenburger Tor) — единственные сохранившиеся городские ворота Берлина, главный символ города. Эти ворота Берлинской таможенной стены были возведены в 1788—1791 годах в ознаменование установления мира в Нидерландах. Ворота мира (Friedenstor[2]) были построены Карлом Готтгардом Ланггансом по велению Фридриха Вильгельма II. Считаются первым значимым памятником берлинского классицизма. Образцом для Бранденбургских ворот послужили Пропилеи Акрополя в Афинах. Фасад ворот был первоначально выкрашен в белый цвет. Украшение фасада принадлежит Иоганну Готфриду Шадову; он также спроектировал и шестиметровую квадригу, которой управляет богиня победы Виктория (квадрига развёрнута в восточную сторону). В 1871 году через ворота маршировали солдаты-победители во Франко-прусской войне, в 1918 и 1920 годах — контрреволюционно настроенные солдаты, в 1933 году ворота стали кулисами национал-социалистического праздника.",
+        photo:
+          "https://www.planetware.com/photos-large/D/germany-brandenburg-gate.jpg",
+        link: "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+      },
+      {
+        "attraction-nameEN": "Cologne Cathedral",
+        "attraction-nameRU": "Кёльнский собор",
+        descriptionEN:
+          "The towering Cologne Cathedral (Kölner Dom) - the Cathedral of St. Peter and St. Mary - is located on the banks of the Rhine and is undoubtedly Cologne's most impressive landmark. This masterpiece of High Gothic architecture, one of the largest cathedrals in Europe, was begun in 1248 and was the most ambitious building project of the Middle Ages. As imposing as its façade, its magnificent interior covers an area of 6,166 square meters and boasts 56 huge pillars. Above the high altar is the Reliquary of the Three Kings, a 12th-century work of art in gold that was designed by Nicholas of Verdun to house the relics of the Three Kings brought here from Milan.",
+        descriptionRU:
+          "Кёльнский собор (нем. Kölner Dom) — римско-католический готический собор в городе Кёльне. Занимает третье место в списке самых высоких церквей мира и внесён в список объектов Всемирного культурного наследия. Строительство главного храма Кёльнской архиепископии велось в два приёма — в 1248—1437 гг. и в 1842—1880 годах. По окончании строительства 157-метровый собор на четыре года стал самым высоким зданием мира. Места, на которых сегодня находится собор, являлись, по всей видимости, ещё в римский период истории Кёльна религиозным центром проживавших здесь христиан. В северной части города в течение столетий было возведено несколько поколений церквей, каждая из которых превосходила по размерам все предыдущие. Эти церкви находились внутри кольца монастырей и монастырских церквей «священного Кёльна». Остатки этих церквей можно увидеть в нижней части сегодняшнего собора в месте проведения раскопок, которыми охвачена территория более чем в 4000 квадратных метров",
+        photo:
+          "https://germanculture.com.ua/wp-content/uploads/2018/05/Cologne_cathedral_aerial_25326253726.jpg",
+        link: "https://en.wikipedia.org/wiki/Cologne_Cathedral",
+      },
+      {
+        "attraction-nameEN": "The Black Forest",
+        "attraction-nameRU": "Шварцвальд",
+        descriptionEN:
+          "The Black Forest (German: Schwarzwald) is a large forested mountain range in the state of Baden-Württemberg in southwest Germany. It is bounded by the Rhine valley to the west and south. Its highest peak is the Feldberg with an elevation of 1,493 metres (4,898 ft) above sea level. The region is roughly oblong in shape, with a length of 160 kilometres (100 miles) and breadth of up to 50 km (30 mi), occupying an area of about 6,009 km2 (2,320 sq mi). Historically, the area was known for forestry and ore deposits which led to heavy mining in the local economy. In recent years, tourism has become the primary industry, accounting for around 300,000 jobs.[4] The area features several ruined military fortifications dating back to the 17th century",
+        descriptionRU:
+          "Шварцвальд (в переводе с немецкого – 'черный лес') – вдоль долины реки Рейн, с севера на юг, на территории федеральной земли Баден-Вюртемберг расположен знаменитый горнолесной массив. Здесь, в краю вечнозеленых лесов и живописных деревень, происходит действие многих сказок братьев Гримм. Регион славится своими минеральными источниками и часами с кукушкой, производство которых началось в XVIII в. В крупнейшем городе Шварцвальда, Фрайбурге, окруженном виноградниками, можно увидеть множество зданий в готическом стиле. Его площадь достигает 11 000 кв.км., при этом две трети Черного леса — это невысокие горы, покрытые густыми хвойными лесами. Длина массива составляет 158 км: самая узкая его часть (30 км) находится на севере, а самая широкая (60 км) на юге. Наивысшей горной вершиной Шварцвальда является гора Feldberg, высота которой достигает 1493 м.",
+        photo:
+          "https://avatars.mds.yandex.net/get-zen_doc/1570751/pub_5edcb15749a53d5aa22df834_5edcc39349a53d5aa22df9c4/scale_1200",
+        link: "https://en.wikipedia.org/wiki/Black_Forest",
+      },
+      {
+        "attraction-nameEN": "Neuschwanstein",
+        "attraction-nameRU": "Нойшванштайн",
+        descriptionEN:
+          "The quaint old town of Füssen, situated between the Ammergau and Allgäu Alps and a popular alpine resort and winter sports center, is a good base from which to explore nearby Neuschwanstein Castle, one of Europe's most famous (and picturesque) royal castles. King Ludwig II of Bavaria built this many-towered and battlement-covered fantasy fortress - the inspiration for Walt Disney's famous theme park castles - from 1869-86. The castle was intended as a home for the King, until he died in 1886. It was open to the public shortly after his death. Neuschwanstein embodies both the contemporaneous architectural fashion known as castle romanticism (German: Burgenromantik), and King Ludwig II's enthusiasm for the operas of Richard Wagner.",
+        descriptionRU:
+          "Schloss Neuschwanstein [nɔy'ʃvanʃtain], буквально: «Новый лебединый камень (утёс)») — романтический замок баварского короля Людвига II около городка Фюссен и замка Хоэншвангау в юго-западной Баварии, недалеко от австрийской границы. Замок Нойшванштайн стоит на месте двух крепостей, переднего и заднего Швангау, на момент начала работ лежавших в руинах. Король Людвиг II приказал на этом месте путём взрыва скалы опустить плато приблизительно на 8 м и создать тем самым место для постройки «сказочного дворца». После строительства дороги и прокладки трубопровода 5 сентября 1869 года был заложен первый камень для строительства огромного замка",
+        photo:
+          "https://static.onecms.io/wp-content/uploads/sites/28/2017/04/01-neuschwanstein-castle-bavaria-NEUSCHWANSTEIN0417.jpg",
+        link: "https://en.wikipedia.org/wiki/Neuschwanstein_Castle",
+      },
+      {
+        "attraction-nameEN": "Miniatur Wunderland",
+        "attraction-nameRU": "Музей миниатюры",
+        descriptionEN:
+          "In the heart of the historic Port of Hamburg, the magnificent Miniatur Wunderland, the world's largest model railway, is an attraction that appeals equally to young and old alike. Boasting more than 12,000 meters of track, this massive scale model includes sections dedicated to the USA, England, and Scandinavia (as well as Hamburg) and incorporates 890 trains, more than 300,000 lights, and in excess of 200,000 human figures.",
+        descriptionRU:
+          "Миниатю́рная страна́ чуде́с (нем. Miniatur Wunderland) — музей в Гамбурге с самым большим в мире действующим железнодорожным макетом (1499 м²). Конструирование первой части макета началось в декабре 2000 года, первые три части были завершены в августе 2001 года. Проект был создан братьями Фредериком и Герритом Браунами.",
+        photo:
+          "https://www.miniatur-wunderland.de/imager/contentimages/layout/italien/1646/italien-rom-petersdom-nacht_bc687f62802525bd2b7f491f2188ec3e.jpg",
+        link: "https://www.miniatur-wunderland.de/",
+      },
+      {
+        "attraction-nameEN": "Berlin's Museum Island",
+        "attraction-nameRU": "Остров Музеумс",
+        descriptionEN:
+          "Berlin's world-famous Museumsinsel, or Museum Island, lies between the River Spree and the Kupfergraben - a 400-meter-long canal off the river - and includes many of the city's oldest and most important museums. The heart of this pedestrian-friendly district is the Old Museum, constructed in 1830 as a place to exhibit the royal treasures. Soon after, the land behind the museum was set aside for art and the 'knowledge of antiquity'.",
+        descriptionRU:
+          "«Музейный остров» (нем. Museumsinsel) — название, которое получила северная оконечность острова Шпреинзель на реке Шпрее в Берлине, где расположено целое созвездие знаменитых берлинских музеев. Музейный остров является центром притяжения для туристов и ценителей искусства со всего мира. С 1999 года уникальный архитектурный и культурный ансамбль включён во Всемирное наследие ЮНЕСКО.",
+        photo:
+          "https://afar-production.imgix.net/uploads/images/post_images/images/8HZiTRSJJR/original_55b126dd99c1e4b2831b751870becce2.jpg?1448372526?ixlib=rails-0.3.0&auto=format%2Ccompress&crop=entropy&fit=crop&h=719&q=80&w=954",
+        link: "https://de.wikipedia.org/wiki/Museumsinsel_(Berlin)",
       },
     ],
   },
