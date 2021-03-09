@@ -14,10 +14,22 @@ app.get('/', (req: Request, res: Response) => {
   res.status(200).json({ message: 'good' });
 });
 
-const db = mongoose.connection;
+async function start() {
+  try {
+    await mongoose.connect(process.env.mongoUri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    });
+    console.log('connect to db');
+    app.listen(port, () => {
+      console.log(`App has been started on port ${port}`);
+    });
+  } catch (e) {
+    console.log(e.message);
+    process.exit(1);
+  }
+}
 
-db.on('error', () => console.error('db connection error'));
-db.once('open', () => {
-  console.info('Successfully connect to DB');
-  app.listen(port, () => console.info(`App is runnitn on ${port}`));
-});
+start();
