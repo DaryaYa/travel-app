@@ -3,6 +3,9 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import path from 'path';
 
+import { router as userRouter } from './resources/users/user.router';
+import bodyParser from 'body-parser';
+
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
@@ -10,9 +13,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', (req: Request, res: Response) => {
-  res.status(200).json({ message: 'good' });
-});
+app.use('/api/user', userRouter);
 
 async function start() {
   try {
