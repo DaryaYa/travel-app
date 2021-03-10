@@ -14,7 +14,7 @@ const addStars = async (
   const attraction = await Attraction.updateOne(
     { _id: attractionId },
     { $push: { stars: updateStarData } },
-  );
+  ).populate('stars');
 };
 
 export default { getByCountry, addStars };
