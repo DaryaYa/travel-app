@@ -1,13 +1,13 @@
-import { CountryInterface } from './resources/countries/country.types';
-import { Country } from './resources/countries/country.models';
-import express, { Request, Response } from 'express';
+import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import path from 'path';
 
 import { router as userRouter } from './resources/users/user.router';
 import { router as counryRouter } from './resources/countries/country.router';
-import bodyParser from 'body-parser';
+import { router as attractionRouter } from './resources/attractions/attraction.routers';
+
+import fillDataBase from './util/fillDataBase';
 
 dotenv.config();
 const app = express();
@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/user', userRouter);
 app.use('/api/country', counryRouter);
+app.use('/api/attractions', attractionRouter);
 
 async function start() {
   try {
@@ -28,10 +29,9 @@ async function start() {
       useFindAndModify: false,
     });
     console.log('connect to db');
-    app.listen(port, () => {
+    app.listen(port, async () => {
       console.log(`App has been started on port ${port}`);
-
-      Country.create({ area: 4343 } as CountryInterface);
+      // await fillDataBase();
     });
   } catch (e) {
     console.log(e.message);

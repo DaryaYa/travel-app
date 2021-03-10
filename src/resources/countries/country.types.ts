@@ -1,6 +1,7 @@
 import { Types } from 'mongoose';
 
 export interface CountryInterface {
+  _id?: Types.ObjectId;
   nameEN: string;
   nameRU: string;
   capitalEN: string;
@@ -24,13 +25,4 @@ export interface CountryInterface {
   flag: string;
   photo: string;
   video: string;
-  attractions: {
-    attractionNameEN: string;
-    attractionNameRU: string;
-    description: string;
-    descriptionRU: string;
-    photo: string;
-    link: string;
-    stars: [{ user: { type: Types.ObjectId; ref: 'User' }; countStar: number }];
-  }[];
 }

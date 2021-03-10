@@ -1,6 +1,6 @@
 import { StatusCodes } from 'http-status-codes';
-
 import { Router, Response, Request } from 'express';
+
 import countryService from './country.service';
 
 export const router = Router();
