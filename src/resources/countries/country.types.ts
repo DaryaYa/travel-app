@@ -25,4 +25,5 @@ export interface CountryInterface {
   flag: string;
   photo: string;
   video: string;
+  attractions: { type: Types.ObjectId }[];
 }

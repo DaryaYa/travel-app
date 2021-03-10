@@ -9,10 +9,11 @@ const attractionSchema = new Schema(
     photo: String,
     link: String,
     stars: [{ user: { type: Types.ObjectId, ref: 'User' }, countStar: Number }],
-    country: {
-      type: Types.ObjectId,
-      ref: 'Country',
-    },
+
+    // country: {
+    //   type: Types.ObjectId,
+    //   ref: 'Country',
+    // },
   },
   { versionKey: false, collection: 'Attraction' },
 );

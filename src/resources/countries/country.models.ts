@@ -26,7 +26,7 @@ const countrySchema = new Schema(
     flag: String,
     photo: String,
     video: String,
-    // attractions: [{ type: Types.ObjectId, ref: 'Attraction' }],
+    attractions: [{ type: Types.ObjectId, ref: 'Attraction' }],
   },
   { versionKey: false, collection: 'Country' },
 );
