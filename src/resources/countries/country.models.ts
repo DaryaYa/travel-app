@@ -1,6 +1,6 @@
 import { Schema, model, Types } from 'mongoose';
 
-const userSchema = new Schema({
+const countrySchema = new Schema({
   nameEN: String,
   nameRU: String,
   capitalEN: String,
@@ -37,3 +37,5 @@ const userSchema = new Schema({
   ],
   stars: [{ user: { type: Types.ObjectId, ref: 'User' }, countStar: Number }],
 });
+
+export const Country = model('Country', countrySchema);
