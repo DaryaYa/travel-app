@@ -11,51 +11,59 @@ const AuthForm = ({ classNames }: AuthFormInterface) => {
   return (
     <div className={cn('auth-form', classNames)}>
       <form>
-        <div className="mb-3">
-          <label htmlFor="formGroupExampleInput" className="form-label">
-            User name
-          </label>
+        <div className="form-floating mb-3">
           <input
             type="text"
             className="form-control"
-            id="formGroupExampleInput"
-            placeholder="Yury"
+            id="floatingInputUserName"
+            placeholder="petka"
           />
+          <label htmlFor="floatingInputUserName">User name</label>
         </div>
-        <div className="mb-3">
-          <label htmlFor="formGroupExampleInput2" className="form-label">
-            Email
-          </label>
+        <div className="form-floating mb-3">
           <input
-            type="text"
-            className="form-control w-100"
-            id="formGroupExampleInput2"
-            placeholder="Another input yury@mail.ru"
+            type="email"
+            className="form-control"
+            id="floatingInputEmail"
+            placeholder="eee@mail.ru"
           />
+          <label htmlFor="floatingInputEmail">Email</label>
         </div>
-        <div className="mb-3">
-          <label htmlFor="formGroupPassword1" className="form-label">
-            Password
-          </label>
+        <div className="form-floating mb-3">
           <input
             type="password"
-            className="form-control w-100"
-            id="formGroupPassword1"
+            className="form-control"
+            id="floatingInputPassword"
+            placeholder="111111"
+            autoComplete="on"
           />
+          <label htmlFor="floatingInputPassword">Password</label>
         </div>
-        <div className="mb-3">
-          <label htmlFor="formGroupPassword2" className="form-label">
-            Repead password
-          </label>
+        <div className="form-floating mb-3">
           <input
             type="password"
-            className="form-control w-100"
-            id="formGroupPassword2"
+            className="form-control"
+            id="floatingInputPassword1"
+            placeholder="petka"
+            autoComplete="on"
+          />
+          <label htmlFor="floatingInputPassword1">Repeat password</label>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="formFile" className="form-label">
+            Select your foto
+          </label>
+          <input
+            className="form-control"
+            type="file"
+            id="formFile"
+            onChange={(e: React.FormEvent<HTMLInputElement>) =>
+              console.log(e.currentTarget.value)
+            }
           />
         </div>
-
-        <button type="submit" className="btn btn-primary">
-          Sign in
+        <button type="submit" className="btn btn-primary w-100">
+          Register
         </button>
       </form>
     </div>
