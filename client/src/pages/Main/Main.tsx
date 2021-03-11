@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import Rating from '../../components/Rating';
+import { Widget } from '../../components/Widget';
 
 import './Main.scss';
 
@@ -43,6 +44,7 @@ const Main = () => {
       <Layout>
         Main page
         <RenderRating />
+        <Widget lat={15} lng={50} timeZone={"Europe/Moscow"} language={"en-GB"} />
       </Layout>
     </>
   );
