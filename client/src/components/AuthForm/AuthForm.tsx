@@ -4,90 +4,56 @@ import cn from 'classnames';
 import './AuthForm.scss';
 
 interface AuthFormInterface {
-  classNames: string;
+  classNames?: string;
 }
 
 const AuthForm = ({ classNames }: AuthFormInterface) => {
   return (
     <div className={cn('auth-form', classNames)}>
       <form>
-        <div className="row mb-3">
-          <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">
+        <div className="mb-3">
+          <label htmlFor="formGroupExampleInput" className="form-label">
+            User name
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="formGroupExampleInput"
+            placeholder="Yury"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="formGroupExampleInput2" className="form-label">
             Email
           </label>
-          <div className="col-sm-10">
-            <input type="email" className="form-control" id="inputEmail3" />
-          </div>
+          <input
+            type="text"
+            className="form-control w-100"
+            id="formGroupExampleInput2"
+            placeholder="Another input yury@mail.ru"
+          />
         </div>
-        <div className="row mb-3">
-          <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">
+        <div className="mb-3">
+          <label htmlFor="formGroupPassword1" className="form-label">
             Password
           </label>
-          <div className="col-sm-10">
-            <input
-              type="password"
-              className="form-control"
-              id="inputPassword3"
-            />
-          </div>
+          <input
+            type="password"
+            className="form-control w-100"
+            id="formGroupPassword1"
+          />
         </div>
-        <fieldset className="row mb-3">
-          <legend className="col-form-label col-sm-2 pt-0">Radios</legend>
-          <div className="col-sm-10">
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="gridRadios"
-                id="gridRadios1"
-                value="option1"
-                checked
-              />
-              <label className="form-check-label" htmlFor="gridRadios1">
-                First radio
-              </label>
-            </div>
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="gridRadios"
-                id="gridRadios2"
-                value="option2"
-              />
-              <label className="form-check-label" htmlFor="gridRadios2">
-                Second radio
-              </label>
-            </div>
-            <div className="form-check disabled">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="gridRadios"
-                id="gridRadios3"
-                value="option3"
-                disabled
-              />
-              <label className="form-check-label" htmlFor="gridRadios3">
-                Third disabled radio
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <div className="row mb-3">
-          <div className="col-sm-10 offset-sm-2">
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="gridCheck1"
-              />
-              <label className="form-check-label" htmlFor="gridCheck1">
-                Example checkbox
-              </label>
-            </div>
-          </div>
+        <div className="mb-3">
+          <label htmlFor="formGroupPassword2" className="form-label">
+            Repead password
+          </label>
+          <input
+            type="password"
+            className="form-control w-100"
+            id="formGroupPassword2"
+          />
         </div>
+
         <button type="submit" className="btn btn-primary">
           Sign in
         </button>
