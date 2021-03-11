@@ -1,0 +1,54 @@
+import React, { useState, useEffect } from 'react';
+const OPEN_WEATHER = '985407983380c5d99fa1bb48a8e0eec0';
+
+export const Weather = ({city, language}) => {
+
+    const [weather, setWeather] = useState({
+      temp: 0,
+      humidity: 0,
+      feels_like: 0,
+      description: " ",
+      iconCode: "",
+      wind: 0,
+    });
+
+    useEffect(() => {
+
+       async function fetchData() {
+           const res = fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=${language}&units=metric&APPID=${OPEN_WEATHER}`);
+           const data1 = await res;
+           const data2 = await data1.json();
+           const data = data2.list[0];
+
+           console.log(data)
+        setWeather({
+          temp: data.main.temp,
+          humidity: data.main.humidity,
+          feels_like: data.main.feels_like,
+          description: data.weather[0].description,
+          iconCode: data.weather[0].icon,
+          wind: data.wind.speed,
+        });
+        console.log(data)
+        return data
+       } 
+       fetchData();
+    },[city, language])
+
+     const url='https://openweathermap.org/img/wn/'
+
+    return (
+      <div className="d-flex flex-column">
+        <img alt="weather icon"
+          className="mx-auto d-block"
+          src={`${url}${weather.iconCode}@2x.png`}
+        />
+        <span>description: {weather.description}</span>
+        <span>temperature: {Math.round(weather.temp)}°C</span>
+        <span>humidity: {weather.humidity}%</span>
+        <span>feels like: {Math.round(weather.feels_like)}°C</span>
+        <span>wind speed: {Math.round(weather.wind)}m/s</span>
+      </div>
+    );
+    
+}
