@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-const OPEN_WEATHER = '985407983380c5d99fa1bb48a8e0eec0';
 
 export const Weather = ({city, language}) => {
 
@@ -15,12 +14,14 @@ export const Weather = ({city, language}) => {
     useEffect(() => {
 
        async function fetchData() {
-           const res = fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=${language}&units=metric&APPID=${OPEN_WEATHER}`);
+      
+           const res = fetch(
+             `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=${language}&units=metric&APPID=${process.env.REACT_APP_OPEN_WEATHER}`,
+           );
            const data1 = await res;
            const data2 = await data1.json();
            const data = data2.list[0];
 
-           console.log(data)
         setWeather({
           temp: data.main.temp,
           humidity: data.main.humidity,
@@ -29,7 +30,7 @@ export const Weather = ({city, language}) => {
           iconCode: data.weather[0].icon,
           wind: data.wind.speed,
         });
-        console.log(data)
+ 
         return data
        } 
        fetchData();
