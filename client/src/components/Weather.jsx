@@ -13,7 +13,7 @@ export const Weather = ({city, language}) => {
 
     useEffect(() => {
 
-       async function fetchData() {
+       const fetchData = async () => {
       
            const res = fetch(
              `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=${language}&units=metric&APPID=${process.env.REACT_APP_OPEN_WEATHER}`,
@@ -31,7 +31,7 @@ export const Weather = ({city, language}) => {
           wind: data.wind.speed,
         });
  
-        return data
+        return data;
        } 
        fetchData();
     },[city, language])
@@ -39,8 +39,9 @@ export const Weather = ({city, language}) => {
      const url='https://openweathermap.org/img/wn/'
 
     return (
-      <div className="d-flex flex-column">
-        <img alt="weather icon"
+      <div className="d-inline-flex flex-column justify-content-center border border-info rounded">
+        <img
+          alt="weather icon"
           className="mx-auto d-block"
           src={`${url}${weather.iconCode}@2x.png`}
         />

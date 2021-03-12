@@ -44,7 +44,7 @@ const Main = () => {
       <Layout>
         Main page
         <RenderRating />
-        <Widget lat={15} lng={50} timeZone={"Europe/Moscow"} language={"en-GB"} />
+        <Widget timeZone={"Europe/Moscow"} language={"en-GB"} currency={"NOK"} />
       </Layout>
     </>
   );
