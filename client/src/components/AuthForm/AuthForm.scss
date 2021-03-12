@@ -3,7 +3,26 @@
   align-items: center;
   min-height: 100%;
 
-  form {
+  &__form {
     width: 100%;
+
+    .mistake {
+      font-size: 10px;
+      color: red;
+      position: absolute;
+      display: none;
+    }
+  }
+}
+
+.form {
+  &__item {
+    position: relative;
+  }
+
+  &__input.is-invalid {
+    & ~ .mistake {
+      display: inline;
+    }
   }
 }
