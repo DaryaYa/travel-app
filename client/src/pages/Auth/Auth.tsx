@@ -2,8 +2,10 @@ import React from 'react';
 import Card from '../../components/Card/Card';
 import AuthForm from '../../components/AuthForm/AuthForm';
 import Layout from '../../components/Layout/Layout';
+import { useSelector } from 'react-redux';
 
 import './Auth.scss';
+import { useTypesSelector } from '../../components/hooks/useTypedSelector';
 
 const Auth = () => {
   return (
