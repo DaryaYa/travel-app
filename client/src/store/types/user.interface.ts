@@ -1,4 +1,3 @@
-import { CountryResponseInterface } from '../../types/country.interface';
 import { UserResponseInterface } from '../../types/user.interface';
 import { UserActionTypes } from '../actionsTypes/user.actionTypes';
 
@@ -16,7 +15,7 @@ export interface LoginFailureActionInterface {
   payload: string;
 }
 
-export type AppActionType =
+export type UserActionInterface =
   | LoginActionInterface
   | LoginFailureActionInterface
   | LoginSuccessActionInterface;

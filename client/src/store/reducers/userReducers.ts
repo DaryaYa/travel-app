@@ -1,5 +1,8 @@
 import { UserActionTypes } from '../actionsTypes/user.actionTypes';
-import { AppActionType, AppStateInterface } from '../types/user.interface';
+import {
+  UserActionInterface,
+  AppStateInterface,
+} from '../types/user.interface';
 
 const initialState: AppStateInterface = {
   loading: false,
@@ -9,7 +12,7 @@ const initialState: AppStateInterface = {
 
 export const userReducer = (
   state = initialState,
-  action: AppActionType,
+  action: UserActionInterface,
 ): AppStateInterface => {
   switch (action.type) {
     case UserActionTypes.LOGIN:
