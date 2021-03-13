@@ -28,7 +28,6 @@ const LoginForm = ({ classNames }: LoginFormInterface) => {
   const reEmail = /^(([^<>()[\]\\.,;:\s@\\"]+(\.[^<>()[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const changeFormHandler = (e: React.FormEvent<HTMLInputElement>) => {
-    console.log(loading);
     if (form.email && form.email && reEmail.test(form.email) && !loading) {
       setIsSubmitBtnValid(true);
     } else {

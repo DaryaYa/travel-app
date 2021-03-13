@@ -58,10 +58,8 @@ const RegisterForm = ({ classNames }: AuthFormInterface) => {
   const formSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsEnabledBtn(false);
-    console.log('sent request');
     const formData = new FormData();
     const { username, password1, email } = form;
-    console.log(fileSelected);
     if (fileSelected) {
       formData.append('imagine', fileSelected, fileSelected?.name);
     }
@@ -70,7 +68,6 @@ const RegisterForm = ({ classNames }: AuthFormInterface) => {
     formData.append('email', email);
     try {
       const user = await axios.post('/api/user', formData);
-      console.log(user);
       setForm({ email: '', password1: '', password2: '', username: '' });
       history.push('/auth');
     } catch (err) {

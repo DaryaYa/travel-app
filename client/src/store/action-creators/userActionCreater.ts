@@ -15,7 +15,6 @@ export const getUserAction = (userData: UserRequestInterface) => {
         '/api/user/login',
         userData,
       );
-      console.log(response.data);
       dispatch({ type: UserActionTypes.LOGIN_SUCCESS, payload: response.data });
     } catch (e) {
       dispatch({

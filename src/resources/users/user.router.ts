@@ -33,7 +33,6 @@ router.post('/', async (req: Request, res: Response) => {
 
       userData = { ...userData, imgSrc: pathImg.slice(1) };
     }
-    console.log(userData);
 
     const user = await userService.getByEmail(userData.email);
     if (user) {
@@ -63,7 +62,6 @@ router.post('/login', async (req: Request, res: Response) => {
     const userData: LogInUserRequestInterface = req.body;
 
     const user = await userService.login(userData);
-    console.log(user);
     if (!user) {
       return res
         .status(StatusCodes.BAD_REQUEST)
