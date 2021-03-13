@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
+import axios from 'axios';
 
 import './AuthForm.scss';
 
@@ -12,7 +13,6 @@ interface FormInterface {
   email: string;
   password1: string;
   password2: string;
-  fotosrc: string;
 }
 
 const AuthForm = ({ classNames }: AuthFormInterface) => {
@@ -21,13 +21,21 @@ const AuthForm = ({ classNames }: AuthFormInterface) => {
     email: '',
     password1: '',
     password2: '',
-    fotosrc: '',
   } as FormInterface);
   const [validForm, setValidForm] = useState(false);
 
   const changeFormHandler = (e: React.FormEvent<HTMLInputElement>) => {
     const key = e.currentTarget.name as keyof FormInterface;
     setForm({ ...form, [key]: e.currentTarget.value });
+  };
+
+  const [fileSelected, setFileSelected] = useState<File>();
+
+  const changeFileInput = (e: React.FormEvent<HTMLInputElement>) => {
+    const fileList = e.currentTarget.files;
+    if (fileList) {
+      setFileSelected(fileList[0]);
+    }
   };
 
   const reEmail = /^(([^<>()[\]\\.,;:\s@\\"]+(\.[^<>()[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -45,14 +53,33 @@ const AuthForm = ({ classNames }: AuthFormInterface) => {
     setValidForm(kindMistake.every(el => el));
   });
 
+  const formSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log('sent request');
+    const formData = new FormData();
+    const { username, password1, email } = form;
+    console.log(fileSelected);
+    if (fileSelected) {
+      console.log('in if');
+      formData.append('imagine', fileSelected, fileSelected?.name);
+    }
+    formData.append('username', username);
+    formData.append('password', password1);
+    formData.append('email', email);
+    try {
+      const user = await axios.post('/api/user', formData);
+
+      setForm({ email: '', password1: '', password2: '', username: '' });
+    } catch (err) {
+      console.log(err.response.data.message);
+    }
+  };
+
   return (
     <div className={cn('auth-form', classNames)}>
       <form
         className="auth-form__form form"
-        onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
-          e.preventDefault();
-          console.log(form);
-        }}
+        onSubmit={formSubmitHandler}
         noValidate
       >
         <div className="form-floating mb-4 form__item">
@@ -132,8 +159,8 @@ const AuthForm = ({ classNames }: AuthFormInterface) => {
             type="file"
             id="formFile"
             name="fotosrc"
-            value={form.fotosrc}
-            onChange={changeFormHandler}
+            accept=".png, .jpg, jpeg"
+            onChange={changeFileInput}
           />
         </div>
         <button

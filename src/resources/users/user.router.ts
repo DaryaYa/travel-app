@@ -1,5 +1,7 @@
 import { StatusCodes } from 'http-status-codes';
+import { UploadedFile, FileArray } from 'express-fileupload';
 import { Router, Response, Request } from 'express';
+import moment from 'moment';
 import { Document } from 'mongoose';
 
 import {
@@ -13,7 +15,25 @@ export const router = Router();
 
 router.post('/', async (req: Request, res: Response) => {
   try {
-    const userData: CreateUserRequestInterface = req.body;
+    let userData: CreateUserRequestInterface = req.body;
+
+    if (req.files) {
+      const file = req.files.imagine as UploadedFile;
+      const date = moment().format('DDMMYYYY-HHmmss_SSS');
+      const fileFormat = file.name.split('.').pop();
+      file.name = `${date}.${fileFormat}`;
+      const pathImg = `./uploads/${file.name}`;
+      file.mv(pathImg, err => {
+        if (err) {
+          return res
+            .status(StatusCodes.BAD_GATEWAY)
+            .json({ message: 'photo not load' });
+        }
+      });
+
+      userData = { ...userData, imgSrc: pathImg.slice(1) };
+    }
+    console.log(userData);
 
     const user = await userService.getByEmail(userData.email);
     if (user) {
@@ -38,12 +58,12 @@ router.post('/', async (req: Request, res: Response) => {
   }
 });
 
-router.get('/', async (req: Request, res: Response) => {
+router.post('/login', async (req: Request, res: Response) => {
   try {
     const userData: LogInUserRequestInterface = req.body;
 
     const user = await userService.login(userData);
-    console.log(userData);
+    console.log(user);
     if (!user) {
       return res
         .status(StatusCodes.BAD_REQUEST)
