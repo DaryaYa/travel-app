@@ -26,7 +26,6 @@ const login = async (userData: LogInUserRequestInterface) => {
   const { password: hashPassword, username, imgSrc, _id } = userObj;
   const comparePaswords = await checkHashPassword(password, hashPassword);
   if (!comparePaswords) return null;
-  console.log(email, username, imgSrc, _id);
   return { email, username, imgSrc, _id };
 };
 

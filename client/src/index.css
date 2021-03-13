@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  min-height: 95vh;
+  min-height: 100vh;
 }
-.form-control {
+/* .form-control {
   width: 60vw;
-}
+} */
