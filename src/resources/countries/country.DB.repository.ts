@@ -1,4 +1,6 @@
+import { User } from './../users/user.models';
 import { Types } from 'mongoose';
+import { assert } from 'node:console';
 import { Country } from './country.models';
 
 const get = async () => {
@@ -15,9 +17,11 @@ const getShortData = async () => {
 };
 
 const getById = async (countryId: Types.ObjectId) => {
-  const country = await Country.findById(countryId)
-    .populate('attractions')
-    .populate('stars');
+  const country = await Country.findById(countryId).populate({
+    path: 'attractions',
+    populate: { path: 'stars.user' },
+  });
+
   return country;
 };
 
