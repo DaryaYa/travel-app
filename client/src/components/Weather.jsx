@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+const REACT_APP_OPEN_WEATHER = '985407983380c5d99fa1bb48a8e0eec0';
+
 export const Weather = ({city, language}) => {
 
     const [weather, setWeather] = useState({
@@ -16,7 +18,7 @@ export const Weather = ({city, language}) => {
        const fetchData = async () => {
       
            const res = fetch(
-             `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=${language}&units=metric&APPID=${process.env.REACT_APP_OPEN_WEATHER}`,
+             `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=${language}&units=metric&APPID=${REACT_APP_OPEN_WEATHER}`,
            );
            const data1 = await res;
            const data2 = await data1.json();

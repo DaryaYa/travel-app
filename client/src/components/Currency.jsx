@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
+const REACT_APP_CUR_CONVERTER1 = 'fb007c3111e224ca901d';
+
 export const Currency = ({ currency }) => {
   const [rate, setRate] = useState({ usd: 1, eur: 1, rub: 1 });
 
   useEffect(() => {
     const fetchRates = async () => {
       const res = fetch(
-        `https://free.currconv.com/api/v7/convert?q=${currency}_USD,${currency}_EUR&compact=ultra&apiKey=${process.env.REACT_APP_CUR_CONVERTER1}`,
+        `https://free.currconv.com/api/v7/convert?q=${currency}_USD,${currency}_EUR&compact=ultra&apiKey=${REACT_APP_CUR_CONVERTER1}`,
       );
       const res1 = fetch(
-        `https://free.currconv.com/api/v7/convert?q=${currency}_RUB&compact=ultra&apiKey=${process.env.REACT_APP_CUR_CONVERTER1}`,
+        `https://free.currconv.com/api/v7/convert?q=${currency}_RUB&compact=ultra&apiKey=${REACT_APP_CUR_CONVERTER1}`,
       );
       const data1 = await res;
       const data2 = await data1.json();
