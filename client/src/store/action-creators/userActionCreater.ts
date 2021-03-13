@@ -12,12 +12,16 @@ export const getUserAction = (userData: UserRequestInterface) => {
     try {
       dispatch({ type: UserActionTypes.LOGIN });
       const response: AxiosResponse<UserResponseInterface> = await axios.post(
-        '/api/user',
+        '/api/user/login',
         userData,
       );
+      console.log(response.data);
       dispatch({ type: UserActionTypes.LOGIN_SUCCESS, payload: response.data });
     } catch (e) {
-      dispatch({ type: UserActionTypes.LOGIN_FAILURe, payload: e.message });
+      dispatch({
+        type: UserActionTypes.LOGIN_FAILURe,
+        payload: e.response.data.message,
+      });
     }
   };
 };

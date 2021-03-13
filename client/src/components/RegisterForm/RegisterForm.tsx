@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
-import './AuthForm.scss';
+import './RegisterForm.scss';
 
 interface AuthFormInterface {
   classNames?: string;
@@ -15,7 +16,7 @@ interface FormInterface {
   password2: string;
 }
 
-const AuthForm = ({ classNames }: AuthFormInterface) => {
+const RegisterForm = ({ classNames }: AuthFormInterface) => {
   const [form, setForm] = useState({
     username: '',
     email: '',
@@ -23,6 +24,9 @@ const AuthForm = ({ classNames }: AuthFormInterface) => {
     password2: '',
   } as FormInterface);
   const [validForm, setValidForm] = useState(false);
+  const [isEnabledBtn, setIsEnabledBtn] = useState(true);
+
+  const history = useHistory();
 
   const changeFormHandler = (e: React.FormEvent<HTMLInputElement>) => {
     const key = e.currentTarget.name as keyof FormInterface;
@@ -30,16 +34,7 @@ const AuthForm = ({ classNames }: AuthFormInterface) => {
   };
 
   const [fileSelected, setFileSelected] = useState<File>();
-
-  const changeFileInput = (e: React.FormEvent<HTMLInputElement>) => {
-    const fileList = e.currentTarget.files;
-    if (fileList) {
-      setFileSelected(fileList[0]);
-    }
-  };
-
   const reEmail = /^(([^<>()[\]\\.,;:\s@\\"]+(\.[^<>()[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
   const kindMistake = [
     form.email,
     form.password2,
@@ -47,7 +42,14 @@ const AuthForm = ({ classNames }: AuthFormInterface) => {
     form.username,
     form.password1 === form.password2,
     reEmail.test(form.email),
+    isEnabledBtn,
   ];
+  const changeFileInput = (e: React.FormEvent<HTMLInputElement>) => {
+    const fileList = e.currentTarget.files;
+    if (fileList) {
+      setFileSelected(fileList[0]);
+    }
+  };
 
   useEffect(() => {
     setValidForm(kindMistake.every(el => el));
@@ -55,12 +57,12 @@ const AuthForm = ({ classNames }: AuthFormInterface) => {
 
   const formSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsEnabledBtn(false);
     console.log('sent request');
     const formData = new FormData();
     const { username, password1, email } = form;
     console.log(fileSelected);
     if (fileSelected) {
-      console.log('in if');
       formData.append('imagine', fileSelected, fileSelected?.name);
     }
     formData.append('username', username);
@@ -68,17 +70,19 @@ const AuthForm = ({ classNames }: AuthFormInterface) => {
     formData.append('email', email);
     try {
       const user = await axios.post('/api/user', formData);
-
+      console.log(user);
       setForm({ email: '', password1: '', password2: '', username: '' });
+      history.push('/auth');
     } catch (err) {
+      setIsEnabledBtn(true);
       console.log(err.response.data.message);
     }
   };
 
   return (
-    <div className={cn('auth-form', classNames)}>
+    <div className={cn('register-form', classNames)}>
       <form
-        className="auth-form__form form"
+        className="register-form__form form"
         onSubmit={formSubmitHandler}
         noValidate
       >
@@ -175,4 +179,4 @@ const AuthForm = ({ classNames }: AuthFormInterface) => {
   );
 };
 
-export default AuthForm;
+export default RegisterForm;

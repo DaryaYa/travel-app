@@ -1,4 +1,12 @@
 .auth {
   min-height: calc(100vh - 48px - 73px);
   align-items: center;
+
+  &__card {
+    .card-body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
 }
