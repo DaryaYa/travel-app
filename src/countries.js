@@ -30,8 +30,7 @@ const countries = [
     flag: "https://restcountries.eu/data/cze.svg",
     photo:
       "https://images.unsplash.com/photo-1541849546-216549ae216d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJhZ3VlfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80",
-    video:
-      "https://www.youtube.com/watch?v=MRGv2TY6S_o&ab_channel=KirillNeiezhmakovTimelapse%26Hyperlapse",
+    videoId: "MRGv2TY6S_o",
     attractions: [
       {
         attractionNameEN: "Prague Castle",
@@ -158,8 +157,7 @@ const countries = [
     flag: "https://restcountries.eu/data/nor.svg",
     photo:
       "https://www.theagilityeffect.com/app/uploads/2019/06/00_VINCI-ICONOGRAPHIE_GettyImages-673112427-1280x680.jpg",
-    video:
-      "https://www.youtube.com/watch?v=Acsnll2Xd2A&ab_channel=T.HaalandPhotography",
+    videoId: "Acsnll2Xd2A",
     attractions: [
       {
         attractionNameEN: "Sognefjord",
@@ -285,7 +283,7 @@ const countries = [
     flag: "https://restcountries.eu/data/jpn.svg",
     photo:
       "https://www.tourprom.ru/site_media/images/upload/2016/8/31/countryimage/yaponiya.jpg",
-    video: "https://www.youtube.com/watch?v=VCUxKiNLFsg",
+    videoId: "VCUxKiNLFsg",
     attractions: [
       {
         attractionNameEN: "Tokyo Imperial Palace",
@@ -425,7 +423,7 @@ const countries = [
     flag: "https://restcountries.eu/data/tur.svg",
     photo:
       "https://www.jpmorgan.com/content/dam/jpm/merchant-services/country-reports/turkey/JP_Morgan_Turkey-Headers-1.jpg",
-    video: "https://www.youtube.com/watch?v=ykA0ffgU6nk",
+    videoId: "ykA0ffgU6nk",
     attractions: [
       {
         atractionNameEN: "Ephesus",
@@ -551,7 +549,7 @@ const countries = [
     flag: "https://restcountries.eu/data/gbr.svg",
     photo:
       "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    video: "https://youtu.be/gs-skMbz9vo",
+    videoId: "gs-skMbz9vo",
     attractions: [
       {
         attractionNameEN: "Buckingham Palace",
@@ -704,7 +702,7 @@ const countries = [
     flag: "https://restcountries.eu/data/deu.svg",
     photo:
       "https://www.tripsavvy.com/thmb/J2P2GH5Rf3RczztSYN3--82ziEQ=/3865x2576/filters:no_upscale():max_bytes(150000):strip_icc()/berlin-skyline-at-dusk-with-tv-tower-626130734-5aca350f18ba0100368e15ae.jpg",
-    video: "https://youtu.be/ZHHbpy91O2E",
+    videoId: "ZHHbpy91O2E",
     attractions: [
       {
         attractionNameEN: "Berlin's Brandenburg Gate",
