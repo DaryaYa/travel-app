@@ -1,49 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../../components/Layout/Layout';
 import Rating from '../../components/Rating';
 import { Widget } from '../../components/Widget';
+import LeaveRatingForm from '../../components/LeaveRatingForm';
 
 import './Main.scss';
 
 const Main = () => {
   // HARDCODE
-  const RenderRating: React.FC = () => {
-    const attractionRating = [
-      {
-        stars: 1,
-        numReviews: 3,
-      },
-      {
-        stars: 1.5,
-        numReviews: 12,
-      },
-      {
-        stars: 3,
-        numReviews: 6,
-      },
-      {
-        stars: 2,
-        numReviews: 9,
-      },
-      {
-        stars: 5,
-        numReviews: 54,
-      },
-    ];
+  const [reviewsArr, setReviewsArr] = useState([1, 3]);
+  const [rating, setRating] = 
+    useState( reviewsArr.reduce((acc, cur) => acc + cur) / reviewsArr.length );
 
-    return (
-      <div>
-        {attractionRating.map(el => (
-          <Rating value={el.stars} text={`${el.numReviews} reviews`} />
-        ))}
-      </div>
-    );
-  };
+  useEffect(() => {
+    setRating(reviewsArr.reduce((acc, cur) => acc + cur) / reviewsArr.length);
+  }, [reviewsArr])
+
+  const onChangeHandler= (val: number) => {
+    setReviewsArr([...reviewsArr, val]);
+  }
+
+  const RenderRating: React.FC = () => (
+    <>
+      <Rating value={rating} text={`${reviewsArr.length} reviews`} />
+    </>
+  )
+
   return (
     <>
       <Layout>
         Main page
         <RenderRating />
+        <LeaveRatingForm
+          onChangeHandler={onChangeHandler}
+        />
         <Widget
           timeZone={'Europe/Moscow'}
           language={'en-GB'}
