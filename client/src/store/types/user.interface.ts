@@ -20,7 +20,7 @@ export type UserActionInterface =
   | LoginFailureActionInterface
   | LoginSuccessActionInterface;
 
-export interface AppStateInterface {
+export interface UserStateInterface {
   loading: boolean;
   user: UserResponseInterface | null;
   error: string | null;

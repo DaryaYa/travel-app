@@ -3,26 +3,40 @@ export interface CountryResponseInterface {
   _id?: string;
   nameEN: string;
   nameRU: string;
+  nameAM: string;
   capitalEN: string;
   capitalRU: string;
+  capitalAM: string;
   regionEN: string;
   regionRU: string;
-  population: number;
-  latlng: number[];
-  area: number;
+  regionAM: string;
+  population: string;
+  latlng: string[];
+  area: string;
   capitalTimezone: string;
   bordersEN: string[];
   bordersRU: string[];
+  bordersAM: string[];
   currencies: {
     code: string;
     nameEN: string;
     nameRU: string;
+    nameAM: string;
     symbol: string;
   }[];
 
-  language: { nameEN: string; nameRU: string; nativeName: string }[];
+  languages: { nameEN: string; nameRU: string; nativeName: string }[];
   flag: string;
   photo: string;
-  video: string;
+  videoID: string;
   attractions: AttractionResponseInterface[];
+}
+
+export interface CountryShortResponseInterface {
+  _id?: string;
+  nameEN: string;
+  nameRU: string;
+  capitalEN: string;
+  capitalRU: string;
+  photo: string;
 }
