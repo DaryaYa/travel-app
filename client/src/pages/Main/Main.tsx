@@ -3,7 +3,6 @@ import Layout from '../../components/Layout/Layout';
 import Rating from '../../components/Rating';
 import { Widget } from '../../components/Widget';
 import LeaveRatingForm from '../../components/LeaveRatingForm';
-// import Video from '../../components/Video';
 
 import './Main.scss';
 
@@ -41,7 +40,6 @@ const Main = () => {
           currency={'NOK'}
         />
       </Layout>
-      {/* <Video videoId={'Acsnll2Xd2A'} /> */}
     </>
   );
 };
