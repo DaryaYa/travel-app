@@ -4,8 +4,10 @@ const attractionSchema = new Schema(
   {
     attractionNameEN: String,
     attractionNameRU: String,
-    description: String,
+    attractionNameAM: String,
+    descriptionEN: String,
     descriptionRU: String,
+    descriptionAM: String,
     photo: String,
     link: String,
     stars: [{ user: { type: Types.ObjectId, ref: 'User' }, countStar: Number }],
