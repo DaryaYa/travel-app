@@ -3,9 +3,7 @@ import { YMaps, Map, Placemark, Polygon, FullscreenControl, TypeSelector, ZoomCo
 import './yandexmap.css';
 import balloon from './balloon.png';
 
-const geoData = [/* geaData arr */];
-
-function YandexMap() {
+function YandexMap({ latitude, longitude, geoData }) {
   const [lang, setLang] = React.useState('ru_RU');
 
   return (
@@ -13,14 +11,14 @@ function YandexMap() {
       <YMaps key={lang} query={{ apikey: 'e6763205-24a3-4522-ae07-e547c476f586', lang }}>
         <Map
           defaultState={{
-            center: [/* latitude, longitude */],
+            center: [latitude, longitude],
             zoom: 5,
           }}
           width='100%'
           height='100%'
         >
           <Placemark
-            geometry={[/* latitude, longitude */]}
+            geometry={[latitude, longitude]}
             options={{
               iconLayout: 'default#image',
               iconImageHref: balloon,
