@@ -28,7 +28,7 @@ const Main = () => {
   )
 
   // Attractions data for PhotoGallery
-  const attractions = [
+  const attractions: { photo: string, attractionNameEN: string }[] = [
     {
       photo: "https://www.planetware.com/photos-large/CZ/czech-republic-prague-castle.jpg",
       attractionNameEN: "Prague Castle",
@@ -55,7 +55,11 @@ const Main = () => {
     },
   ];
 
-  let images = attractions.map((el)=>{
+  let images: {
+    original: string,
+    thumbnail: string,
+    description: string
+  }[] = attractions.map((el)=>{
     return {
       original: el.photo,
       thumbnail: el.photo,
