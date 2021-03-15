@@ -3,6 +3,7 @@ import Layout from '../../components/Layout/Layout';
 import Rating from '../../components/Rating';
 import { Widget } from '../../components/Widget';
 import LeaveRatingForm from '../../components/LeaveRatingForm';
+import PhotoGallery from '../../components/PhotoGallery';
 
 import './Main.scss';
 
@@ -26,6 +27,42 @@ const Main = () => {
     </>
   )
 
+  // Attractions data for PhotoGallery
+  const attractions = [
+    {
+      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-prague-castle.jpg",
+      attractionNameEN: "Prague Castle",
+    },
+    {
+      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-charles-bridge.jpg",
+      attractionNameEN: "Prague's Charles Bridge",
+    },
+    {
+      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-st-vitus-cathedral.jpg",
+      attractionNameEN: "St. Vitus Cathedral",
+    },
+    {
+      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-cesky-krumlov-castle-2.jpg",
+      attractionNameEN: "Ceský Krumlov Castle",
+    },
+    {
+      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-brno-cathedral-of-st-peter-paul.jpg",
+      attractionNameEN: "Brno's Cathedral of St. Peter and Paul",
+    },
+    {
+      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-crypts-tombs-cemeteries.jpg",
+      attractionNameEN: "Bone Collectors: Czech Crypts, Tombs, and Cemeteries",
+    },
+  ];
+
+  let images = attractions.map((el)=>{
+    return {
+      original: el.photo,
+      thumbnail: el.photo,
+      description: el.attractionNameEN,
+    }
+  })
+
   return (
     <>
       <Layout>
@@ -39,6 +76,7 @@ const Main = () => {
           language={'en-GB'}
           currency={'NOK'}
         />
+        <PhotoGallery images={images} />
       </Layout>
     </>
   );
