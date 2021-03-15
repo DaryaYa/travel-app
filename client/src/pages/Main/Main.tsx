@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-
 import { useHistory } from 'react-router';
 
 import { getShortDataAction } from '../../store/action-creators/countryActionCreater';
