@@ -24492,7 +24492,7 @@ export const countries = [
         descriptionRU:
           'Райский зеленый оазис в самом центре оживленного Токио, парк Уэно (Ueno Kōen) - крупнейшая зеленая зона города и одна из самых популярных туристических достопримечательностей. Помимо прекрасной территории, парк также может похвастаться многочисленными храмами и музеями, которые стоит посетить. Этот парк площадью 212 акров, пересекаемый приятными гравийными дорожками, включает в себя такие достопримечательности, как поездка на небольшой лодке по окаймленному тростником пруду Синобадзу вокруг небольшого острова с его храмом Бентендо. Не забудьте также посетить храм Тосёгу 17-го века (Никко Тосё-гу) с 256 бронзовыми и каменными фонарями. Еще одна достопримечательность - зоопарк Уэно (Onshi Ueno Dōbutsuen). Открытый в 1882 году, это старейший зоопарк Японии, который славится пандами, подаренными Китайской Народной Республикой. Хотя это большая достопримечательность и вмещает более 3,00 животных, представляющих около 400 видов, забавная монорельсовая дорога, соединяющая ее различные компоненты, может помочь ускорить посещение (и сделать его еще более приятным). Аква-зоопарк, один из крупнейших аквариумов Азии, также стоит посетить, особенно если вы путешествуете с детьми. Адрес: 9-83 Uenokoen, Taito City, Токио.',
         descriptionAM:
-          'Եռուզեռով լեցուն Տոկիոյի սրտում գտնվող դրախտավայր հիշեցնող կանաչ օազիսը՝ Ուենո պարկը (Ուենո Քյոն) քաղաքի ամենամեծ կանաչ տարածքն է և նրա ամենահայտնի զբոսաշրջային վայրերից մեկը: Բացի իր գեղեցիկ այգիներից, պուրակը հպարտությամբ իր վրա է կրում բազմաթիվ տաճարներով և թանգարաններ, որոնք արժանի են այցելելու և ուսումնասիրելու: Խաչվող խճաքարերով պատրաստած հաճելի  արահետներով այս 212 հեկտար այգին առաջարկում է այնպիսի գեղեցիկ փորձառություններ, ինչպիսիք են փոքրիկ նավակով ուղևորությունն է եղեգնյա Շինոբազու լճակի վրայով դեպի փոքրիկ կղզին` իր Բենտենդո տաճարով: Անպայման այցելեք նաև 17-րդ դարի Տոշոգու սրբավայրը (Nikkō Tōshō-gū) ՝ իր 256 բրոնզե և քարե լապտերներով: Մեկ այլ կարևորագույն գոհար է Ուենոյի կենդանաբանական այգին (Onshi Ueno Dōbutsuen), որը բացվել է 1882 թվականին՝ հանդիսանալով Ճապոնիայի ամենահին կենդանաբանական այգին, որն հայտնի է  պանդաներով՝ բերված Չինաստանի Ժողովրդական Հանրապետությունից: Չնայած նրան, որ սա մեծ զվարճանքի կենտրոն է և  ընդգրկում է ավելի քան 3000 կենդանիներ, որոնք մոտ 400 տեսակների ներկայացուցիչներ են, նրա մոնոռեյլ երթուղին այգու տարբեր մասեր կապում է իրար՝ դարձնելով ձեր այցելությունը ոչ միայն էֆեկտիվ, այլ նաև զվարճալի։ Աքվա կենդանաբանական այգին, որն Ասիայի ամենամեծ ակվարիումներից մեկն է, նույնպես արժե այցելել, հատկապես, եթե ճանապարհորդում եք երեխաների հետ: Հասցե ՝ 9-83 Ուենոկոեն, Տայտո Սիթի, Տոկիո:',
+          'Եռուզեռով լեցուն Տոկիոյի սրտում գտնվող դրախտավայր հիշեցնող կանաչ օազիսը՝ Ուենո պարկը (Ուենո Քյոն) քաղաքի ամենամեծ կանաչ տարածքն է և նրա ամենահայտնի զբոսաշրջային վայրերից մեկը: Բացի իր գեղեցիկ այգիներից, պուրակը հպարտությամբ իր վրա է կրում բազմաթիվ տաճարներով և թանգարաններ, որոնք արժանի են այցելելու և ուսումնասիրելու: Խաչվող խճաքարերով պատրաստած հաճելի  արահետն��րով այս 212 հեկտար այգին առաջարկում է այնպիսի գեղեցիկ փորձառություններ, ինչպիսիք են փոքրիկ նավակով ուղևորությունն է եղեգնյա Շինոբազու լճակի վրայով դեպի փոքրիկ կղզին` իր Բենտենդո տաճարով: Անպայման այցելեք նաև 17-րդ դարի Տոշոգու սրբավայրը (Nikkō Tōshō-gū) ՝ իր 256 բրոնզե և քարե լապտերներով: Մեկ այլ կարևորագույն գոհար է Ուենոյի կենդանաբանական այգին (Onshi Ueno Dōbutsuen), որը բացվել է 1882 թվականին՝ հանդիսանալով Ճապոնիայի ամենահին կենդանաբանական այգին, որն հայտնի է  պանդաներով՝ բերված Չինաստանի Ժողովրդական Հանրապետությունից: Չնայած նրան, որ սա մեծ զվարճանքի կենտրոն է և  ընդգրկում է ավելի քան 3000 կենդանիներ, որոնք մոտ 400 տեսակների ներկայացուցիչներ են, նրա մոնոռեյլ երթուղին այգու տարբեր մասեր կապում է իրար՝ դարձնելով ձեր այցելությունը ոչ միայն էֆեկտիվ, այլ նաև զվարճալի։ Աքվա կենդանաբանական այգին, որն Ասիայի ամենամեծ ակվարիումներից մեկն է, նույնպես արժե այցելել, հատկապես, եթե ճանապարհորդում եք երեխաների հետ: Հասցե ՝ 9-83 Ուենոկոեն, Տայտո Սիթի, Տոկիո:',
         photo:
           'https://www.planetware.com/photos-large/JPN/japan-tokyo-ueno-park-zoo.jpg',
         link: 'https://en.wikipedia.org/wiki/Ueno_Park',
@@ -38945,4 +38945,296 @@ export const countries = [
       },
     ],
   },
+   {
+    id: '7',
+    nameEN: 'France',
+    nameRU: 'Франция',
+    nameAM: 'Ֆրանսիա',
+    capitalEN: 'Paris',
+    capitalRU: 'Париж',
+    capitalAM: 'Փարիզ',
+    regionEN: 'Europe',
+    regionRU: 'Европа',
+    regionAM: 'Եվրոպա',
+    population: '66710000',
+    latlng: ['48.85341', '2.3488'],
+    area: '640679.0',
+    geoData: [
+      []],
+    capitalTimezone: 'Europe/Paris',
+    bordersEN: ["Andorra","Belgium","Germany","Italy","Luxemburg","Monaco","Spain","Switzerland"
+    ],
+    bordersRU: [
+      'Андорра',
+      'Бельгия',
+      'Германия',
+      'Италия',
+      'Люксембург',
+      'Монако',
+      'Испания',
+      'Швейцария',
+    ],
+    bordersAM: [
+      'Ավստրիա',
+      'Բելգիա',
+      'Գերմանիա',
+      'Իտալիա',
+      'Լյուքսեմբուգ',
+      'Մոնակո',
+      'Իսպանիա',
+      'Շվեյցարիա',
+    ],
+    currencies: [
+      {
+        code: 'EUR',
+        nameEN: 'Euro',
+        nameRU: 'Евро',
+        nameAM: 'Եվրո',
+        symbol: '€',
+      },
+    ],
+    languages: [
+      {
+        nameEN: 'French',
+        nameRU: 'Французский',
+        nameAM: 'Ֆրանսերեն',
+        nativeName: 'français',
+      },
+    ],
+    flag: 'https://restcountries.eu/data/fra.svg',
+    photo:
+      'https://arendal.ru/wp-content/uploads/2017/09/France.jpg',
+    videoId: 'BZLZyX3JdEM',
+    attractions: [
+      {
+        attractionNameEN: "Eiffel Tower",
+        attractionNameRU: 'Эйфелева башня',
+        attractionNameAM: 'Էյֆելյան աշտարակ',
+        descriptionEN:
+          "The symbol of Paris, the Eiffel Tower is a feat of ingenuity as much as it is a famous landmark. This structure of 8,000 metallic parts was designed by Gustave Eiffel as a temporary exhibit for the World Fair of 1889. Originally loathed by critics, the 320-meter-high tower is now a beloved and irreplaceable fixture of the Paris skyline. The Eiffel Tower's gracefulness has earned it the nickname of 'Iron Lady'. Visitors are impressed by the tower's delicate airiness despite its monumental size and the breathtaking panoramas at each of the three levels.",
+        descriptionRU:
+          'Э́йфелева ба́шня — металлическая башня в центре Парижа, самая узнаваемая его архитектурная достопримечательность. Названа в честь главного конструктора Гюстава Эйфеля; сам Эйфель называл её просто «300-метровой башней» (tour de 300 mètres). Башня, впоследствии ставшая символом Парижа, была построена в 1889 году и первоначально задумывалась как временное сооружение, служившее входной аркой парижской Всемирной выставки 1889 года. Эйфелеву башню называют самой посещаемой платной и самой фотографируемой достопримечательностью мира',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://weatlas.com/img/landmarks/ae952a667731ac0129ff1a51fcfe081e.jpg',
+        link: 'https://en.wikipedia.org/wiki/Eiffel_Tower',
+      }, 
+      {
+        attractionNameEN: "Louvre Museum",
+        attractionNameRU: 'Лувр',
+        attractionNameAM: 'Լուվր',
+        descriptionEN:
+          "In a stately palace that was once a royal residence, the Louvre ranks among the top European collections of fine arts. Many of Western Civilization's most famous works are found here, including the Mona Lisa by Leonardo DaVinci, the Wedding Feast at Cana by Veronese, and the 1st-century-BC Venus de Milo sculpture. The collection owes its wealth to the contributions of various kings who lived in the Louvre. Other pieces were added as a result of France's treaties with the Vatican and the Republic of Venice, and from the spoils of Napoléon I. The Louvre has an astounding collection of 35,000 artworks, including countless masterpieces. It's impossible to see it all in a day or even in a week.",
+        descriptionRU:
+          'Музей Лувра (фр. Musée du Louvre, часто используется просто название Лувр) — один из крупнейших и самый популярный художественный музей мира. Музей расположен в центре Парижа, на правом берегу Сены, на улице Риволи, в 1-м округе столицы. В 2018 году число посетителей Лувра превысило 10 млн человек, что является рекордом. Здание музея — старинный королевский дворец (Palais du Louvre). Конная статуя Людовика XIV обозначает точку начала так называемой исторической оси Парижа. Лувр — один из старейших музеев с богатой историей коллекционирования художественных и исторических реликвий Франции, начиная со времён династии Капетингов и до наших дней. В Лувре собиралось всё, этот музей можно назвать универсальным. Его коллекции покрывают огромные географические и временные пространства: от западной Европы до Ирана через Грецию, Египет и Ближний Восток; с античности до 1848 года. Европейское искусство новейшего периода времени — с 1848 года и до наших дней — представлено в Музее Орсе и Центре Жоржа Помпиду, а азиатское выставляется в музее Гиме. Искусство Африки, Америки и Океании экспонируется в музее набережной Бранли.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://7d9e88a8-f178-4098-bea5-48d960920605.selcdn.net/9bc00083-be70-462e-b8ae-6dcc59e00843/',
+        link: 'https://www.louvre.fr/',
+      }, 
+      {
+        attractionNameEN: "Palace of Versailles",
+        attractionNameRU: 'Версаль',
+        attractionNameAM: 'Վերսալ',
+        descriptionEN:
+          "More than just a royal residence, Versailles was designed to show off the glory of the French monarchy. 'Sun King' Louis XIV transformed his father's small hunting lodge into an opulent palace with a sumptuous Baroque interior. The palace became Louis XIV's symbol of absolute power and set the standard for princely courts in Europe. Architect Jules Hardouin-Mansart created the elegant Baroque facade and lavish interior of the Château de Versailles, which is designated as a UNESCO World Heritage Site. The most emblematic space in the castle is the Hall of Mirrors, where courtiers waited for an audience with His Majesty. This dazzling hall sparkles with sunlight that enters through the windows and is reflected off massive ornamental mirrors.",
+        descriptionRU:
+          'Верса́ль — дворцово-парковый ансамбль во Франции, бывшая резиденция французских королей в городе Версале, ныне являющемся пригородом Парижа; центр туризма мирового значения.Версаль сооружался под руководством Людовика XIV с 1661 года и стал своеобразным памятником эпохи «короля-солнца», художественно-архитектурным выражением идеи абсолютизма. Ведущие архитекторы — Луи Лево и Жюль Ардуэн-Мансар, создатель парка — Андре Ленотр. Ансамбль Версаля, крупнейший в Европе, отличается уникальной целостностью замысла и гармонией архитектурных форм и преобразованного ландшафта. С конца XVII века Версаль служил образцом для парадных загородных резиденций европейских монархов и аристократии, однако прямых подражаний ему не имеется.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://im.kommersant.ru/Issues.photo/MONEY/2016/028/KMO_138957_00006_1_t218_145334.jpg',
+        link: 'https://www.chateauversailles.fr/',
+      }, 
+      {
+        attractionNameEN: "Mont Saint-Michel",
+        attractionNameRU: 'Мон-Сен-Мишель',
+        attractionNameAM: 'Մոն Սենթ Միշել',
+        descriptionEN:
+          "Rising dramatically from a rocky islet off the Normandy coast, the UNESCO-listed Mont Saint-Michel is one of France's most striking landmarks. This 'Pyramid of the Seas' is a mystical sight, perched 80 meters above the bay and surrounded by imposing defensive walls and bastions. The main tourist attraction, the Abbaye de Saint-Michel is a marvel of medieval architecture with soaring Gothic spires. Visitors are awed by the serene beauty of the Abbey Church, with its harmonious Romanesque nave and ornate high-vaulted choir.Since it was built in the 11th century, the Abbey Church has been an important Christian pilgrimage destination, known as 'The Heavenly Jerusalem'. Modern-day pilgrims are still inspired by Mont Saint-Michel and continue the tradition of crossing the bay by foot as it was done in the Middle Ages.",
+        descriptionRU:
+          'Остров Мон-Сен-Мишель расположен в Нормандии, департамент Манш, на острове-скале, возвышающейся над средним уровнем моря на 78,8 метра, и резко выделяется на фоне окружающего его пространства бухты и плоского берега. Остров представляет собой гранитное образование конической формы, периметр которого составляет 1 км, образованное из устойчивых к выветриванию магматических пород — лейкогранитов. Возраст пород — поздний протерозой, бриоверийский ярус. Два раза в лунные сутки в бухте наблюдаются приливы и отливы, самые сильные на побережье Европы и вторые по амплитуде (после залива Фанди) на всём земном шаре. В период сизигических приливов (в дни осенне-весеннего равноденствия, на второй или третий день после ново- или полнолуния) вода держится 8 часов зимой и 9 часов летом. Вода может отходить от Сен-Мишеля на 18 км и распространяться до 20 км вглубь побережья.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://www.planetware.com/photos-large/F/france-mont-saint-michel-2.jpg',
+        link: 'https://en.wikipedia.org/wiki/Mont-Saint-Michel',
+      }, 
+      {
+        attractionNameEN: "Chartres Cathedral",
+        attractionNameRU: 'Шартрский собор',
+        attractionNameAM: 'ХЗ',
+        descriptionEN:
+          "Chartres Cathedral, also known as the Cathedral of Our Lady of Chartres (French: Cathédrale Notre-Dame de Chartres), is a Roman Catholic church in Chartres, France, about 80 km (50 miles) southwest of Paris and is the seat of the Bishop of Chartres. Mostly constructed between 1194 and 1220, it stands at the site of at least five cathedrals that have occupied the site since the Diocese of Chartres was formed as an episcopal see in the 4th century. It is in the High Gothic and Romanesque styles. The cathedral is designated a World Heritage Site by UNESCO, which calls it 'the high point of French Gothic art' and a 'masterpiece'. The cathedral is well-preserved for its age: the majority of the original stained glass windows survive intact, while the architecture has seen only minor changes since the early 13th century. The building's exterior is dominated by heavy flying buttresses which allowed the architects to increase the window size significantly, while the west end is dominated by two contrasting spires – a 105-metre (349 ft) plain pyramid completed around 1160 and a 113-metre (377 ft) early 16th-century Flamboyant spire on top of an older tower. Equally notable are the three great façades, each adorned with hundreds of sculpted figures illustrating key theological themes and narratives.",
+        descriptionRU:
+          'Шартрский собор (фр. Cathédrale Notre-Dame de Chartres) — католический кафедральный собор, расположенный в городе Шартр префектуры департамента Эр и Луар. Находится в 90 км к юго-западу от Парижа и является одним из шедевров готической архитектуры. В 1979 году собор был внесён в список объектов Всемирного наследия ЮНЕСКО. Трёхнефное здание в плане представляет собой латинский крест с коротким трёхнефным трансептом и деамбулаторием. Восточная часть храма имеет несколько полукруглых радиальных часовен. Три из них заметно выступают за границы полукруга деамбулатория, четыре оставшиеся имеют меньшую глубину. Особенностью внешнего вида собора являются две его сильно различающиеся башни. 105-метровый шпиль южной башни постройки 1140 года выполнен в форме незамысловатой романской пирамиды. Северная башня высотой 113 метров имеет основание, оставшееся от романского собора, а шпиль башни появился в начале XVI века и выполнен в стиле пламенеющей готики.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Notre_Dame_de_Chartres.jpg/1280px-Notre_Dame_de_Chartres.jpg',
+        link: 'http://www.cathedrale-chartres.org/',
+      }, 
+      {
+        attractionNameEN: "Provence",
+        attractionNameRU: 'Прованс',
+        attractionNameAM: 'Պրովանս',
+        descriptionEN:
+          "Provence is a gorgeous landscape of olive groves, sun-drenched rolling hills, and deep purple lavender fields, with little villages nestled in the valleys and perched on rocky outcrops. The vibrant scenery has enchanted many famous artists, including Cézanne, Matisse, Chagall, and Picasso. The rustic natural beauty and country charm of Provence immerses visitors in a place where the art de vivre is a way of life. Sultry weather encourages leisurely strolls along cobblestone streets and afternoons spent on sunny terraces of outdoor cafés. Provence is also a region known for its delicious cuisine, which is based on olive oil, vegetables, and aromatic herbs.",
+        descriptionRU:
+          'Прова́нс (фр. Provence, окс. Provença, букв. «провинция») — историческая область на юго-востоке Франции, ныне составляющая часть региона Прованс — Альпы — Лазурный берег. В настоящее время на территории Прованса находятся департаменты Вар, Воклюз и Буш-дю-Рон, а также части Альп Верхнего Прованса и Приморских Альп. На востоке область ограничена Альпами, на западе — Роной, на юге — Средиземным морем. Столица Прованса – Экс-ан-Прованс, один из древнейших французских городов. Прованс обязан своим именем римской эпохе: во время первого завоевания Трансальпийской Галлии между 58 и 51 годами до нашей эры он интегрировался с римской провинцией – Нарбоннской Галлией, чьей столицей был Нарбон.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://www.pandotrip.com/wp-content/uploads/2013/08/Untitled-72.jpg',
+        link: 'https://en.wikipedia.org/wiki/Provence',
+      }, 
+    ]},
+     {
+    id: '7',
+    nameEN: 'France',
+    nameRU: 'Франция',
+    nameAM: 'Ֆրանսիա',
+    capitalEN: 'Paris',
+    capitalRU: 'Париж',
+    capitalAM: 'Փարիզ',
+    regionEN: 'Europe',
+    regionRU: 'Европа',
+    regionAM: 'Եվրոպա',
+    population: '66710000',
+    latlng: ['48.85341', '2.3488'],
+    area: '640679.0',
+    geoData: [
+      []],
+    capitalTimezone: 'Europe/Paris',
+    bordersEN: ["Andorra","Belgium","Germany","Italy","Luxemburg","Monaco","Spain","Switzerland"
+    ],
+    bordersRU: [
+      'Андорра',
+      'Бельгия',
+      'Германия',
+      'Италия',
+      'Люксембург',
+      'Монако',
+      'Испания',
+      'Швейцария',
+    ],
+    bordersAM: [
+      'Ավստրիա',
+      'Բելգիա',
+      'Գերմանիա',
+      'Իտալիա',
+      'Լյուքսեմբուգ',
+      'Մոնակո',
+      'Իսպանիա',
+      'Շվեյցարիա',
+    ],
+    currencies: [
+      {
+        code: 'EUR',
+        nameEN: 'Euro',
+        nameRU: 'Евро',
+        nameAM: 'Եվրո',
+        symbol: '€',
+      },
+    ],
+    languages: [
+      {
+        nameEN: 'French',
+        nameRU: 'Французский',
+        nameAM: 'Ֆրանսերեն',
+        nativeName: 'français',
+      },
+    ],
+    flag: 'https://restcountries.eu/data/fra.svg',
+    photo:
+      'https://arendal.ru/wp-content/uploads/2017/09/France.jpg',
+    videoId: 'BZLZyX3JdEM',
+    attractions: [
+      {
+        attractionNameEN: "",
+        attractionNameRU: '',
+        attractionNameAM: '',
+        descriptionEN:
+          "",
+        descriptionRU:
+          '',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          '',
+        link: '',
+      }, 
+      {
+        attractionNameEN: "",
+        attractionNameRU: '',
+        attractionNameAM: '',
+        descriptionEN:
+          "",
+        descriptionRU:
+          '',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          '',
+        link: '',
+      }, 
+      {
+        attractionNameEN: "",
+        attractionNameRU: '',
+        attractionNameAM: '',
+        descriptionEN:
+          "",
+        descriptionRU:
+          '',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          '',
+        link: '',
+      }, 
+      {
+        attractionNameEN: "",
+        attractionNameRU: '',
+        attractionNameAM: '',
+        descriptionEN:
+          "",
+        descriptionRU:
+          '',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          '',
+        link: '',
+      }, 
+      {
+        attractionNameEN: "",
+        attractionNameRU: '',
+        attractionNameAM: '',
+        descriptionEN:
+          "",
+        descriptionRU:
+          '',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          '',
+        link: '',
+      }, 
+      {
+        attractionNameEN: "",
+        attractionNameRU: '',
+        attractionNameAM: '',
+        descriptionEN:
+          "",
+        descriptionRU:
+          '',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          '',
+        link: '',
+      }, 
+    ]},
 ];
