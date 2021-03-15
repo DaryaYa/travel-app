@@ -24492,7 +24492,7 @@ export const countries = [
         descriptionRU:
           'Райский зеленый оазис в самом центре оживленного Токио, парк Уэно (Ueno Kōen) - крупнейшая зеленая зона города и одна из самых популярных туристических достопримечательностей. Помимо прекрасной территории, парк также может похвастаться многочисленными храмами и музеями, которые стоит посетить. Этот парк площадью 212 акров, пересекаемый приятными гравийными дорожками, включает в себя такие достопримечательности, как поездка на небольшой лодке по окаймленному тростником пруду Синобадзу вокруг небольшого острова с его храмом Бентендо. Не забудьте также посетить храм Тосёгу 17-го века (Никко Тосё-гу) с 256 бронзовыми и каменными фонарями. Еще одна достопримечательность - зоопарк Уэно (Onshi Ueno Dōbutsuen). Открытый в 1882 году, это старейший зоопарк Японии, который славится пандами, подаренными Китайской Народной Республикой. Хотя это большая достопримечательность и вмещает более 3,00 животных, представляющих около 400 видов, забавная монорельсовая дорога, соединяющая ее различные компоненты, может помочь ускорить посещение (и сделать его еще более приятным). Аква-зоопарк, один из крупнейших аквариумов Азии, также стоит посетить, особенно если вы путешествуете с детьми. Адрес: 9-83 Uenokoen, Taito City, Токио.',
         descriptionAM:
-          'Եռուզեռով լեցուն Տոկիոյի սրտում գտնվող դրախտավայր հիշեցնող կանաչ օազիսը՝ Ուենո պարկը (Ուենո Քյոն) քաղաքի ամենամեծ կանաչ տարածքն է և նրա ամենահայտնի զբոսաշրջային վայրերից մեկը: Բացի իր գեղեցիկ այգիներից, պուրակը հպարտությամբ իր վրա է կրում բազմաթիվ տաճարներով և թանգարաններ, որոնք արժանի են այցելելու և ուսումնասիրելու: Խաչվող խճաքարերով պատրաստած հաճելի  արահետներով այս 212 հեկտար այգին առաջարկում է այնպիսի գեղեցիկ փորձառություններ, ինչպիսիք են փոքրիկ նավակով ուղևորությունն է եղեգնյա Շինոբազու լճակի վրայով դեպի փոքրիկ կղզին` իր Բենտենդո տաճարով: Անպայման այցելեք նաև 17-րդ դարի Տոշոգու սրբավայրը (Nikkō Tōshō-gū) ՝ իր 256 բրոնզե և քարե լապտերներով: Մեկ այլ կարևորագույն գոհար է Ուենոյի կենդանաբանական այգին (Onshi Ueno Dōbutsuen), որը բացվել է 1882 թվականին՝ հանդիսանալով Ճապոնիայի ամենահին կենդանաբանական այգին, որն հայտնի է  պանդաներով՝ բերված Չինաստանի Ժողովրդական Հանրապետությունից: Չնայած նրան, որ սա մեծ զվարճանքի կենտրոն է և  ընդգրկում է ավելի քան 3000 կենդանիներ, որոնք մոտ 400 տեսակների ներկայացուցիչներ են, նրա մոնոռեյլ երթուղին այգու տարբեր մասեր կապում է իրար՝ դարձնելով ձեր այցելությունը ոչ միայն էֆեկտիվ, այլ նաև զվարճալի։ Աքվա կենդանաբանական այգին, որն Ասիայի ամենամեծ ակվարիումներից մեկն է, նույնպես արժե այցելել, հատկապես, եթե ճանապարհորդում եք երեխաների հետ: Հասցե ՝ 9-83 Ուենոկոեն, Տայտո Սիթի, Տոկիո:',
+          'Եռուզեռով լեցուն Տոկիոյի սրտում գտնվող դրախտավայր հիշեցնող կանաչ օազիսը՝ Ուենո պարկը (Ուենո Քյոն) քաղաքի ամենամեծ կանաչ տարածքն է և նրա ամենահայտնի զբոսաշրջային վայրերից մեկը: Բացի իր գեղեցիկ այգիներից, պուրակը հպարտությամբ իր վրա է կրում բազմաթիվ տաճարներով և թանգարաններ, որոնք արժանի են այցելելու և ուսումնասիրելու: Խաչվող խճաքարերով պատրաստած հաճելի  արահետն��րով այս 212 հեկտար այգին առաջարկում է այնպիսի գեղեցիկ փորձառություններ, ինչպիսիք են փոքրիկ նավակով ուղևորությունն է եղեգնյա Շինոբազու լճակի վրայով դեպի փոքրիկ կղզին` իր Բենտենդո տաճարով: Անպայման այցելեք նաև 17-րդ դարի Տոշոգու սրբավայրը (Nikkō Tōshō-gū) ՝ իր 256 բրոնզե և քարե լապտերներով: Մեկ այլ կարևորագույն գոհար է Ուենոյի կենդանաբանական այգին (Onshi Ueno Dōbutsuen), որը բացվել է 1882 թվականին՝ հանդիսանալով Ճապոնիայի ամենահին կենդանաբանական այգին, որն հայտնի է  պանդաներով՝ բերված Չինաստանի Ժողովրդական Հանրապետությունից: Չնայած նրան, որ սա մեծ զվարճանքի կենտրոն է և  ընդգրկում է ավելի քան 3000 կենդանիներ, որոնք մոտ 400 տեսակների ներկայացուցիչներ են, նրա մոնոռեյլ երթուղին այգու տարբեր մասեր կապում է իրար՝ դարձնելով ձեր այցելությունը ոչ միայն էֆեկտիվ, այլ նաև զվարճալի։ Աքվա կենդանաբանական այգին, որն Ասիայի ամենամեծ ակվարիումներից մեկն է, նույնպես արժե այցելել, հատկապես, եթե ճանապարհորդում եք երեխաների հետ: Հասցե ՝ 9-83 Ուենոկոեն, Տայտո Սիթի, Տոկիո:',
         photo:
           'https://www.planetware.com/photos-large/JPN/japan-tokyo-ueno-park-zoo.jpg',
         link: 'https://en.wikipedia.org/wiki/Ueno_Park',
@@ -38945,4 +38945,291 @@ export const countries = [
       },
     ],
   },
+   {
+    id: '7',
+    nameEN: 'France',
+    nameRU: 'Франция',
+    nameAM: 'Ֆրանսիա',
+    capitalEN: 'Paris',
+    capitalRU: 'Париж',
+    capitalAM: 'Փարիզ',
+    regionEN: 'Europe',
+    regionRU: 'Европа',
+    regionAM: 'Եվրոպա',
+    population: '66710000',
+    latlng: ['48.85341', '2.3488'],
+    area: '640679.0',
+    geoData: [
+      []],
+    capitalTimezone: 'Europe/Paris',
+    bordersEN: ["Andorra","Belgium","Germany","Italy","Luxemburg","Monaco","Spain","Switzerland"
+    ],
+    bordersRU: [
+      'Андорра',
+      'Бельгия',
+      'Германия',
+      'Италия',
+      'Люксембург',
+      'Монако',
+      'Испания',
+      'Швейцария',
+    ],
+    bordersAM: [
+      'Ավստրիա',
+      'Բելգիա',
+      'Գերմանիա',
+      'Իտալիա',
+      'Լյուքսեմբուգ',
+      'Մոնակո',
+      'Իսպանիա',
+      'Շվեյցարիա',
+    ],
+    currencies: [
+      {
+        code: 'EUR',
+        nameEN: 'Euro',
+        nameRU: 'Евро',
+        nameAM: 'Եվրո',
+        symbol: '€',
+      },
+    ],
+    languages: [
+      {
+        nameEN: 'French',
+        nameRU: 'Французский',
+        nameAM: 'Ֆրանսերեն',
+        nativeName: 'français',
+      },
+    ],
+    flag: 'https://restcountries.eu/data/fra.svg',
+    photo:
+      'https://arendal.ru/wp-content/uploads/2017/09/France.jpg',
+    videoId: 'BZLZyX3JdEM',
+    attractions: [
+      {
+        attractionNameEN: "Eiffel Tower",
+        attractionNameRU: 'Эйфелева башня',
+        attractionNameAM: 'Էյֆելյան աշտարակ',
+        descriptionEN:
+          "The symbol of Paris, the Eiffel Tower is a feat of ingenuity as much as it is a famous landmark. This structure of 8,000 metallic parts was designed by Gustave Eiffel as a temporary exhibit for the World Fair of 1889. Originally loathed by critics, the 320-meter-high tower is now a beloved and irreplaceable fixture of the Paris skyline. The Eiffel Tower's gracefulness has earned it the nickname of 'Iron Lady'. Visitors are impressed by the tower's delicate airiness despite its monumental size and the breathtaking panoramas at each of the three levels.",
+        descriptionRU:
+          'Э́йфелева ба́шня — металлическая башня в центре Парижа, самая узнаваемая его архитектурная достопримечательность. Названа в честь главного конструктора Гюстава Эйфеля; сам Эйфель называл её просто «300-метровой башней» (tour de 300 mètres). Башня, впоследствии ставшая символом Парижа, была построена в 1889 году и первоначально задумывалась как временное сооружение, служившее входной аркой парижской Всемирной выставки 1889 года. Эйфелеву башню называют самой посещаемой платной и самой фотографируемой достопримечательностью мира',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://weatlas.com/img/landmarks/ae952a667731ac0129ff1a51fcfe081e.jpg',
+        link: 'https://en.wikipedia.org/wiki/Eiffel_Tower',
+      }, 
+      {
+        attractionNameEN: "Louvre Museum",
+        attractionNameRU: 'Лувр',
+        attractionNameAM: 'Լուվր',
+        descriptionEN:
+          "In a stately palace that was once a royal residence, the Louvre ranks among the top European collections of fine arts. Many of Western Civilization's most famous works are found here, including the Mona Lisa by Leonardo DaVinci, the Wedding Feast at Cana by Veronese, and the 1st-century-BC Venus de Milo sculpture. The collection owes its wealth to the contributions of various kings who lived in the Louvre. Other pieces were added as a result of France's treaties with the Vatican and the Republic of Venice, and from the spoils of Napoléon I. The Louvre has an astounding collection of 35,000 artworks, including countless masterpieces. It's impossible to see it all in a day or even in a week.",
+        descriptionRU:
+          'Музей Лувра (фр. Musée du Louvre, часто используется просто название Лувр) — один из крупнейших и самый популярный художественный музей мира. Музей расположен в центре Парижа, на правом берегу Сены, на улице Риволи, в 1-м округе столицы. В 2018 году число посетителей Лувра превысило 10 млн человек, что является рекордом. Здание музея — старинный королевский дворец (Palais du Louvre). Конная статуя Людовика XIV обозначает точку начала так называемой исторической оси Парижа. Лувр — один из старейших музеев с богатой историей коллекционирования художественных и исторических реликвий Франции, начиная со времён династии Капетингов и до наших дней. В Лувре собиралось всё, этот музей можно назвать универсальным. Его коллекции покрывают огромные географические и временные пространства: от западной Европы до Ирана через Грецию, Египет и Ближний Восток; с античности до 1848 года. Европейское искусство новейшего периода времени — с 1848 года и до наших дней — представлено в Музее Орсе и Центре Жоржа Помпиду, а азиатское выставляется в музее Гиме. Искусство Африки, Америки и Океании экспонируется в музее набережной Бранли.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://7d9e88a8-f178-4098-bea5-48d960920605.selcdn.net/9bc00083-be70-462e-b8ae-6dcc59e00843/',
+        link: 'https://www.louvre.fr/',
+      }, 
+      {
+        attractionNameEN: "Palace of Versailles",
+        attractionNameRU: 'Версаль',
+        attractionNameAM: 'Վերսալ',
+        descriptionEN:
+          "More than just a royal residence, Versailles was designed to show off the glory of the French monarchy. 'Sun King' Louis XIV transformed his father's small hunting lodge into an opulent palace with a sumptuous Baroque interior. The palace became Louis XIV's symbol of absolute power and set the standard for princely courts in Europe. Architect Jules Hardouin-Mansart created the elegant Baroque facade and lavish interior of the Château de Versailles, which is designated as a UNESCO World Heritage Site. The most emblematic space in the castle is the Hall of Mirrors, where courtiers waited for an audience with His Majesty. This dazzling hall sparkles with sunlight that enters through the windows and is reflected off massive ornamental mirrors.",
+        descriptionRU:
+          'Верса́ль — дворцово-парковый ансамбль во Франции, бывшая резиденция французских королей в городе Версале, ныне являющемся пригородом Парижа; центр туризма мирового значения.Версаль сооружался под руководством Людовика XIV с 1661 года и стал своеобразным памятником эпохи «короля-солнца», художественно-архитектурным выражением идеи абсолютизма. Ведущие архитекторы — Луи Лево и Жюль Ардуэн-Мансар, создатель парка — Андре Ленотр. Ансамбль Версаля, крупнейший в Европе, отличается уникальной целостностью замысла и гармонией архитектурных форм и преобразованного ландшафта. С конца XVII века Версаль служил образцом для парадных загородных резиденций европейских монархов и аристократии, однако прямых подражаний ему не имеется.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://im.kommersant.ru/Issues.photo/MONEY/2016/028/KMO_138957_00006_1_t218_145334.jpg',
+        link: 'https://www.chateauversailles.fr/',
+      }, 
+      {
+        attractionNameEN: "Mont Saint-Michel",
+        attractionNameRU: 'Мон-Сен-Мишель',
+        attractionNameAM: 'Մոն Սենթ Միշել',
+        descriptionEN:
+          "Rising dramatically from a rocky islet off the Normandy coast, the UNESCO-listed Mont Saint-Michel is one of France's most striking landmarks. This 'Pyramid of the Seas' is a mystical sight, perched 80 meters above the bay and surrounded by imposing defensive walls and bastions. The main tourist attraction, the Abbaye de Saint-Michel is a marvel of medieval architecture with soaring Gothic spires. Visitors are awed by the serene beauty of the Abbey Church, with its harmonious Romanesque nave and ornate high-vaulted choir.Since it was built in the 11th century, the Abbey Church has been an important Christian pilgrimage destination, known as 'The Heavenly Jerusalem'. Modern-day pilgrims are still inspired by Mont Saint-Michel and continue the tradition of crossing the bay by foot as it was done in the Middle Ages.",
+        descriptionRU:
+          'Остров Мон-Сен-Мишель расположен в Нормандии, департамент Манш, на острове-скале, возвышающейся над средним уровнем моря на 78,8 метра, и резко выделяется на фоне окружающего его пространства бухты и плоского берега. Остров представляет собой гранитное образование конической формы, периметр которого составляет 1 км, образованное из устойчивых к выветриванию магматических пород — лейкогранитов. Возраст пород — поздний протерозой, бриоверийский ярус. Два раза в лунные сутки в бухте наблюдаются приливы и отливы, самые сильные на побережье Европы и вторые по амплитуде (после залива Фанди) на всём земном шаре. В период сизигических приливов (в дни осенне-весеннего равноденствия, на второй или третий день после ново- или полнолуния) вода держится 8 часов зимой и 9 часов летом. Вода может отходить от Сен-Мишеля на 18 км и распространяться до 20 км вглубь побережья.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://www.planetware.com/photos-large/F/france-mont-saint-michel-2.jpg',
+        link: 'https://en.wikipedia.org/wiki/Mont-Saint-Michel',
+      }, 
+      {
+        attractionNameEN: "Chartres Cathedral",
+        attractionNameRU: 'Шартрский собор',
+        attractionNameAM: 'ХЗ',
+        descriptionEN:
+          "Chartres Cathedral, also known as the Cathedral of Our Lady of Chartres (French: Cathédrale Notre-Dame de Chartres), is a Roman Catholic church in Chartres, France, about 80 km (50 miles) southwest of Paris and is the seat of the Bishop of Chartres. Mostly constructed between 1194 and 1220, it stands at the site of at least five cathedrals that have occupied the site since the Diocese of Chartres was formed as an episcopal see in the 4th century. It is in the High Gothic and Romanesque styles. The cathedral is designated a World Heritage Site by UNESCO, which calls it 'the high point of French Gothic art' and a 'masterpiece'. The cathedral is well-preserved for its age: the majority of the original stained glass windows survive intact, while the architecture has seen only minor changes since the early 13th century. The building's exterior is dominated by heavy flying buttresses which allowed the architects to increase the window size significantly, while the west end is dominated by two contrasting spires – a 105-metre (349 ft) plain pyramid completed around 1160 and a 113-metre (377 ft) early 16th-century Flamboyant spire on top of an older tower. Equally notable are the three great façades, each adorned with hundreds of sculpted figures illustrating key theological themes and narratives.",
+        descriptionRU:
+          'Шартрский собор (фр. Cathédrale Notre-Dame de Chartres) — католический кафедральный собор, расположенный в городе Шартр префектуры департамента Эр и Луар. Находится в 90 км к юго-западу от Парижа и является одним из шедевров готической архитектуры. В 1979 году собор был внесён в список объектов Всемирного наследия ЮНЕСКО. Трёхнефное здание в плане представляет собой латинский крест с коротким трёхнефным трансептом и деамбулаторием. Восточная часть храма имеет несколько полукруглых радиальных часовен. Три из них заметно выступают за границы полукруга деамбулатория, четыре оставшиеся имеют меньшую глубину. Особенностью внешнего вида собора являются две его сильно различающиеся башни. 105-метровый шпиль южной башни постройки 1140 года выполнен в форме незамысловатой романской пирамиды. Северная башня высотой 113 метров имеет основание, оставшееся от романского собора, а шпиль башни появился в начале XVI века и выполнен в стиле пламенеющей готики.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Notre_Dame_de_Chartres.jpg/1280px-Notre_Dame_de_Chartres.jpg',
+        link: 'http://www.cathedrale-chartres.org/',
+      }, 
+      {
+        attractionNameEN: "Provence",
+        attractionNameRU: 'Прованс',
+        attractionNameAM: 'Պրովանս',
+        descriptionEN:
+          "Provence is a gorgeous landscape of olive groves, sun-drenched rolling hills, and deep purple lavender fields, with little villages nestled in the valleys and perched on rocky outcrops. The vibrant scenery has enchanted many famous artists, including Cézanne, Matisse, Chagall, and Picasso. The rustic natural beauty and country charm of Provence immerses visitors in a place where the art de vivre is a way of life. Sultry weather encourages leisurely strolls along cobblestone streets and afternoons spent on sunny terraces of outdoor cafés. Provence is also a region known for its delicious cuisine, which is based on olive oil, vegetables, and aromatic herbs.",
+        descriptionRU:
+          'Прова́нс (фр. Provence, окс. Provença, букв. «провинция») — историческая область на юго-востоке Франции, ныне составляющая часть региона Прованс — Альпы — Лазурный берег. В настоящее время на территории Прованса находятся департаменты Вар, Воклюз и Буш-дю-Рон, а также части Альп Верхнего Прованса и Приморских Альп. На востоке область ограничена Альпами, на западе — Роной, на юге — Средиземным морем. Столица Прованса – Экс-ан-Прованс, один из древнейших французских городов. Прованс обязан своим именем римской эпохе: во время первого завоевания Трансальпийской Галлии между 58 и 51 годами до нашей эры он интегрировался с римской провинцией – Нарбоннской Галлией, чьей столицей был Нарбон.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://www.pandotrip.com/wp-content/uploads/2013/08/Untitled-72.jpg',
+        link: 'https://en.wikipedia.org/wiki/Provence',
+      }, 
+    ]},
+     {
+    id: '8',
+    nameEN: 'Belarus',
+    nameRU: 'Беларусь',
+    nameAM: 'Բելառուս',
+    capitalEN: 'Minsk',
+    capitalRU: 'Минск',
+    capitalAM: 'Մինսկ',
+    regionEN: 'Europe',
+    regionRU: 'Европа',
+    regionAM: 'Եվրոպա',
+    population: '9498700',
+    latlng: ['55.776952', '37.389405'],
+    area: '207600.0',
+    geoData: [
+      []],
+    capitalTimezone: 'Europe/Minsk',
+    bordersEN: ["Latvia","Lithuania","Poland","Russia","Ukraine"
+    ],
+    bordersRU: [
+      'Латвия',
+      'Литва',
+      'Польша',
+      'Россия',
+      'Украина',
+    ],
+    bordersAM: [
+      'Լատվիա',
+      'Լիտվա',
+      'Լեհաստան',
+      'Ռուսաստան',
+      'Ուկրաինա',
+    ],
+    currencies: [
+      {
+        code: 'BYN',
+        nameEN: 'New Belarusian ruble',
+        nameRU: 'Белорусский рубль',
+        nameAM: 'Բելառուսական ռուբլի',
+        symbol: 'Br',
+      },
+    ],
+    languages: [
+      {
+        nameEN: 'Belarusian',
+        nameRU: 'Белорусский',
+        nameAM: 'Բելոռուսական',
+        nativeName: 'беларуская мова',
+      },
+    ],
+    flag: 'https://restcountries.eu/data/blr.svg',
+    photo:
+      'https://www.visit-belarus.com/wp-content/uploads/2017/07/minsk_ostrov_slez_svisloch_vecher.jpg',
+    videoId: 'FrIbWRrEvKw',
+    attractions: [
+      {
+        attractionNameEN: "Mir Castle Complex",
+        attractionNameRU: 'Мирский замок',
+        attractionNameAM: 'ХЗ',
+        descriptionEN:
+          "The Mir Castle Complex (Belarusian: Мірскі замак, Łacinka: Mirski zamak, Lithuanian: Myriaus pilis, Polish: Zamek w Mirze) is a historic fortified castle and a UNESCO World Heritage site in Belarus. It is located in the town of Mir, in the Kareličy District of the Hrodna voblast, at 53°27′4.46″N 26°28′22.80″E, 29 kilometres (18 mi) north-west of another World Heritage site, Niasviž Castle. Mir Castle Complex is 164 metres (538 ft) above sea level. Erected in the 16th century in the late Polish Gothic style, it is one of the few remaining architectural monuments of the former Polish–Lithuanian Commonwealth in contemporary Belarus. Duke Juryj Ivanavič Illinič (pl:Jerzy Iwanowicz Ilinicz) began construction of the castle near the village of Mir after the turn of the 16th century in the Polish Gothic style. Five towers surrounded the courtyard of the citadel, the walls of which formed a square of 75 metres (246 ft) on each side",
+        descriptionRU:
+          'Ми́рский за́мок (белор. Мірскі замак), за́мково-па́рковый ко́мплекс «Мир» (белор. замкава-палацавы комплекс «Мір») — оборонительное укрепление и резиденция в городском посёлке (пгт) Мир Кореличского района Гродненской области Белоруссии. Памятник архитектуры, внесён в список Всемирного наследия ЮНЕСКО (с 2000 года). Архитектурный комплекс включает в себя замок XVI—XX веков, валы XVII—XVIII веков, пруд 1896—1898 годов, часовню-усыпальницу Святополк-Мирских с домом сторожа и воротами, пейзажный и регулярный парки, дом управляющего. Находится в пгт Мир, на правом берегу реки Миранки. Построенный в начале XVI века магнатом Ю. И. Ильиничем замок стал первым частнособственническим замком на землях Белоруссии. С 1568 г. замком владели Радзивиллы (до 1828), потом Витгенштейны (до 1891). Последними владельцами замка были князья Святополк-Мирские (до 1939), после чего с приходом советской власти замок стал государственной собственностью. Мирский замок является самым восточным готическим сооружением, а также самым крупным и единственным не культовым объектом из сохранившихся немногих образцов самобытной белорусской готики. Замок по строению похож на квадрат со стороной около 75 метров, по углам расположены пятиэтажные башни высотой 25—27 м, которые выходят за пределы стен. Пятая башня — шестиэтажная с въездными воротами',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://t0.gstatic.com/images?q=tbn:ANd9GcRParoM-OkZ0QMsYAVQUx8ICklCmOxc6JAENyN7UK-nPNJLR7pPhEVL9p7lgNHEQvXeV_oav_dXjjsnxDxd5bQJsQ',
+        link: 'http://mirzamak.by/',
+      }, 
+      {
+        attractionNameEN: "Belarusian Great Patriotic War Museum",
+        attractionNameRU: 'Музей истории Великой Отечественной войны',
+        attractionNameAM: 'Հայրենական մեծ պատերազմի պատմության թանգարան',
+        descriptionEN:
+          "The Belarusian Great Patriotic War Museum is a museum in Minsk, Belarus. The conception of a museum commemorating the Great Patriotic War after the end of Nazi occupation sprung up even before the close of the war. The museum first opened shortly after the liberation of Minsk from the Nazi invaders, on 25 October 1944, making it the first World War II museum to open during the course of the war.[2] It moved to its current location in 2014. The museum has 24 exhibition halls. As of 2012 there were 142,676 items in the museum's collection. The museum staff also engages in historical research: particular areas include Belarusians in the Red Army, local anti-fascist and partisan activity, and the history of the Auschwitz death camp.",
+        descriptionRU:
+          'Белорусский государственный музей истории Великой Отечественной войны — государственное учреждение культуры Республики Беларусь, первый в мире музей истории Великой Отечественной войны, крупнейшее собрание артефактов по истории Великой Отечественной войны. Торжественное открытие нового здания музея состоялось 2 июля 2014 года. Новое здание музея, по проекту архитектора В. В. Крамаренко, в комплексе с обелиском «Минск — город-герой» составляет единый архитектурный ансамбль. В музее 10 экспозиционных залов и зал Победы (расположен под стеклянным куполом). Над куполом развивается Государственный флаг СССР как Символ Знамени Победы. Он представляет собой полотнище красного цвета с изображением пятиконечной звезды, серпа и молота. Зал Победы является мемориальным (увековечены имена Героев Советского Союза уроженцев Беларуси, или получивших звание героя на территории Беларуси, имена полных кавалеров Ордена Славы, перечислены воинские формирования, получившие почётные наименования за освобождение Беларуси).',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://t3.gstatic.com/images?q=tbn:ANd9GcSBkbAJXgMNH77p2dNL2P5BYJgyKf7Fg7vL7BkPvyzHw6sxJxEfMOGfx_Z9FBI2oQYU3WCJhLHuH5O4pvCcFrKGUA',
+        link: 'http://www.warmuseum.by/',
+      }, 
+      {
+        attractionNameEN: "National Opera and Ballet of Belarus",
+        attractionNameRU: 'Большой театр Беларуси',
+        attractionNameAM: 'Բելառուսի Մեծ թատրոն',
+        descriptionEN:
+          'The National Academic Grand Opera and Ballet Theatre of the Republic of Belarus (Belarusian: Нацыянальны акадэмічны Вялікі тэатр оперы і балета) is located in a park in the Trinity Hill district of Minsk. Local people call it the "Opierny Teatr" (Belarusian) or the "Opera and Ballet Theatre." While the theatre opened on 15 May 1933, in the beginning, it did not have its own performance venue. Until 1938, the troupe performed at the Belarusian Drama Theatre building. The troupe tours internationally. Fans from Spain, Russia, Germany, Poland, Switzerland, Israel, Portugal, and China are well acquainted with the repertoire of the Belarusian theatre. National Opera and Ballet of Belarus performs annually at the German festival "Classic Open Air."',
+        descriptionRU:
+          'Большой театр Беларуси (белор. Вялікі тэатр Беларусi) — единственный оперный театр и крупнейший театр в Белоруссии, расположенный в Минске. Здание театра является образцом советского довоенного конструктивизма (авторы — И. Г. Лангбард и Г. Лавров), имеет статус памятника архитектуры национального значения. В театре существуют оперная и балетная труппы, симфонический оркестр, хор, Детский музыкальный театр-студия, творческий коллектив "Белорусская Капелла". В настоящее время в репертуаре Большого театра Беларуси более 80 названий опер и балетов (национальные спектакли, шедевры мировой классики и современные постановки). Более 60 премьерных постановок осуществлено в период с 2009 по 2019 год.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://t3.gstatic.com/images?q=tbn:ANd9GcRR_ipv2-D5KyEn5knyiQaJjoofKFuhf5yRmMEPWE1WeH3bT3sSB0Gim3IO37Gq58PY62IYzrnK_fiyo6_1CTed8Q',
+        link: 'https://bolshoibelarus.by/',
+      }, 
+      {
+        attractionNameEN: "Belovezhskaya Pushcha",
+        attractionNameRU: 'Беловежская пуща',
+        attractionNameAM: 'Բիալովիեզա անտառ',
+        descriptionEN:
+          "Belovezhskaya Pushcha  is one of the last and largest remaining parts of the immense primeval forest that once stretched across the European Plain. The forest is home to 800 European bison, Europe's heaviest land animal. UNESCO's Man and the Biosphere Programme designated the Polish Biosphere Reserve Białowieża in 1976 and the Belarusian Biosphere Reserve Belovezhskaya Puschcha in 1993.[4] In 2015, the Belarusian Biosphere Reserve occupied the area of 216,200 ha (2,162 km2; 835 sq mi), subdivided into transition, buffer and core zones.[5] The forest has been designated a UNESCO World Heritage Site[6] and an EU Natura 2000 Special Area of Conservation. The World Heritage Committee by its decision of June 2014 approved the extension of the UNESCO World Heritage site 'Belovezhskaya Pushcha/Białowieża Forest, Belarus, Poland', which became 'Białowieża Forest, Belarus, Poland'. It straddles the border between Poland (Podlaskie Voivodeship) and Belarus (Brest and Grodno voblasts), and is 70 kilometres (43 miles) north of Brest, Belarus and 62 kilometres (39 miles) southeast of Białystok, Poland. The Białowieża Forest World Heritage site covers a total area of 141,885 ha (1,418.85 km2; 547.82 sq mi). Since the border between the two countries runs through the forest, there is a border crossing available for hikers and cyclists.",
+        descriptionRU:
+          'Белове́жская пу́ща — наиболее крупный остаток реликтового первобытного равнинного леса, который, согласно представлениям, сложившимся в современной науке, в доисторические времена произрастал на территории Европы. Постепенно он был вырублен, но в относительно нетронутом состоянии в виде крупного массива сохранился только в Беловежском регионе на территории современных Белоруссии и Польши. Беловежскую пущу относят к экорегиону под названием «сарматский смешанный лес». Через Беловежскую пущу проходит государственная граница между Польшей и Белоруссией. Рядом с Пущей находится водораздел Балтийского и Чёрного морей. Для сохранения уникальной природы в Беловежской пуще выделены четыре функциональные зоны с различным режимом охраны: заповедная зона, зона регулируемого пользования, рекреационная и хозяйственная зоны. Кроме того, вокруг Пущи создана охранная (буферная) зона. В рамках программы ЮНЕСКО «Человек и биосфера» в 1976 году в польской части Пущи создан биосферный заповедник «Беловежа», а в 1993 году в белорусской части Пущи — биосферный заповедник «Беловежская пуща» с площадью 216,2 тыс. га (2015), имеющий зону ядра, буферную и переходную зоны. В 1979 году решением ЮНЕСКО Беловежский национальный парк (Польша) включён в Список Всемирного наследия.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://lh3.googleusercontent.com/proxy/bR0D4ilZt3GMNF3bchWhAAYjcq0Ckd-vDRo5w7vznS1TtsojPsnZ8jjaMQaXEUI5Hwbbph7uRWUnrW4',
+        link: 'https://npbp.by/',
+      }, 
+      {
+        attractionNameEN: "Ruzhany Palace",
+        attractionNameRU: 'Ружанский замок',
+        attractionNameAM: 'Ռուժանի պալատ',
+        descriptionEN:
+          "Ruzhany Palace  is a ruined palace compound in Ruzhany village, Pruzhany Raion (district), Brest Voblast (province), Western Belarus. Between the 16th and 19th centuries Ruzhany, then called Różany, was the main seat of the senior line of the Sapieha noble family, known as the Sapiehas of Ruzhany. The castle is currently undergoing systematic reconstruction, with the palace ornate gate and entry building being already restored. Ruzhany began its life in the late 16th century as the site of Lew Sapieha's castle, the palace being completed in 1602. The Sapieha residence was destroyed in the course of the internecine strife in the Grand Duchy of Lithuania when it was attacked by Michał Serwacy Wiśniowiecki's forces in 1700. By the time of King Stanisław II's visit in 1784, work on the palace had been suspended. The Sapieha estates were nationalised in the aftermath of the November Uprising (1831). Three years later, the palace compound was sold to be used as a textile mill and weaving factory",
+        descriptionRU:
+          'Ружа́нский дворе́ц (белор. Ружанскі палац) — один из крупнейших дворцовых комплексов Белоруссии XVII—XVIII вв., собственность и резиденция князей Сапег. Построен в 1784—1786 гг. в переходном от барокко к классицизму стиле архитектором Я. С. Беккером на основе стен предыдущего дворца начала XVII в. Разрушен во время Великой Отечественной войны. В 1598 году Ружаны купил канцлер великий литовский Лев Сапега. Он построил здесь в 1602 году замок с тремя башнями, который имел скорее оборонительные функции. Неизвестно имя архитектора, однако в старинных ружанских записях, датированных 1602-м годом, упоминается о крупномасштабных строительных работах, без указания места проведения застройки. Первоначально дворец имел оборонительный характер — двухэтажный крестовидный в плане каменный объём дополняли три четырёхгранные башни. В центральной части дворца находились парадная зала и вестибюль с двусторонней лестницей, в боковых частях — жилые помещения, кабинет, библиотека. Анфилада помещений на первом этаже перекрывалась сводчатыми, а на втором — балочными перекрытиями. Под постройкой в больших сводчатых подвалах находились арсенал, архив, запасы провизии.',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://www.belarus.by/dadvimages/001310_654108.jpg',
+        link: 'http://rozana.by/',
+      }, 
+      {
+        attractionNameEN: "Church of Saints Simon and Helena",
+        attractionNameRU: 'Костёл Святого Симеона и Святой Елены',
+        attractionNameAM: 'Սուրբ Սիմեոն և Սուրբ Հելենա եկեղեցիներ',
+        descriptionEN:
+          "The Church of Saints Simon and Helena (Belarusian: Касцёл святых Сымона і Алены) (Polish: Kościół św. Szymona i św. Heleny w Mińsku), also known as the Red Church (Belarusian: Чырвоны касцёл) (Polish: Czerwony Kościół), is a Roman Catholic church on Independence Square in Minsk, Belarus. This neo-Romanesque church was designed by Polish architects Tomasz Pajzderski and Władysław Marconi. The cornerstone was laid in 1905 and the church was completed in 1910. The bricks for its walls were sourced from Częstochowa, whilst the roof tiles came from Włocławek. Its construction was financed by Edward Woyniłłowicz (1847-1928), a prominent Belarusian-Polish landowner, businessman and civic activist. The church was named and consecrated in memory of Woyniłłowicz's two deceased children, Szymon and Helena.",
+        descriptionRU:
+          'Костёл святого Симеона и святой Елены (белор. Касцёл святога Сымона і святой Алены, польск. Kościół św. Szymona i Heleny), часто называемый также Красным костёлом — наиболее известный католический храм Минска. Строительство храма началось в 1905 году. Строительством руководил минский дворянин Эдвард Войнилович, он же пожертвовал крупную сумму на строительство храма. Автором проекта стал польский архитектор Томаш Пайздерский. Костёл получил имена святых Симеона и Елены в память двух рано умерших детей Войниловича. Осенью 1908 года были завершены основные строительные работы, в 1909 году на башню подняты колокола, а 20 сентября 1910 года архиепископ Ключинский освятил храм. Храм был целиком построен из красного кирпича, что принесло ему народное прозвище «Красный костёл»',
+        descriptionAM:
+          'ХЗ',
+        photo:
+          'https://realt.by/uploads/pics/333727066.jpg',
+        link: 'https://chyrvony.by/',
+      }, 
+    ]},
+
 ];
