@@ -12,7 +12,7 @@ const App = () => {
     <>
       <Switch>
         <Route path={'/main'} component={Main} exact />
-        <Route path={'/country'} component={Country} exact />
+        <Route path={'/country/:id'} component={Country} exact />
         <Route path={'/auth'} component={Auth} exact />
         <Redirect to={'/main'} />
       </Switch>
