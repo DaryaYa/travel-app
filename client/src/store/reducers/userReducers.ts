@@ -1,10 +1,10 @@
 import { UserActionTypes } from '../actionsTypes/user.actionTypes';
 import {
   UserActionInterface,
-  AppStateInterface,
+  UserStateInterface,
 } from '../types/user.interface';
 
-const initialState: AppStateInterface = {
+const initialState: UserStateInterface = {
   loading: false,
   user: null,
   error: null,
@@ -13,7 +13,7 @@ const initialState: AppStateInterface = {
 export const userReducer = (
   state = initialState,
   action: UserActionInterface,
-): AppStateInterface => {
+): UserStateInterface => {
   switch (action.type) {
     case UserActionTypes.LOGIN:
       return { ...state, loading: true };

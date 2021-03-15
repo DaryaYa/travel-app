@@ -1,86 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router';
+
+import { getShortDataAction } from '../../store/action-creators/countryActionCreater';
+import CountryCard from '../../components/CountryCard/CountryCard';
+import { useTypesSelector } from '../../components/hooks/useTypedSelector';
 import Layout from '../../components/Layout/Layout';
-import Rating from '../../components/Rating';
-import { Widget } from '../../components/Widget';
-import LeaveRatingForm from '../../components/LeaveRatingForm';
-import PhotoGallery from '../../components/PhotoGallery';
+import Spinner from '../../components/Spinner/Spinner';
 
 import './Main.scss';
 
 const Main = () => {
-  // HARDCODE
-  const [reviewsArr, setReviewsArr] = useState([1, 3]);
-  const [rating, setRating] = 
-    useState( reviewsArr.reduce((acc, cur) => acc + cur) / reviewsArr.length );
-
+  const dispatch = useDispatch();
   useEffect(() => {
-    setRating(reviewsArr.reduce((acc, cur) => acc + cur) / reviewsArr.length);
-  }, [reviewsArr])
-
-  const onChangeHandler= (val: number) => {
-    setReviewsArr([...reviewsArr, val]);
-  }
-
-  const RenderRating: React.FC = () => (
-    <>
-      <Rating value={rating} text={`${reviewsArr.length} reviews`} />
-    </>
-  )
-
-  // Attractions data for PhotoGallery
-  const attractions: { photo: string, attractionNameEN: string }[] = [
-    {
-      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-prague-castle.jpg",
-      attractionNameEN: "Prague Castle",
-    },
-    {
-      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-charles-bridge.jpg",
-      attractionNameEN: "Prague's Charles Bridge",
-    },
-    {
-      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-st-vitus-cathedral.jpg",
-      attractionNameEN: "St. Vitus Cathedral",
-    },
-    {
-      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-cesky-krumlov-castle-2.jpg",
-      attractionNameEN: "Ceský Krumlov Castle",
-    },
-    {
-      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-brno-cathedral-of-st-peter-paul.jpg",
-      attractionNameEN: "Brno's Cathedral of St. Peter and Paul",
-    },
-    {
-      photo: "https://www.planetware.com/photos-large/CZ/czech-republic-crypts-tombs-cemeteries.jpg",
-      attractionNameEN: "Bone Collectors: Czech Crypts, Tombs, and Cemeteries",
-    },
-  ];
-
-  let images: {
-    original: string,
-    thumbnail: string,
-    description: string
-  }[] = attractions.map((el)=>{
-    return {
-      original: el.photo,
-      thumbnail: el.photo,
-      description: el.attractionNameEN,
+    if (!shorData) {
+      dispatch(getShortDataAction());
     }
-  })
+  }, []);
+
+  const { loading, shorData } = useTypesSelector(state => state.country);
+
+  const history = useHistory();
+  const cardClickHandler = (id: string | undefined) => {
+    history.push(`/country/${id}`);
+  };
 
   return (
     <>
       <Layout>
-        Main page
-        <RenderRating />
-        <LeaveRatingForm
-          onChangeHandler={onChangeHandler}
-        />
-        <Widget
-          timeZone={'Europe/Moscow'}
-          language={'en-GB'}
-          currency={'NOK'}
-        />
-        <PhotoGallery images={images} />
+        {!loading && (
+          <div className="row">
+            {shorData?.map(country => (
+              <CountryCard
+                key={country._id}
+                capinalName={country.capitalEN}
+                countryFoto={country.photo}
+                countryName={country.nameEN}
+                classNames="main-page__country-card col-12 col-xl-3 col-lg-4  col-md-6 mb-3"
+                onClick={() => cardClickHandler(country?._id)}
+              />
+            ))}
+          </div>
+        )}
+        {loading && (
+          <div className="row">
+            <Spinner classNames="main-page__spinner" />
+          </div>
+        )}
       </Layout>
     </>
   );

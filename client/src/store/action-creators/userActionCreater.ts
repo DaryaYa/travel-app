@@ -1,10 +1,12 @@
+import { Dispatch } from 'redux';
+import axios, { AxiosResponse } from 'axios';
+
 import { UserActionTypes } from './../actionsTypes/user.actionTypes';
 import {
   UserRequestInterface,
   UserResponseInterface,
 } from './../../types/user.interface';
-import { Dispatch } from 'redux';
-import axios, { AxiosResponse } from 'axios';
+
 import { UserActionInterface } from '../types/user.interface';
 
 export const getUserAction = (userData: UserRequestInterface) => {

@@ -4,26 +4,37 @@ export interface CountryInterface {
   _id?: Types.ObjectId;
   nameEN: string;
   nameRU: string;
+  nameAM: string;
   capitalEN: string;
   capitalRU: string;
+  capitalAM: string;
   regionEN: string;
   regionRU: string;
-  population: number;
-  latlng: number[];
-  area: number;
+  regionAM: string;
+  population: string;
+  latlng: string[];
+  area: string;
+  geoData: Number[][][];
   capitalTimezone: string;
   bordersEN: string[];
   bordersRU: string[];
+  bordersAM: string[];
   currencies: {
     code: string;
     nameEN: string;
     nameRU: string;
+    nameAM: string;
     symbol: string;
   }[];
 
-  language: { nameEN: string; nameRU: string; nativeName: string }[];
+  languages: {
+    nameEN: string;
+    nameRU: string;
+    nameAM: string;
+    nativeName: string;
+  }[];
   flag: string;
   photo: string;
-  video: string;
+  videoId: string;
   attractions: { type: Types.ObjectId }[];
 }
