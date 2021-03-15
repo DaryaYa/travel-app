@@ -11,7 +11,7 @@ const get = async () => {
 const getShortData = async () => {
   const countiesAndCapitals = await Country.find(
     {},
-    'nameEN nameRU capitalEN capitalRU photo',
+    'nameEN nameRU nameAM capitalEN capitalRU capitalAM photo',
   );
   return countiesAndCapitals;
 };

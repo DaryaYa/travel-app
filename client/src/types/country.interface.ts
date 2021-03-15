@@ -13,6 +13,7 @@ export interface CountryResponseInterface {
   population: string;
   latlng: string[];
   area: string;
+  geoData: number[][][];
   capitalTimezone: string;
   bordersEN: string[];
   bordersRU: string[];
