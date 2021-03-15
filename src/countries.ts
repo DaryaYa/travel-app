@@ -39092,149 +39092,144 @@ export const countries = [
       }, 
     ]},
      {
-    id: '7',
-    nameEN: 'France',
-    nameRU: 'Франция',
-    nameAM: 'Ֆրանսիա',
-    capitalEN: 'Paris',
-    capitalRU: 'Париж',
-    capitalAM: 'Փարիզ',
+    id: '8',
+    nameEN: 'Belarus',
+    nameRU: 'Беларусь',
+    nameAM: 'Բելառուս',
+    capitalEN: 'Minsk',
+    capitalRU: 'Минск',
+    capitalAM: 'Մինսկ',
     regionEN: 'Europe',
     regionRU: 'Европа',
     regionAM: 'Եվրոպա',
-    population: '66710000',
-    latlng: ['48.85341', '2.3488'],
-    area: '640679.0',
+    population: '9498700',
+    latlng: ['55.776952', '37.389405'],
+    area: '207600.0',
     geoData: [
       []],
-    capitalTimezone: 'Europe/Paris',
-    bordersEN: ["Andorra","Belgium","Germany","Italy","Luxemburg","Monaco","Spain","Switzerland"
+    capitalTimezone: 'Europe/Minsk',
+    bordersEN: ["Latvia","Lithuania","Poland","Russia","Ukraine"
     ],
     bordersRU: [
-      'Андорра',
-      'Бельгия',
-      'Германия',
-      'Италия',
-      'Люксембург',
-      'Монако',
-      'Испания',
-      'Швейцария',
+      'Латвия',
+      'Литва',
+      'Польша',
+      'Россия',
+      'Украина',
     ],
     bordersAM: [
-      'Ավստրիա',
-      'Բելգիա',
-      'Գերմանիա',
-      'Իտալիա',
-      'Լյուքսեմբուգ',
-      'Մոնակո',
-      'Իսպանիա',
-      'Շվեյցարիա',
+      'Լատվիա',
+      'Լիտվա',
+      'Լեհաստան',
+      'Ռուսաստան',
+      'Ուկրաինա',
     ],
     currencies: [
       {
-        code: 'EUR',
-        nameEN: 'Euro',
-        nameRU: 'Евро',
-        nameAM: 'Եվրո',
-        symbol: '€',
+        code: 'BYN',
+        nameEN: 'New Belarusian ruble',
+        nameRU: 'Белорусский рубль',
+        nameAM: 'Բելառուսական ռուբլի',
+        symbol: 'Br',
       },
     ],
     languages: [
       {
-        nameEN: 'French',
-        nameRU: 'Французский',
-        nameAM: 'Ֆրանսերեն',
-        nativeName: 'français',
+        nameEN: 'Belarusian',
+        nameRU: 'Белорусский',
+        nameAM: 'Բելոռուսական',
+        nativeName: 'беларуская мова',
       },
     ],
-    flag: 'https://restcountries.eu/data/fra.svg',
+    flag: 'https://restcountries.eu/data/blr.svg',
     photo:
-      'https://arendal.ru/wp-content/uploads/2017/09/France.jpg',
-    videoId: 'BZLZyX3JdEM',
+      'https://www.visit-belarus.com/wp-content/uploads/2017/07/minsk_ostrov_slez_svisloch_vecher.jpg',
+    videoId: 'FrIbWRrEvKw',
     attractions: [
       {
-        attractionNameEN: "",
-        attractionNameRU: '',
-        attractionNameAM: '',
+        attractionNameEN: "Mir Castle Complex",
+        attractionNameRU: 'Мирский замок',
+        attractionNameAM: 'ХЗ',
         descriptionEN:
-          "",
+          "The Mir Castle Complex (Belarusian: Мірскі замак, Łacinka: Mirski zamak, Lithuanian: Myriaus pilis, Polish: Zamek w Mirze) is a historic fortified castle and a UNESCO World Heritage site in Belarus. It is located in the town of Mir, in the Kareličy District of the Hrodna voblast, at 53°27′4.46″N 26°28′22.80″E, 29 kilometres (18 mi) north-west of another World Heritage site, Niasviž Castle. Mir Castle Complex is 164 metres (538 ft) above sea level. Erected in the 16th century in the late Polish Gothic style, it is one of the few remaining architectural monuments of the former Polish–Lithuanian Commonwealth in contemporary Belarus. Duke Juryj Ivanavič Illinič (pl:Jerzy Iwanowicz Ilinicz) began construction of the castle near the village of Mir after the turn of the 16th century in the Polish Gothic style. Five towers surrounded the courtyard of the citadel, the walls of which formed a square of 75 metres (246 ft) on each side",
         descriptionRU:
-          '',
+          'Ми́рский за́мок (белор. Мірскі замак), за́мково-па́рковый ко́мплекс «Мир» (белор. замкава-палацавы комплекс «Мір») — оборонительное укрепление и резиденция в городском посёлке (пгт) Мир Кореличского района Гродненской области Белоруссии. Памятник архитектуры, внесён в список Всемирного наследия ЮНЕСКО (с 2000 года). Архитектурный комплекс включает в себя замок XVI—XX веков, валы XVII—XVIII веков, пруд 1896—1898 годов, часовню-усыпальницу Святополк-Мирских с домом сторожа и воротами, пейзажный и регулярный парки, дом управляющего. Находится в пгт Мир, на правом берегу реки Миранки. Построенный в начале XVI века магнатом Ю. И. Ильиничем замок стал первым частнособственническим замком на землях Белоруссии. С 1568 г. замком владели Радзивиллы (до 1828), потом Витгенштейны (до 1891). Последними владельцами замка были князья Святополк-Мирские (до 1939), после чего с приходом советской власти замок стал государственной собственностью. Мирский замок является самым восточным готическим сооружением, а также самым крупным и единственным не культовым объектом из сохранившихся немногих образцов самобытной белорусской готики. Замок по строению похож на квадрат со стороной около 75 метров, по углам расположены пятиэтажные башни высотой 25—27 м, которые выходят за пределы стен. Пятая башня — шестиэтажная с въездными воротами',
         descriptionAM:
           'ХЗ',
         photo:
-          '',
-        link: '',
+          'https://t0.gstatic.com/images?q=tbn:ANd9GcRParoM-OkZ0QMsYAVQUx8ICklCmOxc6JAENyN7UK-nPNJLR7pPhEVL9p7lgNHEQvXeV_oav_dXjjsnxDxd5bQJsQ',
+        link: 'http://mirzamak.by/',
       }, 
       {
-        attractionNameEN: "",
-        attractionNameRU: '',
-        attractionNameAM: '',
+        attractionNameEN: "Belarusian Great Patriotic War Museum",
+        attractionNameRU: 'Музей истории Великой Отечественной войны',
+        attractionNameAM: 'Հայրենական մեծ պատերազմի պատմության թանգարան',
         descriptionEN:
-          "",
+          "The Belarusian Great Patriotic War Museum is a museum in Minsk, Belarus. The conception of a museum commemorating the Great Patriotic War after the end of Nazi occupation sprung up even before the close of the war. The museum first opened shortly after the liberation of Minsk from the Nazi invaders, on 25 October 1944, making it the first World War II museum to open during the course of the war.[2] It moved to its current location in 2014. The museum has 24 exhibition halls. As of 2012 there were 142,676 items in the museum's collection. The museum staff also engages in historical research: particular areas include Belarusians in the Red Army, local anti-fascist and partisan activity, and the history of the Auschwitz death camp.",
         descriptionRU:
-          '',
+          'Белорусский государственный музей истории Великой Отечественной войны — государственное учреждение культуры Республики Беларусь, первый в мире музей истории Великой Отечественной войны, крупнейшее собрание артефактов по истории Великой Отечественной войны. Торжественное открытие нового здания музея состоялось 2 июля 2014 года. Новое здание музея, по проекту архитектора В. В. Крамаренко, в комплексе с обелиском «Минск — город-герой» составляет единый архитектурный ансамбль. В музее 10 экспозиционных залов и зал Победы (расположен под стеклянным куполом). Над куполом развивается Государственный флаг СССР как Символ Знамени Победы. Он представляет собой полотнище красного цвета с изображением пятиконечной звезды, серпа и молота. Зал Победы является мемориальным (увековечены имена Героев Советского Союза уроженцев Беларуси, или получивших звание героя на территории Беларуси, имена полных кавалеров Ордена Славы, перечислены воинские формирования, получившие почётные наименования за освобождение Беларуси).',
         descriptionAM:
           'ХЗ',
         photo:
-          '',
-        link: '',
+          'https://t3.gstatic.com/images?q=tbn:ANd9GcSBkbAJXgMNH77p2dNL2P5BYJgyKf7Fg7vL7BkPvyzHw6sxJxEfMOGfx_Z9FBI2oQYU3WCJhLHuH5O4pvCcFrKGUA',
+        link: 'http://www.warmuseum.by/',
       }, 
       {
-        attractionNameEN: "",
-        attractionNameRU: '',
-        attractionNameAM: '',
+        attractionNameEN: "National Opera and Ballet of Belarus",
+        attractionNameRU: 'Большой театр Беларуси',
+        attractionNameAM: 'Բելառուսի Մեծ թատրոն',
         descriptionEN:
-          "",
+          'The National Academic Grand Opera and Ballet Theatre of the Republic of Belarus (Belarusian: Нацыянальны акадэмічны Вялікі тэатр оперы і балета) is located in a park in the Trinity Hill district of Minsk. Local people call it the "Opierny Teatr" (Belarusian) or the "Opera and Ballet Theatre." While the theatre opened on 15 May 1933, in the beginning, it did not have its own performance venue. Until 1938, the troupe performed at the Belarusian Drama Theatre building. The troupe tours internationally. Fans from Spain, Russia, Germany, Poland, Switzerland, Israel, Portugal, and China are well acquainted with the repertoire of the Belarusian theatre. National Opera and Ballet of Belarus performs annually at the German festival "Classic Open Air."',
         descriptionRU:
-          '',
+          'Большой театр Беларуси (белор. Вялікі тэатр Беларусi) — единственный оперный театр и крупнейший театр в Белоруссии, расположенный в Минске. Здание театра является образцом советского довоенного конструктивизма (авторы — И. Г. Лангбард и Г. Лавров), имеет статус памятника архитектуры национального значения. В театре существуют оперная и балетная труппы, симфонический оркестр, хор, Детский музыкальный театр-студия, творческий коллектив "Белорусская Капелла". В настоящее время в репертуаре Большого театра Беларуси более 80 названий опер и балетов (национальные спектакли, шедевры мировой классики и современные постановки). Более 60 премьерных постановок осуществлено в период с 2009 по 2019 год.',
         descriptionAM:
           'ХЗ',
         photo:
-          '',
-        link: '',
+          'https://t3.gstatic.com/images?q=tbn:ANd9GcRR_ipv2-D5KyEn5knyiQaJjoofKFuhf5yRmMEPWE1WeH3bT3sSB0Gim3IO37Gq58PY62IYzrnK_fiyo6_1CTed8Q',
+        link: 'https://bolshoibelarus.by/',
       }, 
       {
-        attractionNameEN: "",
-        attractionNameRU: '',
-        attractionNameAM: '',
+        attractionNameEN: "Belovezhskaya Pushcha",
+        attractionNameRU: 'Беловежская пуща',
+        attractionNameAM: 'Բիալովիեզա անտառ',
         descriptionEN:
-          "",
+          "Belovezhskaya Pushcha  is one of the last and largest remaining parts of the immense primeval forest that once stretched across the European Plain. The forest is home to 800 European bison, Europe's heaviest land animal. UNESCO's Man and the Biosphere Programme designated the Polish Biosphere Reserve Białowieża in 1976 and the Belarusian Biosphere Reserve Belovezhskaya Puschcha in 1993.[4] In 2015, the Belarusian Biosphere Reserve occupied the area of 216,200 ha (2,162 km2; 835 sq mi), subdivided into transition, buffer and core zones.[5] The forest has been designated a UNESCO World Heritage Site[6] and an EU Natura 2000 Special Area of Conservation. The World Heritage Committee by its decision of June 2014 approved the extension of the UNESCO World Heritage site 'Belovezhskaya Pushcha/Białowieża Forest, Belarus, Poland', which became 'Białowieża Forest, Belarus, Poland'. It straddles the border between Poland (Podlaskie Voivodeship) and Belarus (Brest and Grodno voblasts), and is 70 kilometres (43 miles) north of Brest, Belarus and 62 kilometres (39 miles) southeast of Białystok, Poland. The Białowieża Forest World Heritage site covers a total area of 141,885 ha (1,418.85 km2; 547.82 sq mi). Since the border between the two countries runs through the forest, there is a border crossing available for hikers and cyclists.",
         descriptionRU:
-          '',
+          'Белове́жская пу́ща — наиболее крупный остаток реликтового первобытного равнинного леса, который, согласно представлениям, сложившимся в современной науке, в доисторические времена произрастал на территории Европы. Постепенно он был вырублен, но в относительно нетронутом состоянии в виде крупного массива сохранился только в Беловежском регионе на территории современных Белоруссии и Польши. Беловежскую пущу относят к экорегиону под названием «сарматский смешанный лес». Через Беловежскую пущу проходит государственная граница между Польшей и Белоруссией. Рядом с Пущей находится водораздел Балтийского и Чёрного морей. Для сохранения уникальной природы в Беловежской пуще выделены четыре функциональные зоны с различным режимом охраны: заповедная зона, зона регулируемого пользования, рекреационная и хозяйственная зоны. Кроме того, вокруг Пущи создана охранная (буферная) зона. В рамках программы ЮНЕСКО «Человек и биосфера» в 1976 году в польской части Пущи создан биосферный заповедник «Беловежа», а в 1993 году в белорусской части Пущи — биосферный заповедник «Беловежская пуща» с площадью 216,2 тыс. га (2015), имеющий зону ядра, буферную и переходную зоны. В 1979 году решением ЮНЕСКО Беловежский национальный парк (Польша) включён в Список Всемирного наследия.',
         descriptionAM:
           'ХЗ',
         photo:
-          '',
-        link: '',
+          'https://lh3.googleusercontent.com/proxy/bR0D4ilZt3GMNF3bchWhAAYjcq0Ckd-vDRo5w7vznS1TtsojPsnZ8jjaMQaXEUI5Hwbbph7uRWUnrW4',
+        link: 'https://npbp.by/',
       }, 
       {
-        attractionNameEN: "",
-        attractionNameRU: '',
-        attractionNameAM: '',
+        attractionNameEN: "Ruzhany Palace",
+        attractionNameRU: 'Ружанский замок',
+        attractionNameAM: 'Ռուժանի պալատ',
         descriptionEN:
-          "",
+          "Ruzhany Palace  is a ruined palace compound in Ruzhany village, Pruzhany Raion (district), Brest Voblast (province), Western Belarus. Between the 16th and 19th centuries Ruzhany, then called Różany, was the main seat of the senior line of the Sapieha noble family, known as the Sapiehas of Ruzhany. The castle is currently undergoing systematic reconstruction, with the palace ornate gate and entry building being already restored. Ruzhany began its life in the late 16th century as the site of Lew Sapieha's castle, the palace being completed in 1602. The Sapieha residence was destroyed in the course of the internecine strife in the Grand Duchy of Lithuania when it was attacked by Michał Serwacy Wiśniowiecki's forces in 1700. By the time of King Stanisław II's visit in 1784, work on the palace had been suspended. The Sapieha estates were nationalised in the aftermath of the November Uprising (1831). Three years later, the palace compound was sold to be used as a textile mill and weaving factory",
         descriptionRU:
-          '',
+          'Ружа́нский дворе́ц (белор. Ружанскі палац) — один из крупнейших дворцовых комплексов Белоруссии XVII—XVIII вв., собственность и резиденция князей Сапег. Построен в 1784—1786 гг. в переходном от барокко к классицизму стиле архитектором Я. С. Беккером на основе стен предыдущего дворца начала XVII в. Разрушен во время Великой Отечественной войны. В 1598 году Ружаны купил канцлер великий литовский Лев Сапега. Он построил здесь в 1602 году замок с тремя башнями, который имел скорее оборонительные функции. Неизвестно имя архитектора, однако в старинных ружанских записях, датированных 1602-м годом, упоминается о крупномасштабных строительных работах, без указания места проведения застройки. Первоначально дворец имел оборонительный характер — двухэтажный крестовидный в плане каменный объём дополняли три четырёхгранные башни. В центральной части дворца находились парадная зала и вестибюль с двусторонней лестницей, в боковых частях — жилые помещения, кабинет, библиотека. Анфилада помещений на первом этаже перекрывалась сводчатыми, а на втором — балочными перекрытиями. Под постройкой в больших сводчатых подвалах находились арсенал, архив, запасы провизии.',
         descriptionAM:
           'ХЗ',
         photo:
-          '',
-        link: '',
+          'https://www.belarus.by/dadvimages/001310_654108.jpg',
+        link: 'http://rozana.by/',
       }, 
       {
-        attractionNameEN: "",
-        attractionNameRU: '',
-        attractionNameAM: '',
+        attractionNameEN: "Church of Saints Simon and Helena",
+        attractionNameRU: 'Костёл Святого Симеона и Святой Елены',
+        attractionNameAM: 'Սուրբ Սիմեոն և Սուրբ Հելենա եկեղեցիներ',
         descriptionEN:
-          "",
+          "The Church of Saints Simon and Helena (Belarusian: Касцёл святых Сымона і Алены) (Polish: Kościół św. Szymona i św. Heleny w Mińsku), also known as the Red Church (Belarusian: Чырвоны касцёл) (Polish: Czerwony Kościół), is a Roman Catholic church on Independence Square in Minsk, Belarus. This neo-Romanesque church was designed by Polish architects Tomasz Pajzderski and Władysław Marconi. The cornerstone was laid in 1905 and the church was completed in 1910. The bricks for its walls were sourced from Częstochowa, whilst the roof tiles came from Włocławek. Its construction was financed by Edward Woyniłłowicz (1847-1928), a prominent Belarusian-Polish landowner, businessman and civic activist. The church was named and consecrated in memory of Woyniłłowicz's two deceased children, Szymon and Helena.",
         descriptionRU:
-          '',
+          'Костёл святого Симеона и святой Елены (белор. Касцёл святога Сымона і святой Алены, польск. Kościół św. Szymona i Heleny), часто называемый также Красным костёлом — наиболее известный католический храм Минска. Строительство храма началось в 1905 году. Строительством руководил минский дворянин Эдвард Войнилович, он же пожертвовал крупную сумму на строительство храма. Автором проекта стал польский архитектор Томаш Пайздерский. Костёл получил имена святых Симеона и Елены в память двух рано умерших детей Войниловича. Осенью 1908 года были завершены основные строительные работы, в 1909 году на башню подняты колокола, а 20 сентября 1910 года архиепископ Ключинский освятил храм. Храм был целиком построен из красного кирпича, что принесло ему народное прозвище «Красный костёл»',
         descriptionAM:
           'ХЗ',
         photo:
-          '',
-        link: '',
+          'https://realt.by/uploads/pics/333727066.jpg',
+        link: 'https://chyrvony.by/',
       }, 
     ]},
+
 ];
