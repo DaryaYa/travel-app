@@ -1,10 +1,9 @@
 import { CountryActionTypes } from './../actionsTypes/country.actionTypes';
-import { CountryShortResponseInterface } from './../../types/country.interface';
-import { CountryInterface } from './../../../../src/resources/countries/country.types';
+import { CountryResponseInterface, CountryShortResponseInterface } from './../../types/country.interface';
 
 export interface CountryStateInterface {
   loading: boolean;
-  countries: CountryInterface[];
+  countries: CountryResponseInterface[];
   shorData: CountryShortResponseInterface[] | null;
   error: string | null;
 }
@@ -15,7 +14,7 @@ interface GetCountryActionInterface {
 
 interface GetCountrySuccessActionInterface {
   type: CountryActionTypes.GET_CURRENT_COUNTRY_SUCCESS;
-  payload: CountryInterface;
+  payload: CountryResponseInterface;
 }
 
 interface GetCountryFailureActionInterface {

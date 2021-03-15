@@ -1,6 +1,6 @@
 import { CountryInterface } from './../../../../src/resources/countries/country.types';
 import { Response } from 'express';
-import { CountryShortResponseInterface } from './../../types/country.interface';
+import { CountryResponseInterface, CountryShortResponseInterface } from './../../types/country.interface';
 import { CountryActionTypes } from './../actionsTypes/country.actionTypes';
 import { Dispatch } from 'redux';
 import axios, { AxiosResponse } from 'axios';
@@ -30,7 +30,7 @@ export const getCountryAction = (id: string) => {
   return async (dispatch: Dispatch<CountryActionInterface>) => {
     try {
       dispatch({ type: CountryActionTypes.GET_CURRENT_COUNTRY });
-      const response: AxiosResponse<CountryInterface> = await axios.get(
+      const response: AxiosResponse<CountryResponseInterface> = await axios.get(
         `/api/country/${id}`,
       );
       dispatch({
