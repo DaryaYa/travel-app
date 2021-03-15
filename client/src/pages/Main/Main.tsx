@@ -36,7 +36,7 @@ const Main = () => {
                 capinalName={country.capitalEN}
                 countryFoto={country.photo}
                 countryName={country.nameEN}
-                classNames="main-page__country-card col-12 col-xl-3 col-lg-4  col-md-6 mb-3"
+                classNames="main-page__country-card col-12 col-xl-4 col-lg-4  col-md-6 mb-3"
                 onClick={() => cardClickHandler(country?._id)}
               />
             ))}
