@@ -37,7 +37,9 @@ export interface CountryShortResponseInterface {
   _id?: string;
   nameEN: string;
   nameRU: string;
+  nameAM: string;
   capitalEN: string;
   capitalRU: string;
+  capitalAM: string;
   photo: string;
 }

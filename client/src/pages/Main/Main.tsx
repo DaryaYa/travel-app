@@ -1,50 +1,54 @@
 import React, { useState, useEffect } from 'react';
+
+import { useDispatch } from 'react-redux';
+
+import { useHistory } from 'react-router';
+
+import { getShortDataAction } from '../../store/action-creators/countryActionCreater';
+import CountryCard from '../../components/CountryCard/CountryCard';
+import { useTypesSelector } from '../../components/hooks/useTypedSelector';
 import Layout from '../../components/Layout/Layout';
-import Rating from '../../components/Rating';
-import { Widget } from '../../components/Widget';
-import LeaveRatingForm from '../../components/LeaveRatingForm';
+import Spinner from '../../components/Spinner/Spinner';
 
 import './Main.scss';
-import { useDispatch } from 'react-redux';
-import { getShortDataAction } from '../../store/action-creators/countryActionCreater';
 
 const Main = () => {
-  // HARDCODE
-  const [reviewsArr, setReviewsArr] = useState([1, 3]);
-  const [rating, setRating] = useState(
-    reviewsArr.reduce((acc, cur) => acc + cur) / reviewsArr.length,
-  );
-
-  useEffect(() => {
-    setRating(reviewsArr.reduce((acc, cur) => acc + cur) / reviewsArr.length);
-  }, [reviewsArr]);
-
-  const onChangeHandler = (val: number) => {
-    setReviewsArr([...reviewsArr, val]);
-  };
-
-  const RenderRating: React.FC = () => (
-    <>
-      <Rating value={rating} text={`${reviewsArr.length} reviews`} />
-    </>
-  );
-
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getShortDataAction());
-  });
+    if (!shorData) {
+      dispatch(getShortDataAction());
+    }
+  }, []);
+
+  const { loading, shorData } = useTypesSelector(state => state.country);
+
+  const history = useHistory();
+  const cardClickHandler = (id: string | undefined) => {
+    history.push(`/country/${id}`);
+  };
 
   return (
     <>
       <Layout>
-        Main page
-        <RenderRating />
-        <LeaveRatingForm onChangeHandler={onChangeHandler} />
-        <Widget
-          timeZone={'Europe/Moscow'}
-          language={'en-GB'}
-          currency={'NOK'}
-        />
+        {!loading && (
+          <div className="row">
+            {shorData?.map(country => (
+              <CountryCard
+                key={country._id}
+                capinalName={country.capitalEN}
+                countryFoto={country.photo}
+                countryName={country.nameEN}
+                classNames="main-page__country-card col-12 col-xl-3 col-lg-4  col-md-6 mb-3"
+                onClick={() => cardClickHandler(country?._id)}
+              />
+            ))}
+          </div>
+        )}
+        {loading && (
+          <div className="row">
+            <Spinner classNames="main-page__spinner" />
+          </div>
+        )}
       </Layout>
     </>
   );

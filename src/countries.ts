@@ -962,8 +962,7 @@ export const countries = [
       },
     ],
     flag: 'https://restcountries.eu/data/cze.svg',
-    photo:
-      'https://images.unsplash.com/photo-1541849546-216549ae216d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJhZ3VlfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80',
+    photo: 'https://static.dw.com/image/50873976_303.jpg',
     videoId: 'MRGv2TY6S_o',
     attractions: [
       {
