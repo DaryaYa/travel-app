@@ -14,8 +14,8 @@ type RatingProps = {
 
 const Rating: React.FC<RatingProps> = ({ value, text }) => {
   return (
-    <div>
-      <span>
+    <div className="rating">
+      <span className="rating-star">
         {value >= 1
           ? <BsStarFill style={iconStyles}/>
           : value >= 0.5
@@ -23,7 +23,7 @@ const Rating: React.FC<RatingProps> = ({ value, text }) => {
           : <BsStar style={iconStyles} />
         }
       </span>
-      <span>
+      <span className="rating-star">
         {value >= 2
           ? <BsStarFill style={iconStyles} />
           : value >= 1.5
@@ -31,7 +31,7 @@ const Rating: React.FC<RatingProps> = ({ value, text }) => {
           : <BsStar style={iconStyles} />
         }
       </span>
-      <span>
+      <span className="rating-star">
         {value >= 3
           ? <BsStarFill style={iconStyles} />
           : value >= 2.5
@@ -39,7 +39,7 @@ const Rating: React.FC<RatingProps> = ({ value, text }) => {
           : <BsStar style={iconStyles} />
         }
       </span>
-      <span>
+      <span className="rating-star">
         {value >= 4
           ? <BsStarFill style={iconStyles} />
           : value >= 3.5
@@ -47,7 +47,7 @@ const Rating: React.FC<RatingProps> = ({ value, text }) => {
           : <BsStar style={iconStyles} />
         }
       </span>
-      <span>
+      <span className="rating-star">
         {value >= 5
           ? <BsStarFill style={iconStyles} />
           : value >= 4.5
@@ -55,7 +55,7 @@ const Rating: React.FC<RatingProps> = ({ value, text }) => {
           : <BsStar style={iconStyles} />
         }
       </span>
-      <span>{text && text}</span>
+      <span className="total-votes">{text && text}</span>
     </div>
   )
 }

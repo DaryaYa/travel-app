@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FaTemperatureHigh } from 'react-icons/fa';
+import { BsDropletHalf } from 'react-icons/bs';
+import { GiWindsock, GiPerson } from 'react-icons/gi';
 
 const REACT_APP_OPEN_WEATHER = '985407983380c5d99fa1bb48a8e0eec0';
 
@@ -41,17 +44,34 @@ export const Weather = ({city, language}) => {
      const url='https://openweathermap.org/img/wn/'
 
     return (
-      <div className="d-inline-flex flex-column justify-content-center border border-info rounded">
+      <div className="weather d-inline-flex flex-column justify-content-center">
         <img
           alt="weather icon"
           className="mx-auto d-block"
           src={`${url}${weather.iconCode}@2x.png`}
         />
-        <span>description: {weather.description}</span>
-        <span>temperature: {Math.round(weather.temp)}°C</span>
-        <span>humidity: {weather.humidity}%</span>
-        <span>feels like: {Math.round(weather.feels_like)}°C</span>
-        <span>wind speed: {Math.round(weather.wind)}m/s</span>
+
+        <div className="weather-parameter description">{weather.description}</div>
+
+        <div className="weather-parameter temperature">
+          <FaTemperatureHigh />
+          <span className="text">{Math.round(weather.temp)}°C</span>
+        </div>
+
+        <div className="weather-parameter humidity">
+          <BsDropletHalf />
+          <span className="text">{weather.humidity}%</span>
+        </div>
+
+        <div className="weather-parameter feels-like">
+          <GiPerson />
+          <span className="text">{Math.round(weather.feels_like)}°C</span>
+        </div>
+
+        <div className="weather-parameter wind-speed">
+          <GiWindsock />
+          <span className="text">{Math.round(weather.wind)}m/s</span>
+        </div>
       </div>
     );
     

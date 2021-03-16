@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { GiWatch } from 'react-icons/gi';
 
 export const Clock = ({ timeZone, language }) => {
 
@@ -30,8 +31,12 @@ export const Clock = ({ timeZone, language }) => {
   }, [time]);
 
   return (
-    <span className="border border-danger rounded">
-      {time}
-    </span>
+    <div className="time">
+      <div className="time-icon">
+        <GiWatch />
+      </div>
+      
+      <div className="time-value">{time}</div>
+    </div>
   );
 };
