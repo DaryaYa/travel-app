@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
 import './RegisterForm.scss';
+import { toast } from 'react-toastify';
 
 interface AuthFormInterface {
   classNames?: string;
@@ -70,9 +71,10 @@ const RegisterForm = ({ classNames }: AuthFormInterface) => {
       const user = await axios.post('/api/user', formData);
       setForm({ email: '', password1: '', password2: '', username: '' });
       history.push('/auth');
+      toast.success('Теперь вы можете войти');
     } catch (err) {
       setIsEnabledBtn(true);
-      console.log(err.response.data.message);
+      toast.error(err.response.data.message);
     }
   };
 

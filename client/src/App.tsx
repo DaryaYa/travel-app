@@ -1,20 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Auth from './pages/Auth/Auth';
 import Country from './pages/Country/Country';
 import Main from './pages/Main/Main';
-import { useTypesSelector } from './components/hooks/useTypedSelector';
 
 const App = () => {
-  const notify = () => toast('Wow so easy!');
-  const { error } = useTypesSelector(state => state.user);
-  if (error) {
-    notify();
-    console.log(1);
-  }
   return (
     <>
       <Switch>

@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import { Dispatch } from 'redux';
 import axios, { AxiosResponse } from 'axios';
 
@@ -8,6 +9,7 @@ import {
 } from './../../types/user.interface';
 
 import { UserActionInterface } from '../types/user.interface';
+import { Toast } from 'react-toastify/dist/components';
 
 export const getUserAction = (userData: UserRequestInterface) => {
   return async (dispatch: Dispatch<UserActionInterface>) => {
@@ -23,6 +25,7 @@ export const getUserAction = (userData: UserRequestInterface) => {
         type: UserActionTypes.LOGIN_FAILURe,
         payload: e.response.data.message,
       });
+      toast.error(e.response.data.message);
     }
   };
 };
