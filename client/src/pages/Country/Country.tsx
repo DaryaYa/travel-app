@@ -19,57 +19,60 @@ import { CountryResponseInterface } from '../../types/country.interface';
 const Country = () => {
   let { id } = useParams<{ id: string }>();
 
-  const { loading, countries } = useTypesSelector(state => state.country)
+  const { loading, countries } = useTypesSelector(state => state.country);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!countries.find((el) => String(el._id) === id)) {
-      dispatch(getCountryAction(id))
+    if (!countries.find(el => String(el._id) === id)) {
+      dispatch(getCountryAction(id));
     }
-  }, [])
+  }, []);
 
-  // let currentCountry: CountryResponseInterface | undefined = countries.find((el) => String(el._id) === id);
+  const currentCountry = countries.find(el => String(el._id) === id);
 
-  // let images = countries[0].attractions.map((el) => {
-  //   return {
-  //     original: el.photo,
-  //     thumbnail: el.photo,
-  //     description: el.attractionNameEN,
-  //   }
-  // })
+  let images = currentCountry?.attractions.map(el => {
+    return {
+      original: el.photo,
+      thumbnail: el.photo,
+      description: el.attractionNameEN,
+    };
+  });
 
   return (
     <>
-      {loading 
-        ? <Spinner />
-        : <Layout>
-            <img
-              src={countries[0].photo}
-              style={{width: '200px'}}
-              alt={countries[0].nameEN}
-            />
-            <div>{countries[0].nameEN}</div>
-            <div>{countries[0].capitalEN}</div>
-            <img
-              src={countries[0].flag}
-              style={{width: '50px'}}
-              alt={countries[0].nameEN}
-            />
-            <Widget
-              timeZone={countries[0].capitalTimezone}
-              language={'en-GB'}
-              currency={countries[0].currencies[0].code}
-              city={countries[0].capitalEN}
-            />
-            {/* <PhotoGallery images={images} /> */}
-            <Video videoId={countries[0].videoID} />
-            <YandexMap
-              latitude={countries[0].latlng[0]}
-              longitude={countries[0].latlng[1]}
-              geoData={countries[0].geoData[0]}
-            />
-          </Layout>
-        }
+      {loading || !currentCountry ? (
+        <Spinner />
+      ) : (
+        <Layout>
+          <img
+            src={currentCountry?.photo}
+            style={{ width: '200px' }}
+            alt={currentCountry?.nameEN}
+          />
+          <div>{currentCountry?.nameEN}</div>
+          <div>{currentCountry?.capitalEN}</div>
+          <img
+            src={currentCountry?.flag}
+            style={{ width: '50px' }}
+            alt={currentCountry?.nameEN}
+          />
+          <Widget
+            timeZone={currentCountry?.capitalTimezone}
+            language={'en-GB'}
+            currency={currentCountry?.currencies[0].code}
+            city={currentCountry?.capitalEN}
+          />
+
+          {images && <PhotoGallery images={images} />}
+
+          <Video videoId={currentCountry?.videoID} />
+          <YandexMap
+            latitude={currentCountry?.latlng[0]}
+            longitude={currentCountry?.latlng[1]}
+            geoData={currentCountry?.geoData[0]}
+          />
+        </Layout>
+      )}
     </>
   );
 };

@@ -2,8 +2,8 @@ import React from 'react';
 import YouTube from 'react-youtube';
 
 type VideoProps = {
-  videoId: string,
-}
+  videoId?: string;
+};
 
 interface Opts {
   height: string;
@@ -19,14 +19,14 @@ const Video: React.FC<VideoProps> = ({ videoId }) => {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
     },
-  }
+  };
 
   const _onReady = (event: any) => {
     // access to player in all event handlers via event.target
     event.target.pauseVideo();
-  }
+  };
 
   return <YouTube videoId={videoId} opts={opts} onReady={_onReady} />;
-}
+};
 
 export default Video;
