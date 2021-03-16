@@ -55,11 +55,11 @@ const Country = () => {
   // HARDCODE END
 
   return (
-    <>
-      {loading || !currentCountry ? (
-        <Spinner />
-      ) : (
         <Layout>
+          {loading || !currentCountry ? 
+            <Spinner classNames='main-spinner' />
+           : (
+          <>
           <img
             src={currentCountry?.photo}
             style={{ width: '200px' }}
@@ -94,9 +94,9 @@ const Country = () => {
             longitude={currentCountry?.latlng[1]}
             geoData={currentCountry?.geoData[0]}
           />
+          </>
+        )}
         </Layout>
-      )}
-    </>
   );
 };
 
