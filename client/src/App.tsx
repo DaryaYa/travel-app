@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import Auth from './pages/Auth/Auth';
 import Country from './pages/Country/Country';
 import Main from './pages/Main/Main';
+import { useTypesSelector } from './components/hooks/useTypedSelector';
 
 const App = () => {
-  const a = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(e.currentTarget.textContent);
-  };
   return (
     <>
       <Switch>
