@@ -15,10 +15,16 @@ export interface LoginFailureActionInterface {
   payload: string;
 }
 
+export interface LogoutInterface {
+  type: UserActionTypes.LOGOUT;
+  payload: null;
+}
+
 export type UserActionInterface =
   | LoginActionInterface
   | LoginFailureActionInterface
-  | LoginSuccessActionInterface;
+  | LoginSuccessActionInterface
+  | LogoutInterface;
 
 export interface UserStateInterface {
   loading: boolean;
