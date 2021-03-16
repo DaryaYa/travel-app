@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Auth from './pages/Auth/Auth';
 import Country from './pages/Country/Country';
 import Main from './pages/Main/Main';
 
 const App = () => {
-  const a = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(e.currentTarget.textContent);
-  };
   return (
     <>
       <Switch>
@@ -16,6 +16,8 @@ const App = () => {
         <Route path={'/auth'} component={Auth} exact />
         <Redirect to={'/main'} />
       </Switch>
+
+      <ToastContainer />
     </>
   );
 };
