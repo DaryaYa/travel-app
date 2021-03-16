@@ -29,3 +29,10 @@ export const getUserAction = (userData: UserRequestInterface) => {
     }
   };
 };
+
+export const logoutUserAction = () => {
+  return {
+    type: UserActionTypes.LOGOUT,
+    payload: null,
+  };
+};
