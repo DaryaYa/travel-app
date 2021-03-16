@@ -29,7 +29,7 @@ export interface CountryResponseInterface {
   languages: { nameEN: string; nameRU: string; nativeName: string }[];
   flag: string;
   photo: string;
-  videoID: string;
+  videoId: string;
   attractions: AttractionResponseInterface[];
 }
 

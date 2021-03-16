@@ -65,7 +65,7 @@ const Country = () => {
 
           {images && <PhotoGallery images={images} />}
 
-          <Video videoId={currentCountry?.videoID} />
+          <Video videoId={currentCountry?.videoId} />
           <YandexMap
             latitude={currentCountry?.latlng[0]}
             longitude={currentCountry?.latlng[1]}
