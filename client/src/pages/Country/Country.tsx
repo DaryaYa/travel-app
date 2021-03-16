@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { CountryInterface } from '../../../../src/resources/countries/country.types';
@@ -8,6 +8,8 @@ import Layout from '../../components/Layout/Layout';
 import Spinner from '../../components/Spinner/Spinner';
 import Widget from '../../components/Widget';
 import PhotoGallery from '../../components/PhotoGallery';
+import Rating from '../../components/Rating';
+import LeaveRatingForm from '../../components/LeaveRatingForm';
 import Video from '../../components/Video';
 import YandexMap from '../../components/YandexMap/YandexMap';
 import { getCountryAction } from '../../store/action-creators/countryActionCreater';
@@ -38,6 +40,20 @@ const Country = () => {
     };
   });
 
+  // HARDCODE START
+  const [reviewsArr, setReviewsArr] = useState([1, 3]);
+  const [rating, setRating] = 
+    useState( reviewsArr.reduce((acc, cur) => acc + cur) / reviewsArr.length );
+
+  useEffect(() => {
+    setRating(reviewsArr.reduce((acc, cur) => acc + cur) / reviewsArr.length);
+  }, [reviewsArr])
+
+  const onChangeHandler= (val: number) => {
+    setReviewsArr([...reviewsArr, val]);
+  }
+  // HARDCODE END
+
   return (
     <>
       {loading || !currentCountry ? (
@@ -64,6 +80,13 @@ const Country = () => {
           />
 
           {images && <PhotoGallery images={images} />}
+
+          <Rating
+            value={rating}
+            text={`${reviewsArr.length.toString()} reviews`}
+          />
+
+          <LeaveRatingForm onChangeHandler={onChangeHandler} />
 
           <Video videoId={currentCountry?.videoId} />
           <YandexMap
