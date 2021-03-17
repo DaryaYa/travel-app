@@ -31,6 +31,16 @@
   background: #d6e9f8;
 }
 
+button {
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
 .animated-button {
   position: relative;
   margin-right: 7px;

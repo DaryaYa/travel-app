@@ -97,36 +97,36 @@ const Country = () => {
           <div className="country-description col-xs-12">
             <div className="description-table">
               <div className="table-row dt-region">
-                <div className="dt-parameter">Регион</div>
-                <div className="dt-value">Европа</div>
+                <div className="dt-parameter">Region</div>
+                <div className="dt-value">{currentCountry?.regionEN}</div>
               </div>
 
               <div className="table-row dt-language">
-                <div className="dt-parameter">Язык</div>
-                <div className="dt-value">Норвежский</div>
+                <div className="dt-parameter">Language</div>
+                <div className="dt-value">{currentCountry?.languages[0].nameEN}</div>
               </div>
 
               <div className="table-row dt-population">
-                <div className="dt-parameter">Население</div>
-                <div className="dt-value">5223256 чел.</div>
+                <div className="dt-parameter">Population</div>
+                <div className="dt-value">{`${currentCountry?.population} people`}</div>
               </div>
 
               <div className="table-row dt-area">
-                <div className="dt-parameter">Площадь</div>
-                <div className="dt-value">323802.0 км²</div>
+                <div className="dt-parameter">Area</div>
+                <div className="dt-value">{`${currentCountry?.area} km²`}</div>
               </div>
 
               <div className="table-row dt-currency">
-                <div className="dt-parameter">Валюта</div>
-                <div className="dt-value">Норвежская крона</div>
+                <div className="dt-parameter">Currency</div>
+                <div className="dt-value">{currentCountry?.currencies[0].nameEN}</div>
               </div>
 
               <div className="table-row dt-borders">
-                <div className="dt-parameter">Соседи</div>
+                <div className="dt-parameter">Neighbors</div>
                 <div className="dt-value">
-                  <span>Финляндия</span>
-                  <span>Швеция</span>
-                  <span>Россия</span>
+                  {currentCountry?.bordersEN?.map((el) => {
+                    return <span>{el}</span>
+                  })}
                 </div>
               </div>
             </div>
