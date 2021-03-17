@@ -2,7 +2,7 @@ import { Navbar, Form, FormControl, Button, Image } from 'react-bootstrap';
 import { FcBusinessman } from 'react-icons/fc';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiLogIn, BiLogOut } from 'react-icons/bi';
-import { FaUserTimes } from 'react-icons/fa';
+import { FaUserTimes, FaGamepad } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import { useTypesSelector } from './hooks/useTypedSelector';
@@ -74,6 +74,11 @@ const Header = () => {
       <Navbar bg="primary" expand="md">
         <Link to="/main" style={{ color: 'black' }}>
           <img className="logo" src={logo} alt="Logo" />
+        </Link>
+        <Link to="/quizz-game">
+          <FaGamepad
+            style={{color: 'white', cursor: 'pointer', fontSize: '3rem', marginLeft: '40px'}}
+          />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
