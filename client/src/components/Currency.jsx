@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import usa from '../assets/images/usa.png';
 import euro from '../assets/images/euro.png';
 import russia from '../assets/images/russia.png';
+import { GiWallet } from 'react-icons/gi';
 
 const REACT_APP_CUR_CONVERTER1 = 'fb007c3111e224ca901d';
 const REACT_APP_CUR_CONVERTER = 'f474c406f8fb4cb30e80';
@@ -35,17 +36,25 @@ export const Currency = ({ currency }) => {
   }, [currency]);
 
   return (
-    
-    <span className="d-inline-flex flex-column justify-content-center border border-success rounded">
-      <span>
-       <img src={usa} /> 1 USD = {rate.usd[1]} {currency}
-      </span>
-      <span>
-       <img src={euro} /> 1 EUR = {rate.eur[1]} {currency}
-      </span>
-      <span>
-       <img src={russia} /> 100 RUB = {(rate.rub[1]*100)} {currency}
-      </span>
-    </span>
+    <div className="currency d-inline-flex flex-column justify-content-center">
+      <div className="currency-icon">
+        <GiWallet />
+      </div>
+      
+      <div className="currency-ratio">
+       <img src={usa} />
+       <span>1 USD = {rate.usd[1]} {currency}</span>
+      </div>
+
+      <div className="currency-ratio">
+       <img src={euro} />
+       <span>1 EUR = {rate.eur[1]} {currency}</span>
+      </div>
+
+      <div className="currency-ratio">
+       <img src={russia} />
+       <span>100 RUB = {(rate.rub[1]*100)} {currency}</span>
+      </div>
+    </div>
   );
 };

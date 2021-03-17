@@ -1,6 +1,10 @@
+import { toast } from 'react-toastify';
 import { CountryInterface } from './../../../../src/resources/countries/country.types';
 import { Response } from 'express';
-import { CountryResponseInterface, CountryShortResponseInterface } from './../../types/country.interface';
+import {
+  CountryResponseInterface,
+  CountryShortResponseInterface,
+} from './../../types/country.interface';
 import { CountryActionTypes } from './../actionsTypes/country.actionTypes';
 import { Dispatch } from 'redux';
 import axios, { AxiosResponse } from 'axios';
@@ -22,6 +26,7 @@ export const getShortDataAction = () => {
         type: CountryActionTypes.GET_SHORT_DATA_FAILURE,
         payload: err.response.data.message,
       });
+      toast.error(err.response.data.message);
     }
   };
 };
@@ -30,6 +35,7 @@ export const getCountryAction = (id: string) => {
   return async (dispatch: Dispatch<CountryActionInterface>) => {
     try {
       dispatch({ type: CountryActionTypes.GET_CURRENT_COUNTRY });
+
       const response: AxiosResponse<CountryResponseInterface> = await axios.get(
         `/api/country/${id}`,
       );
@@ -42,6 +48,7 @@ export const getCountryAction = (id: string) => {
         type: CountryActionTypes.GET_CURRENT_COUNTRY_FAILURE,
         payload: err.response.data.message,
       });
+      toast.error(err.response.data.message);
     }
   };
 };

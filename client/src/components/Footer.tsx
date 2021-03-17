@@ -17,7 +17,7 @@ const Footer = () => {
       <Container fluid>
         <Row>
           <Col className="pt-2 pb-0">
-            <p>2021</p>
+            <p>© 2021</p>
           </Col>
           <Col className="d-flex justify-content-center pt-2 pb-0">
             <a target="_blank" rel="noreferrer" href="https://github.com/DaryaYa">

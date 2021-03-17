@@ -13,7 +13,7 @@ type PhotoGalleryProps = {
 const PhotoGallery: React.FC<PhotoGalleryProps> = ({ images }) => {
   return (
     <>
-      <ImageGallery items={images} />;
+      <ImageGallery items={images} />
     </>
   );
 };

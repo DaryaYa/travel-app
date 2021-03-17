@@ -1,0 +1,169 @@
+.logo {
+  width: 80px;
+}
+
+main.main {
+  padding: 40px 0;
+}
+
+.country-image img {
+  width: 100%;
+}
+
+h1 {
+  letter-spacing: 2px;
+}
+
+.country-capital {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.country-flag {
+  margin-top: 15px;
+}
+
+.country-widgets {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.weather {
+  .description {
+    text-transform: capitalize;
+  }
+
+  .weather-parameter {
+    min-width: 115px;
+    text-align: center;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+    fill: #607d8b;
+  }
+
+  .text {
+    margin-left: 10px;
+  }
+}
+
+.main-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 180px);
+} 
+
+.weather-parameter + .weather-parameter {
+  margin-top: 6px;
+}
+
+.time-currency {
+  margin-left: 30px;
+  padding-left: 30px;
+  border-left: 1px solid #d8d8d8;
+}
+
+.time-icon,
+.currency-icon {
+  margin-bottom: 20px;
+  line-height: 0;
+  text-align: center;
+
+  svg {
+    width: 50px;
+    height: 50px;
+    fill: #48484a;
+  }
+}
+
+.currency {
+  margin-top: 30px;
+}
+
+.currency-ratio {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 8px;
+  }
+}
+
+.country-description {
+  margin-top: 40px;
+}
+
+.country-media {
+  margin-top: 40px;
+}
+
+.country-gallery-info {
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+
+  .rating-star {
+    line-height: 0;
+  }
+
+  .rating-star + .rating-star {
+    margin-left: 3px;
+  }
+
+  .total-votes {
+    margin-left: 8px;
+  }
+
+  h5 {
+    margin-top: 10px;
+  }
+
+  form {
+    margin-top: 5px;
+  }
+}
+
+.coutry-sight-descr {
+  margin-top: 15px;
+}
+
+.country-video {
+  margin-top: 40px;
+  line-height: 0;
+  text-align: center;
+}
+
+@media all and (max-width: 991px) {
+  .country-gallery-info {
+    margin-top: 25px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .country-widgets {
+    margin-top: 25px;
+  }
+
+  .country-video iframe {
+    height: 350px !important;
+  }
+
+  .map-wrapper {
+    height: 350px;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .country-video iframe {
+    height: 300px !important;
+  }
+
+  .map-wrapper {
+    height: 300px;
+  }
+}

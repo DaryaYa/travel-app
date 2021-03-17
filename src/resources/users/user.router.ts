@@ -16,9 +16,14 @@ export const router = Router();
 router.post('/', async (req: Request, res: Response) => {
   try {
     let userData: CreateUserRequestInterface = req.body;
+    userData = {
+      ...userData,
+      email: userData.email.toLowerCase(),
+    };
 
     if (req.files) {
       const file = req.files.imagine as UploadedFile;
+
       const date = moment().format('DDMMYYYY-HHmmss_SSS');
       const fileFormat = file.name.split('.').pop();
       file.name = `${date}.${fileFormat}`;
@@ -31,9 +36,12 @@ router.post('/', async (req: Request, res: Response) => {
         }
       });
 
-      userData = { ...userData, imgSrc: pathImg.slice(1) };
+      userData = {
+        ...userData,
+        email: userData.email.toLowerCase(),
+        imgSrc: pathImg.slice(1),
+      };
     }
-
     const user = await userService.getByEmail(userData.email);
     if (user) {
       return res
@@ -59,7 +67,8 @@ router.post('/', async (req: Request, res: Response) => {
 
 router.post('/login', async (req: Request, res: Response) => {
   try {
-    const userData: LogInUserRequestInterface = req.body;
+    let userData: LogInUserRequestInterface = req.body;
+    userData = { ...userData, email: userData.email.toLowerCase() };
 
     const user = await userService.login(userData);
     if (!user) {

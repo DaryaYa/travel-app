@@ -7,7 +7,7 @@ function YandexMap({ latitude, longitude, geoData }) {
   const [lang, setLang] = React.useState('ru_RU');
 
   return (
-    <div className="map-wrapper">
+    <div className="map-wrapper col-xs-12">
       <YMaps key={lang} query={{ apikey: 'e6763205-24a3-4522-ae07-e547c476f586', lang }}>
         <Map
           defaultState={{
