@@ -2,6 +2,7 @@ import { Navbar, Form, FormControl, Button, Image } from 'react-bootstrap';
 import { FcBusinessman } from 'react-icons/fc';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiLogIn, BiLogOut } from 'react-icons/bi';
+import { FaUserTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import { useTypesSelector } from './hooks/useTypedSelector';
@@ -25,6 +26,49 @@ const Header = () => {
     marginRight: '10px',
   };
 
+  const RenderUserImage = () => {
+    if (user?.username && user?.imgSrc) {
+      return <Image src={user.imgSrc} style={userImgStyles} rounded  />
+    }
+    if (user?.username && !user?.imgSrc) {
+      return <FcBusinessman style={userImgStyles} />
+    } else {
+      return <FaUserTimes style={userImgStyles} />
+    }
+  }
+
+  const RenderUserGreeting = () => {
+    if (user?.username) {
+      return (
+        <p style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0' }}>
+          Hey, {user.username}!
+        </p>
+      )
+    } else {
+      return null;
+    }
+  }
+
+  const RenderLogInLogOutBtn = () => {
+    if (user?.username) {
+      return (
+        <BiLogOut
+          style={logInBtnStyles}
+          onClick={() => {
+            dispatch(logoutUserAction());
+            localStorage.clear();
+          }}
+        />
+      )
+    } else {
+      return (
+        <Link to="/auth">
+          <BiLogIn style={logInBtnStyles} />
+        </Link>
+      )
+    }
+  }
+
   return (
     <header>
       <Navbar bg="primary" expand="md">
@@ -33,13 +77,9 @@ const Header = () => {
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          {user?.username ? (
-            <p
-              style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0' }}
-            >
-              Hey, {user.username}!
-            </p>
-          ) : null}
+
+          <RenderUserGreeting />
+
           <Form inline className="m-2">
             <FormControl type="text" placeholder="Search" />
             <Button variant="success">
@@ -55,24 +95,11 @@ const Header = () => {
               </Form.Control>
             </Form.Group>
           </Form>
-          {user?.username ? (
-            <Image src={user.imgSrc} style={userImgStyles} roundedCircle />
-          ) : (
-            <FcBusinessman style={userImgStyles} />
-          )}
-          {user?.username ? (
-            <BiLogOut
-              style={logInBtnStyles}
-              onClick={() => {
-                dispatch(logoutUserAction());
-                localStorage.clear();
-              }}
-            />
-          ) : (
-            <Link to="/auth">
-              <BiLogIn style={logInBtnStyles} />
-            </Link>
-          )}
+
+          <RenderUserImage />
+
+          <RenderLogInLogOutBtn />
+          
         </Navbar.Collapse>
       </Navbar>
     </header>
