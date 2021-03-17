@@ -17,30 +17,29 @@ const Header = () => {
     fontSize: '2rem',
     color: 'whitesmoke',
     cursor: 'pointer',
-  }
+  };
 
   const userImgStyles = {
     width: '40px',
     height: '40px',
     marginRight: '10px',
-  }
+  };
 
   return (
     <header>
       <Navbar bg="primary" expand="md">
-        <Link to="/main" style={{color: 'black'}}>
-          <img className="logo" src={logo} alt="Logo"/>
+        <Link to="/main" style={{ color: 'black' }}>
+          <img className="logo" src={logo} alt="Logo" />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          { user?.username
-            ? 
-              <p style={{fontSize: '1.2rem', color: 'white', marginBottom: '0'}}>
-                Hey, {user.username}!
-              </p>
-            : 
-              null
-          }
+          {user?.username ? (
+            <p
+              style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0' }}
+            >
+              Hey, {user.username}!
+            </p>
+          ) : null}
           <Form inline className="m-2">
             <FormControl type="text" placeholder="Search" />
             <Button variant="success">
@@ -56,24 +55,24 @@ const Header = () => {
               </Form.Control>
             </Form.Group>
           </Form>
-          { user?.username
-            ?
-              <Image
-                src={user.imgSrc}
-                style={userImgStyles}
-                roundedCircle
-              />
-            : 
-              <FcBusinessman style={userImgStyles} />
-          }
-          { user?.username 
-            ? 
-              <BiLogOut style={logInBtnStyles} onClick={() => dispatch(logoutUserAction())} />
-            : 
-              <Link to="/auth">
-                <BiLogIn style={logInBtnStyles} />
-              </Link>
-          }
+          {user?.username ? (
+            <Image src={user.imgSrc} style={userImgStyles} roundedCircle />
+          ) : (
+            <FcBusinessman style={userImgStyles} />
+          )}
+          {user?.username ? (
+            <BiLogOut
+              style={logInBtnStyles}
+              onClick={() => {
+                dispatch(logoutUserAction());
+                localStorage.clear();
+              }}
+            />
+          ) : (
+            <Link to="/auth">
+              <BiLogIn style={logInBtnStyles} />
+            </Link>
+          )}
         </Navbar.Collapse>
       </Navbar>
     </header>

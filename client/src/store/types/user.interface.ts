@@ -15,7 +15,7 @@ export interface LoginFailureActionInterface {
   payload: string;
 }
 
-export interface LogoutInterface {
+export interface LogoutActionInterface {
   type: UserActionTypes.LOGOUT;
   payload: null;
 }
@@ -24,7 +24,7 @@ export type UserActionInterface =
   | LoginActionInterface
   | LoginFailureActionInterface
   | LoginSuccessActionInterface
-  | LogoutInterface;
+  | LogoutActionInterface;
 
 export interface UserStateInterface {
   loading: boolean;

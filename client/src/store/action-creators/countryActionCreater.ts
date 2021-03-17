@@ -35,6 +35,7 @@ export const getCountryAction = (id: string) => {
   return async (dispatch: Dispatch<CountryActionInterface>) => {
     try {
       dispatch({ type: CountryActionTypes.GET_CURRENT_COUNTRY });
+
       const response: AxiosResponse<CountryResponseInterface> = await axios.get(
         `/api/country/${id}`,
       );
