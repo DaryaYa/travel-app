@@ -3,8 +3,14 @@ import { YMaps, Map, Placemark, Polygon, FullscreenControl, TypeSelector, ZoomCo
 import './yandexmap.css';
 import balloon from './balloon.png';
 
-function YandexMap({ latitude, longitude, geoData }) {
-  const [lang, setLang] = React.useState('ru_RU');
+function YandexMap({ latitude, longitude, geoData, language }) {
+  let lang = 'hy_AM';
+
+  language === 'en' 
+  ? lang = 'en_GB'
+  : language === 'ru'
+  ? lang = 'ru_RU'
+  : lang = 'hy_AM'
 
   return (
     <div className="map-wrapper col-xs-12">

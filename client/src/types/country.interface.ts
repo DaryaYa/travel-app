@@ -26,7 +26,7 @@ export interface CountryResponseInterface {
     symbol: string;
   }[];
 
-  languages: { nameEN: string; nameRU: string; nativeName: string }[];
+  languages: { nameEN: string; nameRU: string; nameAM: string; nativeName: string }[];
   flag: string;
   photo: string;
   videoId: string;

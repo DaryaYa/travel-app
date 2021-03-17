@@ -67,7 +67,7 @@ const Header = () => {
     if (user?.username) {
       return (
         <p style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0' }}>
-          Hey, {user.username}!
+          {t('Hello.1')}, {user.username}!
         </p>
       );
     } else {

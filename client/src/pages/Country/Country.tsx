@@ -13,6 +13,8 @@ import Video from '../../components/Video';
 import YandexMap from '../../components/YandexMap/YandexMap';
 import { getCountryAction } from '../../store/action-creators/countryActionCreater';
 import { AttractionResponseInterface } from '../../types/atraction.interface';
+import { ChangeLanguageAction } from '../../store/action-creators/other.ActionCreate';
+import { OtherStateInterface } from '../../store/types/other.interface'
 
 import './Country.scss';
 import { CountryResponseInterface } from '../../types/country.interface';
@@ -25,6 +27,7 @@ const Country = () => {
 
   const { loading, countries } = useTypesSelector(state => state.country);
   const { user } = useTypesSelector(state => state.user);
+  const { language } = useTypesSelector(state => state.other);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -54,7 +57,12 @@ const Country = () => {
         return {
           original: el.photo,
           thumbnail: el.photo,
-          description: el.attractionNameEN,
+          description: 
+            language === 'en'
+              ? el.attractionNameEN
+              : language === 'ru'
+              ? el.attractionNameRU
+              : el.attractionNameAM,
         };
       });
       setimg(images);
@@ -72,9 +80,25 @@ const Country = () => {
           </div>
 
           <div className="country-info col-lg-2 col-md-3">
-            <h1>{currentCountry?.nameEN}</h1>
+            <h1>
+              {
+                language === 'en'
+                ? currentCountry?.nameEN
+                : language === 'ru' 
+                ? currentCountry?.nameRU
+                : currentCountry?.nameAM
+              }
+            </h1>
 
-            <div className="country-capital">{currentCountry?.capitalEN}</div>
+            <div className="country-capital">
+              {
+                language === 'en'
+                ? currentCountry?.capitalEN
+                : language === 'ru'
+                ? currentCountry?.capitalRU
+                : currentCountry?.capitalAM
+              }
+            </div>
 
             <div className="country-flag">
               <img
@@ -88,7 +112,7 @@ const Country = () => {
           <div className="country-widgets col-md-6">
             <Widget
               timeZone={currentCountry?.capitalTimezone}
-              language={'en-GB'}
+              language={language}
               currency={currentCountry?.currencies[0].code}
               city={currentCountry?.capitalEN}
             />
@@ -98,17 +122,35 @@ const Country = () => {
             <div className="description-table">
               <div className="table-row dt-region">
                 <div className="dt-parameter">{t('CountryDescriptionTable.1')}</div>
-                <div className="dt-value">{currentCountry?.regionEN}</div>
+                <div className="dt-value">
+                  {
+                    language === 'en'
+                    ? currentCountry?.regionEN
+                    : language === 'ru'
+                    ? currentCountry?.regionRU
+                    : currentCountry?.regionAM
+                  }
+                </div>
               </div>
 
               <div className="table-row dt-language">
                 <div className="dt-parameter">{t('CountryDescriptionTable.2')}</div>
-                <div className="dt-value">{currentCountry?.languages[0].nameEN}</div>
+                <div className="dt-value">
+                  {
+                    language === 'en'
+                    ? currentCountry?.languages[0].nameEN
+                    : language === 'ru'
+                    ? currentCountry?.languages[0].nameRU
+                    : currentCountry?.languages[0].nameAM
+                  }
+                </div>
               </div>
 
               <div className="table-row dt-population">
                 <div className="dt-parameter">{t('CountryDescriptionTable.3')}</div>
-                <div className="dt-value">{`${currentCountry?.population} people`}</div>
+                <div className="dt-value">
+                  {`${currentCountry?.population} ${t('CountryDescriptionTable.7')}`}
+                </div>
               </div>
 
               <div className="table-row dt-area">
@@ -118,15 +160,34 @@ const Country = () => {
 
               <div className="table-row dt-currency">
                 <div className="dt-parameter">{t('CountryDescriptionTable.5')}</div>
-                <div className="dt-value">{currentCountry?.currencies[0].nameEN}</div>
+                <div className="dt-value">
+                  {
+                    language === 'en'
+                    ? currentCountry?.currencies[0].nameEN
+                    : language === 'ru'
+                    ? currentCountry?.currencies[0].nameRU
+                    : currentCountry?.currencies[0].nameAM
+                  }
+                </div>
               </div>
 
               <div className="table-row dt-borders">
                 <div className="dt-parameter">{t('CountryDescriptionTable.6')}</div>
                 <div className="dt-value">
-                  {currentCountry?.bordersEN?.map((el) => {
-                    return <span>{el}</span>
-                  })}
+                  {
+                    language === 'en'
+                    ? currentCountry?.bordersEN?.map((el) => {
+                      return <span>{el}</span>
+                    })
+                    : language === 'ru'
+                    ? currentCountry?.bordersRU?.map((el) => {
+                      return <span>{el}</span>
+                    })
+                    : currentCountry?.bordersAM?.map((el) => {
+                      return <span>{el}</span>
+                    })
+                    
+                  }
                 </div>
               </div>
             </div>
@@ -149,7 +210,16 @@ const Country = () => {
                 />
 
                 <div className="coutry-sight-descr">
-                  <p>{currentCountry.attractions[attractId].descriptionEN}</p>
+                  <p>
+                    {
+                      language === 'en'
+                      ? currentCountry.attractions[attractId].descriptionEN
+                      : language === 'ru'
+                      ? currentCountry.attractions[attractId].descriptionRU
+                      : currentCountry.attractions[attractId].descriptionAM
+                    
+                    }
+                  </p>
                 </div>
               </div>
             </div>
@@ -163,6 +233,7 @@ const Country = () => {
             latitude={currentCountry?.latlng[0]}
             longitude={currentCountry?.latlng[1]}
             geoData={currentCountry?.geoData}
+            language={language}
           />
         </>
       )}

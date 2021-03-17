@@ -3,6 +3,13 @@ import { GiWatch } from 'react-icons/gi';
 
 export const Clock = ({ timeZone, language }) => {
 
+  let locale = 'en-US';
+  language === 'en'
+  ? locale = 'en-US'
+  : language === 'ru'
+  ? locale = 'ru-RU'
+  : locale = 'hy-AM'
+
   const [time, setTime] = useState(Date().toLocaleString().slice(16, 25));
 
   const options = {
@@ -17,7 +24,7 @@ export const Clock = ({ timeZone, language }) => {
   let today = new Date();
 
   const nowTime = () => {
-    return today.toLocaleString(language, options);
+    return today.toLocaleString(locale, options);
   };
 
   useEffect(() => {
