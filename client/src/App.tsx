@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -6,8 +7,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import Auth from './pages/Auth/Auth';
 import Country from './pages/Country/Country';
 import Main from './pages/Main/Main';
+import { getUserAction } from './store/action-creators/userActionCreater';
+import { UserResponseInterface } from './types/user.interface';
 
 const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (localStorage.getItem('user')) {
+      dispatch(getUserAction());
+    }
+  }, [dispatch]);
   return (
     <>
       <Switch>
