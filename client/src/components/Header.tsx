@@ -21,8 +21,7 @@ const Header = () => {
   };
 
   const userImgStyles = {
-    width: '40px',
-    height: '40px',
+    maxHeight: '40px',
     marginRight: '10px',
   };
 
@@ -71,7 +70,7 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg="primary" expand="md">
+      <Navbar bg="primary" expand="lg">
         <Link to="/main" style={{ color: 'black' }}>
           <img className="logo" src={logo} alt="Logo" />
         </Link>
