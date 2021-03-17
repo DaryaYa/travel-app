@@ -1,36 +1,115 @@
-import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Form, FormControl, Button, Image } from 'react-bootstrap';
+import { FcBusinessman } from 'react-icons/fc';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { BiLogIn } from 'react-icons/bi';
+import { BiLogIn, BiLogOut } from 'react-icons/bi';
+import { FaUserTimes, FaGamepad } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
+import { useTypesSelector } from './hooks/useTypedSelector';
+import { useDispatch } from 'react-redux';
+import { logoutUserAction } from '../store/action-creators/userActionCreater';
+import { useTranslation } from 'react-i18next'; // trans
 
 const Header = () => {
+  
+ const { t, i18n } = useTranslation(); // trans
+  const handleChange = (lang: string) => { //trans
+    i18n.changeLanguage(lang);
+  }
+  
+  const { user } = useTypesSelector(state => state.user);
+  const dispatch = useDispatch();
+
+  const logInBtnStyles = {
+    fontSize: '2rem',
+    color: 'whitesmoke',
+    cursor: 'pointer',
+  };
+
+  const userImgStyles = {
+    maxHeight: '40px',
+    marginRight: '10px',
+  };
+
+  const RenderUserImage = () => {
+    if (user?.username && user?.imgSrc) {
+      return <Image src={user.imgSrc} style={userImgStyles} rounded  />
+    }
+    if (user?.username && !user?.imgSrc) {
+      return <FcBusinessman style={userImgStyles} />
+    } else {
+      return <FaUserTimes style={userImgStyles} />
+    }
+  }
+
+  const RenderUserGreeting = () => {
+    if (user?.username) {
+      return (
+        <p style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0' }}>
+          Hey, {user.username}!
+        </p>
+      )
+    } else {
+      return null;
+    }
+  }
+
+  const RenderLogInLogOutBtn = () => {
+    if (user?.username) {
+      return (
+        <BiLogOut
+          style={logInBtnStyles}
+          onClick={() => {
+            dispatch(logoutUserAction());
+            localStorage.clear();
+          }}
+        />
+      )
+    } else {
+      return (
+        <Link to="/auth">
+          <BiLogIn style={logInBtnStyles} />
+        </Link>
+      )
+    }
+  }
+
   return (
     <header>
-      <Navbar bg="primary" expand="md">
-        <Link to="/main" style={{color: 'black'}}>
-          <img className="logo" src={logo} alt="Logo"/>
+      <Navbar bg="primary" expand="lg">
+        <Link to="/main" style={{ color: 'black' }}>
+          <img className="logo" src={logo} alt="Logo" />
+        </Link>
+        <Link to="/quizz-game">
+          <FaGamepad
+            style={{color: 'white', cursor: 'pointer', fontSize: '3rem', marginLeft: '40px'}}
+          />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+
+          <RenderUserGreeting />
+
           <Form inline className="m-2">
-            <FormControl type="text" placeholder="Search" />
+            <FormControl type="text" placeholder={t('Form.11')} />
             <Button variant="success">
               <AiOutlineSearch />
             </Button>
           </Form>
           <Form inline className="m-2">
             <Form.Group controlId="exampleForm.SelectCustom">
-              <Form.Control as="select" custom defaultValue="RU">
-                <option>EN</option>
-                <option>RU</option>
-                <option>AM</option>
+              <Form.Control as="select" custom defaultValue="ru" onChange={(e)=>handleChange(e.target.value)}>
+                <option value='en'>EN</option>
+                <option value='ru'>RU</option>
+                <option value='hy'>AM</option>
               </Form.Control>
             </Form.Group>
           </Form>
-          <Button variant="light" className="m-2">
-            <BiLogIn style={{ fontSize: '1.3rem' }} />
-          </Button>
+
+          <RenderUserImage />
+
+          <RenderLogInLogOutBtn />
+          
         </Navbar.Collapse>
       </Navbar>
     </header>

@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux';
 import { getUserAction } from '../../store/action-creators/userActionCreater';
 import { useTypesSelector } from '../hooks/useTypedSelector';
 
+import { useTranslation } from 'react-i18next'; //translation
+
 interface LoginFormInterface {
   classNames: string;
 }
@@ -20,6 +22,8 @@ const LoginForm = ({ classNames }: LoginFormInterface) => {
     email: '',
     password: '',
   } as FormInterface);
+
+  const { t, i18n } = useTranslation(); //translation
 
   const dispatch = useDispatch();
   const { loading } = useTypesSelector(state => state.user);
@@ -67,9 +71,9 @@ const LoginForm = ({ classNames }: LoginFormInterface) => {
             formNoValidate
             autoComplete="off"
           />
-          {!form.email && <span className="mistake">Required field</span>}
-          {form.email && <span className="mistake">Enter correct email</span>}
-          <label htmlFor="floatingInputEmailLog-Form">Email</label>
+          {!form.email && <span className="mistake">{t('Form.1')}</span>}
+          {form.email && <span className="mistake">{t('Form.2')}</span>}
+          <label htmlFor="floatingInputEmailLog-Form">{t('Form.3')}</label>
         </div>
 
         <div className="form-floating mb-4 form__item">
@@ -85,8 +89,8 @@ const LoginForm = ({ classNames }: LoginFormInterface) => {
             value={form.password}
             onChange={changeFormHandler}
           />
-          <span className="mistake">Required field</span>
-          <label htmlFor="floatingInputPasswordLog-Form">Password</label>
+          <span className="mistake">{t('Form.1')}</span>
+          <label htmlFor="floatingInputPasswordLog-Form">{t('Form.5')} </label>
         </div>
 
         <button
@@ -94,7 +98,7 @@ const LoginForm = ({ classNames }: LoginFormInterface) => {
           className="btn btn-primary w-100"
           disabled={!isSubmitBtnValid}
         >
-          Login
+          {t('Form.4')}
         </button>
       </form>
     </div>

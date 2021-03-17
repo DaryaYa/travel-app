@@ -17,11 +17,14 @@ import { AttractionResponseInterface } from '../../types/atraction.interface';
 
 import './Country.scss';
 import { CountryResponseInterface } from '../../types/country.interface';
+import Rating2 from '../../components/Rating2/Rating2';
 
 const Country = () => {
   let { id } = useParams<{ id: string }>();
+  const [attractId, setAttractId] = useState(0);
 
   const { loading, countries } = useTypesSelector(state => state.country);
+  const { user } = useTypesSelector(state => state.user);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -30,41 +33,42 @@ const Country = () => {
     }
   }, []);
 
+  const onBeforeSlide = (idSlide: number): number => {
+    setAttractId(idSlide);
+    return idSlide;
+  };
+
   const currentCountry = countries.find(el => String(el._id) === id);
-
-  let images = currentCountry?.attractions.map(el => {
-    return {
-      original: el.photo,
-      thumbnail: el.photo,
-      description: el.attractionNameEN,
-    };
-  });
-
-  // HARDCODE START
-  const [reviewsArr, setReviewsArr] = useState([1, 3]);
-  const [rating, setRating] = 
-    useState( reviewsArr.reduce((acc, cur) => acc + cur) / reviewsArr.length );
+  const [img, setimg] = useState<
+    | {
+        original: string;
+        thumbnail: string;
+        description: string;
+      }[]
+    | undefined
+  >();
 
   useEffect(() => {
-    setRating(reviewsArr.reduce((acc, cur) => acc + cur) / reviewsArr.length);
-  }, [reviewsArr])
-
-  const onChangeHandler= (val: number) => {
-    setReviewsArr([...reviewsArr, val]);
-  }
-  // HARDCODE END
+    if (currentCountry) {
+      let images = currentCountry?.attractions.map(el => {
+        return {
+          original: el.photo,
+          thumbnail: el.photo,
+          description: el.attractionNameEN,
+        };
+      });
+      setimg(images);
+    }
+  }, [id, loading]);
 
   return (
-    <>
+    <Layout classNames={'row'}>
       {loading || !currentCountry ? (
-        <Spinner />
+        <Spinner classNames="main-spinner" />
       ) : (
-        <Layout classNames={"row"}>
+        <>
           <div className="country-image col-lg-4 col-md-3">
-            <img
-              src={currentCountry?.photo}
-              alt={currentCountry?.nameEN}
-            />
+            <img src={currentCountry?.photo} alt={currentCountry?.nameEN} />
           </div>
 
           <div className="country-info col-lg-2 col-md-3">
@@ -131,19 +135,21 @@ const Country = () => {
           <div className="country-media col col-xs-12">
             <div className="row">
               <div className="country-gallery-slider col-lg-7 col-xs-12">
-                {images && <PhotoGallery images={images} />}
+                {img && (
+                  <PhotoGallery images={img} onBefoeSlide={onBeforeSlide} />
+                )}
               </div>
 
               <div className="country-gallery-info col-lg-5 col-xs-12">
-                <Rating
-                  value={rating}
-                  text={`${reviewsArr.length.toString()} reviews`}
+                <Rating2
+                  countryId={id}
+                  arrStars={currentCountry.attractions[attractId].stars}
+                  user={user || undefined}
+                  attrctId={currentCountry.attractions[attractId]._id}
                 />
 
-                <LeaveRatingForm onChangeHandler={onChangeHandler} />
-
                 <div className="coutry-sight-descr">
-                  <p>Разнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Не следует, однако забывать, что рамки и место обучения кадров требуют определения и уточнения направлений прогрессивного развития. Таким образом сложившаяся структура организации влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности способствует подготовки и реализации новых предложений. Разнообразный и богатый опыт новая модель организационной деятельности требуют от нас анализа новых предложений. Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании модели развития.</p>
+                  <p>{currentCountry.attractions[attractId].descriptionAM}</p>
                 </div>
               </div>
             </div>
@@ -158,9 +164,9 @@ const Country = () => {
             longitude={currentCountry?.latlng[1]}
             geoData={currentCountry?.geoData}
           />
-        </Layout>
+        </>
       )}
-    </>
+    </Layout>
   );
 };
 

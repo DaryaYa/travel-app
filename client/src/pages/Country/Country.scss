@@ -50,6 +50,13 @@ h1 {
   }
 }
 
+.main-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 180px);
+} 
+
 .weather-parameter + .weather-parameter {
   margin-top: 6px;
 }

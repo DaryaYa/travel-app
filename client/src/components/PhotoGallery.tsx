@@ -8,12 +8,20 @@ type PhotoGalleryProps = {
     thumbnail: string;
     description: string;
   }[];
+
+  onBefoeSlide(a: number): number;
 };
 
-const PhotoGallery: React.FC<PhotoGalleryProps> = ({ images }) => {
+const PhotoGallery: React.FC<PhotoGalleryProps> = ({
+  images,
+  onBefoeSlide,
+}) => {
   return (
     <>
-      <ImageGallery items={images} />
+      <ImageGallery
+        items={images}
+        onBeforeSlide={nextIdx => onBefoeSlide(nextIdx)}
+      />
     </>
   );
 };
