@@ -42,18 +42,18 @@ export const Currency = ({ currency }) => {
       </div>
       
       <div className="currency-ratio">
-       <img src={usa} />
-       <span>1 USD = {rate.usd[1]} {currency}</span>
+       <img src={usa} alt="dollar" />
+       <span>1 USD = {rate.usd[1]?.toFixed(4)} {currency}</span>
       </div>
 
       <div className="currency-ratio">
-       <img src={euro} />
-       <span>1 EUR = {rate.eur[1]} {currency}</span>
+       <img src={euro} alt="euro" />
+       <span>1 EUR = {rate.eur[1]?.toFixed(4)} {currency}</span>
       </div>
 
       <div className="currency-ratio">
-       <img src={russia} />
-       <span>100 RUB = {(rate.rub[1]*100)} {currency}</span>
+       <img src={russia} alt="ruble" />
+       <span>100 RUB = {(rate.rub[1]*100)?.toFixed(4)} {currency}</span>
       </div>
     </div>
   );
