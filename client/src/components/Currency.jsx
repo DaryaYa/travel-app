@@ -13,10 +13,10 @@ export const Currency = ({ currency }) => {
   useEffect(() => {
     const fetchRates = async () => {
       const res = fetch(
-        `https://free.currconv.com/api/v7/convert?q=USD_${currency},EUR_${currency}&compact=ultra&apiKey=${REACT_APP_CUR_CONVERTER}`,
+        `https://free.currconv.com/api/v7/convert?q=USD_${currency},EUR_${currency}&compact=ultra&apiKey=${REACT_APP_CUR_CONVERTER1}`,
       );
       const res1 = fetch(
-        `https://free.currconv.com/api/v7/convert?q=RUB_${currency}&compact=ultra&apiKey=${REACT_APP_CUR_CONVERTER}`,
+        `https://free.currconv.com/api/v7/convert?q=RUB_${currency}&compact=ultra&apiKey=${REACT_APP_CUR_CONVERTER1}`,
       );
       const data1 = await res;
       const data2 = await data1.json();
@@ -42,18 +42,18 @@ export const Currency = ({ currency }) => {
       </div>
       
       <div className="currency-ratio">
-       <img src={usa} />
-       <span>1 USD = {rate.usd[1]} {currency}</span>
+       <img src={usa} alt="dollar" />
+       <span>1 USD = {rate.usd[1]?.toFixed(4)} {currency}</span>
       </div>
 
       <div className="currency-ratio">
-       <img src={euro} />
-       <span>1 EUR = {rate.eur[1]} {currency}</span>
+       <img src={euro} alt="euro" />
+       <span>1 EUR = {rate.eur[1]?.toFixed(4)} {currency}</span>
       </div>
 
       <div className="currency-ratio">
-       <img src={russia} />
-       <span>100 RUB = {(rate.rub[1]*100)} {currency}</span>
+       <img src={russia} alt="ruble" />
+       <span>100 RUB = {(rate.rub[1]*100)?.toFixed(4)} {currency}</span>
       </div>
     </div>
   );

@@ -4,9 +4,12 @@ import { Currency } from './Currency';
 
 const Widget = ({ timeZone, language, currency, city }) => (
   <div className="d-flex justify-content-center">
-    <Weather city={city} language={language} />
+    <Weather city={city} language={localStorage.getItem('i18nextLng')} />
     <div className="time-currency d-inline-flex flex-column justify-content-between">
-      <Clock timeZone={timeZone} language={language} />
+      <Clock
+        timeZone={timeZone}
+        language={localStorage.getItem('i18nextLng')}
+      />
       <Currency currency={currency} />
     </div>
   </div>

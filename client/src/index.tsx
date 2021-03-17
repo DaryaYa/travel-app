@@ -7,11 +7,12 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
+import Spinner from './components/Spinner/Spinner';
 
 import './i18next';
 
 ReactDOM.render(
-  <Suspense fallback={<div>Loading~~~</div>}> 
+  <Suspense fallback={<Spinner />}> 
   <React.StrictMode>
     <Router>
       <Provider store={store}>

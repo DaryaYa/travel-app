@@ -3,6 +3,7 @@ import React from 'react'
 import { AnswerObject } from '../pages/QuizzGame/QuizzGame';
 // Styles
 import styled from 'styled-components';
+import './QuestionCard.css';
 
 type StyledBtnProps = {
   correct: boolean;
@@ -11,22 +12,25 @@ type StyledBtnProps = {
 
 const StyledBtn = styled.button<StyledBtnProps>`
   transition: all 0.5s ease;
-  :hover {
-    background-color: '#e1e2e2';
-    opacity: 1;
-  }
-  cursor: pointer;
-    user-select: none;
-    font-size: 0.8rem;
-    width: 100%;
-    height: 40px;
-    margin: 0 5px;
+  user-select: none;
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+  min-height: 40px;
+  background: ${({correct, userClicked}) => 
+    correct
+      ? '#25ab6d'
+      : !correct && userClicked
+      ? '#ef1c44'
+      : '#5f92b5'};
+  &:hover {
     background: ${({correct, userClicked}) => 
       correct
-        ? '#3dd28d'
+        ? '#25ab6d'
         : !correct && userClicked
-        ? '#F32C52'
-        : '#f2f2f2'};
+        ? '#ef1c44'
+        : '#186194'};
+  }
 `
 
 type Props = {
@@ -49,14 +53,14 @@ const QuestionCard: React.FC<Props> = ({
   totalQuestions,
 }) => {
   return (
-    <div>
-      <p className="number">
-        Question: {questionNumber} / {totalQuestions}
-      </p>
-      <p dangerouslySetInnerHTML={{ __html: question }} />
-      <div>
+    <>
+      <div className="question-number">
+        <span>{questionNumber} / {totalQuestions}</span>
+      </div>
+      <div className="question" dangerouslySetInnerHTML={{ __html: question }} />
+      <div className="answers">
         {answers.map(answer => (
-          <div key={answer}>
+          <div className="answer" key={answer}>
             <StyledBtn
               key={answer}
               correct={userAnswer?.correctAnswer === answer}
@@ -70,7 +74,7 @@ const QuestionCard: React.FC<Props> = ({
           </div>
         ))}
       </div>
-    </div>
+    </>
   )
 }
 
