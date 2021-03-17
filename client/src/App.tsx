@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Auth from './pages/Auth/Auth';
 import Country from './pages/Country/Country';
 import Main from './pages/Main/Main';
+import QuizzGame from './pages/QuizzGame/QuizzGame';
 import { getUserAction } from './store/action-creators/userActionCreater';
 import { UserResponseInterface } from './types/user.interface';
 
@@ -24,6 +25,7 @@ const App = () => {
         <Route path={'/main'} component={Main} exact />
         <Route path={'/country/:id'} component={Country} exact />
         <Route path={'/auth'} component={Auth} exact />
+        <Route path={'/quizz-game'} component={QuizzGame} exact />
         <Redirect to={'/main'} />
       </Switch>
 
