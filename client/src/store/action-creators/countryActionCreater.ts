@@ -1,3 +1,5 @@
+import { UpdateStarsActionInterface } from '../types/country.interface';
+import { AttractionResponseInterface } from './../../types/atraction.interface';
 import { toast } from 'react-toastify';
 import { CountryInterface } from './../../../../src/resources/countries/country.types';
 import { Response } from 'express';
@@ -51,4 +53,15 @@ export const getCountryAction = (id: string) => {
       toast.error(err.response.data.message);
     }
   };
+};
+
+export const UpdateStarsAction = (
+  countryId: string,
+  updatedData: AttractionResponseInterface,
+  attractId: string,
+) => {
+  return {
+    type: CountryActionTypes.UPDATE_STARS,
+    payload: { countryId, attractId, updatedData },
+  } as UpdateStarsActionInterface;
 };

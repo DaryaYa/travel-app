@@ -9,6 +9,7 @@ import Layout from '../../components/Layout/Layout';
 import Spinner from '../../components/Spinner/Spinner';
 
 import './Main.scss';
+import Rating2 from '../../components/Rating2/Rating2';
 
 const Main = () => {
   const dispatch = useDispatch();

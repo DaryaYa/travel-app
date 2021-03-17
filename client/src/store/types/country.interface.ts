@@ -1,5 +1,9 @@
 import { CountryActionTypes } from './../actionsTypes/country.actionTypes';
-import { CountryResponseInterface, CountryShortResponseInterface } from './../../types/country.interface';
+import {
+  CountryResponseInterface,
+  CountryShortResponseInterface,
+} from './../../types/country.interface';
+import { AttractionResponseInterface } from '../../types/atraction.interface';
 
 export interface CountryStateInterface {
   loading: boolean;
@@ -36,10 +40,20 @@ interface GetShortDataFailureActionInterface {
   payload: string;
 }
 
+export interface UpdateStarsActionInterface {
+  type: CountryActionTypes.UPDATE_STARS;
+  payload: {
+    countryId: string;
+    updatedData: AttractionResponseInterface;
+    attractId: string;
+  };
+}
+
 export type CountryActionInterface =
   | GetCountryActionInterface
   | GetCountrySuccessActionInterface
   | GetCountryFailureActionInterface
   | GetShortDataActionInterface
   | GetShortDataSuccessActionInterface
-  | GetShortDataFailureActionInterface;
+  | GetShortDataFailureActionInterface
+  | UpdateStarsActionInterface;

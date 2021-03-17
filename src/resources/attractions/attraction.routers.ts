@@ -28,7 +28,7 @@ router.put('/:id', async (req: Request, res: Response) => {
   try {
     const attractionId = Types.ObjectId(req.params.id);
     const dataUpdate: UpdateStarsInterface = req.body;
-    const updatedAttraction = attractionService.addStars(
+    const updatedAttraction = await attractionService.addStars(
       attractionId,
       dataUpdate,
     );
