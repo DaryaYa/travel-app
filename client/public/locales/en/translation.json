@@ -17,5 +17,8 @@
         "9": "Select your photo",
         "10": "Register",
         "11": "Search"
+    },
+      "Weather": {
+        "1": "m/s"
     }
 }
