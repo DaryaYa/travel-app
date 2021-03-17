@@ -149,7 +149,7 @@ const Country = () => {
                 />
 
                 <div className="coutry-sight-descr">
-                  <p>{currentCountry.attractions[attractId].descriptionAM}</p>
+                  <p>{currentCountry.attractions[attractId].descriptionEN}</p>
                 </div>
               </div>
             </div>
