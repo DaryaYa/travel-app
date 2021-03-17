@@ -20,6 +20,16 @@ const Main = () => {
   }, []);
 
   const { loading, shorData } = useTypesSelector(state => state.country);
+  const { searchValue } = useTypesSelector(state => state.other);
+  const countrySelected = shorData?.filter(
+    el =>
+      (el.capitalAM + el.capitalEN + el.capitalRU)
+        .toLowerCase()
+        .includes(searchValue.toLowerCase()) ||
+      (el.nameAM + el.nameEN + el.nameRU)
+        .toLowerCase()
+        .includes(searchValue.toLowerCase()),
+  );
 
   const history = useHistory();
   const cardClickHandler = (id: string | undefined) => {
@@ -31,16 +41,17 @@ const Main = () => {
       <Layout>
         {!loading && (
           <div className="row">
-            {shorData?.map(country => (
-              <CountryCard
-                key={country._id}
-                capinalName={country.capitalEN}
-                countryFoto={country.photo}
-                countryName={country.nameEN}
-                classNames="main-page__country-card col-12 col-xl-4 col-lg-4  col-md-6 mb-3"
-                onClick={() => cardClickHandler(country?._id)}
-              />
-            ))}
+            {countrySelected &&
+              countrySelected.map(country => (
+                <CountryCard
+                  key={country._id}
+                  capinalName={country.capitalEN}
+                  countryFoto={country.photo}
+                  countryName={country.nameEN}
+                  classNames="main-page__country-card col-12 col-xl-4 col-lg-4  col-md-6 mb-3"
+                  onClick={() => cardClickHandler(country?._id)}
+                />
+              ))}
           </div>
         )}
         {loading && (

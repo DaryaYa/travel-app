@@ -3,22 +3,43 @@ import { FcBusinessman } from 'react-icons/fc';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiLogIn, BiLogOut } from 'react-icons/bi';
 import { FaUserTimes, FaGamepad } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import { useTypesSelector } from './hooks/useTypedSelector';
 import { useDispatch } from 'react-redux';
 import { logoutUserAction } from '../store/action-creators/userActionCreater';
 import { useTranslation } from 'react-i18next'; // trans
+import { useEffect, useRef, useState } from 'react';
+import {
+  ChangeLanguageAction,
+  ChangeSearchValueAction,
+} from '../store/action-creators/other.ActionCreate';
 
 const Header = () => {
-  
- const { t, i18n } = useTranslation(); // trans
-  const handleChange = (lang: string) => { //trans
+  const { t, i18n } = useTranslation(); // trans
+  const handleChange = (lang: string) => {
+    //trans
     i18n.changeLanguage(lang);
-  }
-  
-  const { user } = useTypesSelector(state => state.user);
+  };
+
+  const [searchValue, serSearchValue] = useState('');
   const dispatch = useDispatch();
+
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  const changeSearchHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    serSearchValue(e.currentTarget.value);
+    dispatch(ChangeSearchValueAction(e.currentTarget.value));
+  };
+  if (searchRef.current) {
+    searchRef.current.focus();
+  }
+
+  const { user } = useTypesSelector(state => state.user);
+  const { language } = useTypesSelector(state => state.other);
+
+  const location = useLocation();
+  console.log(location.pathname);
 
   const logInBtnStyles = {
     fontSize: '2rem',
@@ -33,14 +54,14 @@ const Header = () => {
 
   const RenderUserImage = () => {
     if (user?.username && user?.imgSrc) {
-      return <Image src={user.imgSrc} style={userImgStyles} rounded  />
+      return <Image src={user.imgSrc} style={userImgStyles} rounded />;
     }
     if (user?.username && !user?.imgSrc) {
-      return <FcBusinessman style={userImgStyles} />
+      return <FcBusinessman style={userImgStyles} />;
     } else {
-      return <FaUserTimes style={userImgStyles} />
+      return <FaUserTimes style={userImgStyles} />;
     }
-  }
+  };
 
   const RenderUserGreeting = () => {
     if (user?.username) {
@@ -48,11 +69,11 @@ const Header = () => {
         <p style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0' }}>
           Hey, {user.username}!
         </p>
-      )
+      );
     } else {
       return null;
     }
-  }
+  };
 
   const RenderLogInLogOutBtn = () => {
     if (user?.username) {
@@ -64,15 +85,27 @@ const Header = () => {
             localStorage.clear();
           }}
         />
-      )
+      );
     } else {
       return (
         <Link to="/auth">
           <BiLogIn style={logInBtnStyles} />
         </Link>
-      )
+      );
     }
-  }
+  };
+
+  const changeLanguageHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    handleChange(e.target.value);
+    dispatch(ChangeLanguageAction(e.target.value));
+    localStorage.setItem('lang', e.target.value);
+  };
+
+  useEffect(() => {
+    if (searchRef.current) {
+      searchRef.current.focus();
+    }
+  });
 
   return (
     <header>
@@ -82,26 +115,44 @@ const Header = () => {
         </Link>
         <Link to="/quizz-game">
           <FaGamepad
-            style={{color: 'white', cursor: 'pointer', fontSize: '3rem', marginLeft: '40px'}}
+            style={{
+              color: 'white',
+              cursor: 'pointer',
+              fontSize: '3rem',
+              marginLeft: '40px',
+            }}
           />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-
           <RenderUserGreeting />
 
-          <Form inline className="m-2">
-            <FormControl type="text" placeholder={t('Form.11')} />
-            <Button variant="success">
-              <AiOutlineSearch />
-            </Button>
-          </Form>
+          {!location.pathname.includes('country') && (
+            <Form inline className="m-2" autoComplete="off">
+              <FormControl
+                value={searchValue}
+                onChange={changeSearchHandler}
+                type="text"
+                placeholder={t('Form.11')}
+                autoComplete="off"
+                ref={searchRef}
+              />
+              <Button variant="success">
+                <AiOutlineSearch />
+              </Button>
+            </Form>
+          )}
           <Form inline className="m-2">
             <Form.Group controlId="exampleForm.SelectCustom">
-              <Form.Control as="select" custom defaultValue="ru" onChange={(e)=>handleChange(e.target.value)}>
-                <option value='en'>EN</option>
-                <option value='ru'>RU</option>
-                <option value='hy'>AM</option>
+              <Form.Control
+                as="select"
+                custom
+                defaultValue={language}
+                onChange={changeLanguageHandler}
+              >
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+                <option value="hy">AM</option>
               </Form.Control>
             </Form.Group>
           </Form>
@@ -109,7 +160,6 @@ const Header = () => {
           <RenderUserImage />
 
           <RenderLogInLogOutBtn />
-          
         </Navbar.Collapse>
       </Navbar>
     </header>

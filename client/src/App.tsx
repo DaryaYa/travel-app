@@ -8,6 +8,7 @@ import Auth from './pages/Auth/Auth';
 import Country from './pages/Country/Country';
 import Main from './pages/Main/Main';
 import QuizzGame from './pages/QuizzGame/QuizzGame';
+import { ChangeLanguageAction } from './store/action-creators/other.ActionCreate';
 import { getUserAction } from './store/action-creators/userActionCreater';
 import { UserResponseInterface } from './types/user.interface';
 
@@ -18,10 +19,16 @@ const App = () => {
     if (localStorage.getItem('user')) {
       dispatch(getUserAction());
     }
+
+    if (localStorage.getItem('lang')) {
+      const lang: string = String(localStorage.getItem('lang'));
+      console.log(lang);
+      dispatch(ChangeLanguageAction(lang));
+    }
   }, [dispatch]);
   return (
     <>
-    {/* <nav>
+      {/* <nav>
       <button className='button' onClick={()=>handleClick('en')}>EN</button>
       <button className='button' onClick={()=>handleClick('ru')}>RU</button>
       <button className='button' onClick={()=>handleClick('hy')}>HY</button>
@@ -34,7 +41,6 @@ const App = () => {
         <Route path={'/auth'} component={Auth} exact />
         <Route path={'/quizz-game'} component={QuizzGame} exact />
         <Redirect to={'/main'} />
-        
       </Switch>
 
       <ToastContainer />
