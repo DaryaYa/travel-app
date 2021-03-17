@@ -97,6 +97,44 @@ h1 {
   margin-top: 40px;
 }
 
+.description-table {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.87);
+
+
+  .table-row {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .table-row:nth-child(2n + 1) {
+    background: rgba(73, 72, 74, .7);
+    color: #fff;
+  }
+}
+
+.dt-parameter,
+.dt-value {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px;
+}
+
+.dt-borders {
+  .dt-value {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .description-table {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 .country-media {
   margin-top: 40px;
 }
