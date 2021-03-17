@@ -25,7 +25,6 @@ const Rating2 = ({
   const arrayRatingItem = [0, 0, 0, 0, 0];
 
   const dispatch = useDispatch();
-  console.log(attrctId);
   const [ratingValue, setRatingValue] = useState(0);
   const [ratingActiveWidth, setRatingActiveWidth] = useState(
     ratingValue / 0.05,

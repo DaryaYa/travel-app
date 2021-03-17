@@ -44,9 +44,7 @@ export const countryReducer = (
       const { attractId, countryId, updatedData } = action.payload;
       const myStore = { ...state };
       let countries = [...myStore.countries];
-      console.log('countries=', countries);
       let country = myStore.countries.find(el => el._id === countryId);
-      console.log('country=', country);
 
       if (country) {
         let attractions = [...country?.attractions];
