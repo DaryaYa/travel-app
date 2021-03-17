@@ -6,4 +6,6 @@ export enum CountryActionTypes {
   GET_SHORT_DATA = 'Get short data country',
   GET_SHORT_DATA_SUCCESS = 'Get short data country success',
   GET_SHORT_DATA_FAILURE = 'Get short data country failure',
+
+  UPDATE_STARS = 'Update stars attraction',
 }

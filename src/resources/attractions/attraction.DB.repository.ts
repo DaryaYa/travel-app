@@ -11,10 +11,18 @@ const addStars = async (
   attractionId: Types.ObjectId,
   updateStarData: UpdateStarsInterface,
 ) => {
-  const attraction = await Attraction.updateOne(
-    { _id: attractionId },
-    { $push: { stars: updateStarData } },
-  ).populate('stars');
+  const attraction = await Attraction.findById(attractionId);
+  const user = await attraction.stars.find(
+    el => el.user == updateStarData.user,
+  );
+  if (user) {
+    user.countStar = updateStarData.countStar;
+  } else {
+    await attraction.stars.push(updateStarData);
+  }
+
+  await attraction.save();
+  return attraction;
 };
 
 export default { getByCountry, addStars };

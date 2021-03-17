@@ -1,3 +1,5 @@
+import { store } from '..';
+import { CountryResponseInterface } from './../../types/country.interface';
 import { CountryActionTypes } from './../actionsTypes/country.actionTypes';
 import {
   CountryStateInterface,
@@ -37,6 +39,28 @@ export const countryReducer = (
 
     case CountryActionTypes.GET_SHORT_DATA_FAILURE:
       return { ...state, loading: false, error: action.payload };
+
+    case CountryActionTypes.UPDATE_STARS: {
+      const { attractId, countryId, updatedData } = action.payload;
+      const myStore = { ...state };
+      let countries = [...myStore.countries];
+      console.log('countries=', countries);
+      let country = myStore.countries.find(el => el._id === countryId);
+      console.log('country=', country);
+
+      if (country) {
+        let attractions = [...country?.attractions];
+        let attrIdx = attractions.findIndex(el => el._id === attractId);
+        let countIdx = countries.findIndex(el => el._id === countryId);
+        attractions.splice(attrIdx, 1, updatedData);
+        country = { ...country, attractions: attractions };
+        countries.splice(countIdx, 1, country);
+
+        return { ...state, countries: countries };
+      }
+
+      return state;
+    }
 
     default:
       return state;
