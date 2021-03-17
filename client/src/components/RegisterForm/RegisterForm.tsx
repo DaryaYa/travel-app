@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
 import './RegisterForm.scss';
+import { useTranslation } from 'react-i18next'; //translation
 
 interface AuthFormInterface {
   classNames?: string;
@@ -25,7 +26,7 @@ const RegisterForm = ({ classNames }: AuthFormInterface) => {
   } as FormInterface);
   const [validForm, setValidForm] = useState(false);
   const [isEnabledBtn, setIsEnabledBtn] = useState(true);
-
+  const { t, i18n } = useTranslation(); //translation
   const history = useHistory();
 
   const changeFormHandler = (e: React.FormEvent<HTMLInputElement>) => {
@@ -95,8 +96,8 @@ const RegisterForm = ({ classNames }: AuthFormInterface) => {
             value={form.username}
             onChange={changeFormHandler}
           />
-          <span className="mistake">Required field</span>
-          <label htmlFor="floatingInputUserName">User name</label>
+          <span className="mistake">{t('Form.1')}</span>
+          <label htmlFor="floatingInputUserName">{t('Form.6')}</label>
         </div>
         <div className="form-floating mb-4 form__item">
           <input
@@ -111,9 +112,9 @@ const RegisterForm = ({ classNames }: AuthFormInterface) => {
             onChange={changeFormHandler}
             formNoValidate
           />
-          {!form.email && <span className="mistake">Required field</span>}
-          {form.email && <span className="mistake">Enter correct email</span>}
-          <label htmlFor="floatingInputEmail">Email</label>
+          {!form.email && <span className="mistake">{t('Form.1')}</span>}
+          {form.email && <span className="mistake">{t('Form.2')}</span>}
+          <label htmlFor="floatingInputEmail">{t('Form.3')}</label>
         </div>
         <div className="form-floating mb-4 form__item">
           <input
@@ -128,8 +129,8 @@ const RegisterForm = ({ classNames }: AuthFormInterface) => {
             value={form.password1}
             onChange={changeFormHandler}
           />
-          <span className="mistake">Required field</span>
-          <label htmlFor="floatingInputPassword">Password</label>
+          <span className="mistake">{t('Form.1')}</span>
+          <label htmlFor="floatingInputPassword">{t('Form.5')}</label>
         </div>
         <div className="form-floating mb-4 form__item">
           <input
@@ -145,15 +146,15 @@ const RegisterForm = ({ classNames }: AuthFormInterface) => {
             value={form.password2}
             onChange={changeFormHandler}
           />
-          {!form.password2 && <span className="mistake">Required field</span>}
+          {!form.password2 && <span className="mistake">{t('Form.1')}</span>}
           {form.password1 !== form.password2 && form.password2 && (
-            <span className="mistake">Password missmatch</span>
+            <span className="mistake">{t('Form.7')}</span>
           )}
-          <label htmlFor="floatingInputPassword1">Repeat password</label>
+          <label htmlFor="floatingInputPassword1">{t('Form.8')}</label>
         </div>
         <div className="mb-3 form__item">
           <label htmlFor="formFile" className="form-label">
-            Select your foto
+            {t('Form.9')}
           </label>
           <input
             className="form-control"
@@ -169,7 +170,7 @@ const RegisterForm = ({ classNames }: AuthFormInterface) => {
           className="btn btn-primary w-100"
           disabled={!validForm}
         >
-          Register
+          {t('Form.10')}
         </button>
       </form>
     </div>

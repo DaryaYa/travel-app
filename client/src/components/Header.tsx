@@ -2,8 +2,14 @@ import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiLogIn } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; // trans
 
 const Header = () => {
+
+  const { t, i18n } = useTranslation(); // trans
+  const handleChange = (lang: string) => { //trans
+    i18n.changeLanguage(lang);
+  }
   return (
     <header>
       <Navbar bg="primary" expand="md">
@@ -11,17 +17,17 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Form inline className="m-2">
-            <FormControl type="text" placeholder="Search" />
+            <FormControl type="text" placeholder={t('Form.11')} />
             <Button variant="success">
               <AiOutlineSearch />
             </Button>
           </Form>
           <Form inline className="m-2">
             <Form.Group controlId="exampleForm.SelectCustom">
-              <Form.Control as="select" custom defaultValue="RU">
-                <option>EN</option>
-                <option>RU</option>
-                <option>AM</option>
+              <Form.Control as="select" custom defaultValue="ru" onChange={(e)=>handleChange(e.target.value)}>
+                <option value='en'>EN</option>
+                <option value='ru'>RU</option>
+                <option value='hy'>AM</option>
               </Form.Control>
             </Form.Group>
           </Form>

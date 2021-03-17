@@ -39199,7 +39199,7 @@ export const countries = [
         descriptionAM:
           'ХЗ',
         photo:
-          'https://lh3.googleusercontent.com/proxy/bR0D4ilZt3GMNF3bchWhAAYjcq0Ckd-vDRo5w7vznS1TtsojPsnZ8jjaMQaXEUI5Hwbbph7uRWUnrW4',
+          'https://d1k39sp5rjli2z.cloudfront.net/belovezhskaya-pushcha-1.jpg',
         link: 'https://npbp.by/',
       }, 
       {
