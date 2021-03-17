@@ -17,5 +17,13 @@
         "9": "Select your photo",
         "10": "Register",
         "11": "Search"
+    },
+    "CountryDescriptionTable": {
+        "1": "Region",
+        "2": "Language",
+        "3": "Population",
+        "4": "Area",
+        "5": "Currency",
+        "6": "Neighbors"
     }
 }

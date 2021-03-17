@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'; // trans
 const REACT_APP_OPEN_WEATHER = '985407983380c5d99fa1bb48a8e0eec0';
 
 export const Weather = ({ city, language }) => {
-  const { t, i18n } = useTranslation(); // trans
+  const { t } = useTranslation(); // trans
 
   const [weather, setWeather] = useState({
     temp: 0,
