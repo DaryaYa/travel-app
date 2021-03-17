@@ -13,10 +13,10 @@ export const Currency = ({ currency }) => {
   useEffect(() => {
     const fetchRates = async () => {
       const res = fetch(
-        `https://free.currconv.com/api/v7/convert?q=USD_${currency},EUR_${currency}&compact=ultra&apiKey=${REACT_APP_CUR_CONVERTER}`,
+        `https://free.currconv.com/api/v7/convert?q=USD_${currency},EUR_${currency}&compact=ultra&apiKey=${REACT_APP_CUR_CONVERTER1}`,
       );
       const res1 = fetch(
-        `https://free.currconv.com/api/v7/convert?q=RUB_${currency}&compact=ultra&apiKey=${REACT_APP_CUR_CONVERTER}`,
+        `https://free.currconv.com/api/v7/convert?q=RUB_${currency}&compact=ultra&apiKey=${REACT_APP_CUR_CONVERTER1}`,
       );
       const data1 = await res;
       const data2 = await data1.json();

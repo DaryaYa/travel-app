@@ -18,7 +18,15 @@
         "10": "Register",
         "11": "Search"
     },
-      "Weather": {
+    "CountryDescriptionTable": {
+        "1": "Region",
+        "2": "Language",
+        "3": "Population",
+        "4": "Area",
+        "5": "Currency",
+        "6": "Neighbors"
+    },
+    "Weather": {
         "1": "m/s"
     }
 }

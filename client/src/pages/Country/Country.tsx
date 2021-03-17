@@ -3,13 +3,12 @@ import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { CountryInterface } from '../../../../src/resources/countries/country.types';
 import { useTypesSelector } from '../../components/hooks/useTypedSelector';
+import { useTranslation } from 'react-i18next';
 
 import Layout from '../../components/Layout/Layout';
 import Spinner from '../../components/Spinner/Spinner';
 import Widget from '../../components/Widget';
 import PhotoGallery from '../../components/PhotoGallery';
-import Rating from '../../components/Rating';
-import LeaveRatingForm from '../../components/LeaveRatingForm';
 import Video from '../../components/Video';
 import YandexMap from '../../components/YandexMap/YandexMap';
 import { getCountryAction } from '../../store/action-creators/countryActionCreater';
@@ -20,6 +19,7 @@ import { CountryResponseInterface } from '../../types/country.interface';
 import Rating2 from '../../components/Rating2/Rating2';
 
 const Country = () => {
+  const { t, i18n } = useTranslation();
   let { id } = useParams<{ id: string }>();
   const [attractId, setAttractId] = useState(0);
 
@@ -97,32 +97,32 @@ const Country = () => {
           <div className="country-description col-xs-12">
             <div className="description-table">
               <div className="table-row dt-region">
-                <div className="dt-parameter">Region</div>
+                <div className="dt-parameter">{t('CountryDescriptionTable.1')}</div>
                 <div className="dt-value">{currentCountry?.regionEN}</div>
               </div>
 
               <div className="table-row dt-language">
-                <div className="dt-parameter">Language</div>
+                <div className="dt-parameter">{t('CountryDescriptionTable.2')}</div>
                 <div className="dt-value">{currentCountry?.languages[0].nameEN}</div>
               </div>
 
               <div className="table-row dt-population">
-                <div className="dt-parameter">Population</div>
+                <div className="dt-parameter">{t('CountryDescriptionTable.3')}</div>
                 <div className="dt-value">{`${currentCountry?.population} people`}</div>
               </div>
 
               <div className="table-row dt-area">
-                <div className="dt-parameter">Area</div>
+                <div className="dt-parameter">{t('CountryDescriptionTable.4')}</div>
                 <div className="dt-value">{`${currentCountry?.area} km²`}</div>
               </div>
 
               <div className="table-row dt-currency">
-                <div className="dt-parameter">Currency</div>
+                <div className="dt-parameter">{t('CountryDescriptionTable.5')}</div>
                 <div className="dt-value">{currentCountry?.currencies[0].nameEN}</div>
               </div>
 
               <div className="table-row dt-borders">
-                <div className="dt-parameter">Neighbors</div>
+                <div className="dt-parameter">{t('CountryDescriptionTable.6')}</div>
                 <div className="dt-value">
                   {currentCountry?.bordersEN?.map((el) => {
                     return <span>{el}</span>
@@ -149,7 +149,7 @@ const Country = () => {
                 />
 
                 <div className="coutry-sight-descr">
-                  <p>{currentCountry.attractions[attractId].descriptionAM}</p>
+                  <p>{currentCountry.attractions[attractId].descriptionEN}</p>
                 </div>
               </div>
             </div>
