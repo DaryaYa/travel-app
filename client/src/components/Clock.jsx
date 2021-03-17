@@ -17,7 +17,10 @@ export const Clock = ({ timeZone, language }) => {
   let today = new Date();
 
   const nowTime = () => {
-    return today.toLocaleString(language, options);
+    if(language && options) {
+return today.toLocaleString(language, options);
+    }
+    return []
   };
 
   useEffect(() => {
