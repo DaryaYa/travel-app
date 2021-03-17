@@ -21,12 +21,20 @@ const App = () => {
   }, [dispatch]);
   return (
     <>
+    {/* <nav>
+      <button className='button' onClick={()=>handleClick('en')}>EN</button>
+      <button className='button' onClick={()=>handleClick('ru')}>RU</button>
+      <button className='button' onClick={()=>handleClick('hy')}>HY</button>
+      <p>{t('Hello.1')}</p>
+        <p>{t('Why.1')}</p>
+    </nav> */}
       <Switch>
         <Route path={'/main'} component={Main} exact />
         <Route path={'/country/:id'} component={Country} exact />
         <Route path={'/auth'} component={Auth} exact />
         <Route path={'/quizz-game'} component={QuizzGame} exact />
         <Redirect to={'/main'} />
+        
       </Switch>
 
       <ToastContainer />

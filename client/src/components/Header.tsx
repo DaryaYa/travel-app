@@ -8,10 +8,16 @@ import logo from '../assets/images/logo.png';
 import { useTypesSelector } from './hooks/useTypedSelector';
 import { useDispatch } from 'react-redux';
 import { logoutUserAction } from '../store/action-creators/userActionCreater';
+import { useTranslation } from 'react-i18next'; // trans
 
 const Header = () => {
+  
+ const { t, i18n } = useTranslation(); // trans
+  const handleChange = (lang: string) => { //trans
+    i18n.changeLanguage(lang);
+  }
+  
   const { user } = useTypesSelector(state => state.user);
-
   const dispatch = useDispatch();
 
   const logInBtnStyles = {
@@ -85,17 +91,17 @@ const Header = () => {
           <RenderUserGreeting />
 
           <Form inline className="m-2">
-            <FormControl type="text" placeholder="Search" />
+            <FormControl type="text" placeholder={t('Form.11')} />
             <Button variant="success">
               <AiOutlineSearch />
             </Button>
           </Form>
           <Form inline className="m-2">
             <Form.Group controlId="exampleForm.SelectCustom">
-              <Form.Control as="select" custom defaultValue="RU">
-                <option>EN</option>
-                <option>RU</option>
-                <option>AM</option>
+              <Form.Control as="select" custom defaultValue="ru" onChange={(e)=>handleChange(e.target.value)}>
+                <option value='en'>EN</option>
+                <option value='ru'>RU</option>
+                <option value='hy'>AM</option>
               </Form.Control>
             </Form.Group>
           </Form>
