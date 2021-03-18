@@ -67,7 +67,7 @@ const Header = () => {
     if (user?.username) {
       return (
         <p style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0' }}>
-          Hey, {user.username}!
+          {t('Hello.1')}, {user.username}!
         </p>
       );
     } else {
@@ -109,7 +109,7 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg="primary" expand="lg">
+      <Navbar expand="lg">
         <Link to="/main" style={{ color: 'black' }}>
           <img className="logo" src={logo} alt="Logo" />
         </Link>
@@ -128,7 +128,7 @@ const Header = () => {
           <RenderUserGreeting />
 
           {!location.pathname.includes('country') && (
-            <Form inline className="m-2" autoComplete="off">
+            <Form inline className="m-2 search" autoComplete="off">
               <FormControl
                 value={searchValue}
                 onChange={changeSearchHandler}
@@ -143,7 +143,7 @@ const Header = () => {
             </Form>
           )}
           <Form inline className="m-2">
-            <Form.Group controlId="exampleForm.SelectCustom">
+            <Form.Group className="language-selector" controlId="exampleForm.SelectCustom">
               <Form.Control
                 as="select"
                 custom

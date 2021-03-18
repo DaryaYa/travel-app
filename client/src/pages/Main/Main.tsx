@@ -21,6 +21,7 @@ const Main = () => {
 
   const { loading, shorData } = useTypesSelector(state => state.country);
   const { searchValue } = useTypesSelector(state => state.other);
+  const { language } = useTypesSelector(state => state.other);
   const countrySelected = shorData?.filter(
     el =>
       (el.capitalAM + el.capitalEN + el.capitalRU)
@@ -45,9 +46,21 @@ const Main = () => {
               countrySelected.map(country => (
                 <CountryCard
                   key={country._id}
-                  capinalName={country.capitalEN}
+                  capinalName={
+                    language === 'en'
+                    ? country.capitalEN
+                    : language === 'ru' 
+                    ? country.capitalRU
+                    : country.capitalAM
+                  }
                   countryFoto={country.photo}
-                  countryName={country.nameEN}
+                  countryName={
+                    language === 'en'
+                    ? country.nameEN
+                    : language === 'ru'
+                    ? country.nameRU
+                    : country.nameAM
+                  }
                   classNames="main-page__country-card col-12 col-xl-4 col-lg-4  col-md-6 mb-3"
                   onClick={() => cardClickHandler(country?._id)}
                 />

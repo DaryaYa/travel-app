@@ -8,12 +8,8 @@ import dielGhImg from '../assets/images/diel89.png';
 import nickGhImg from '../assets/images/nickolay-dudaryk.png';
 
 const Footer = () => {
-  const styles = {
-    backgroundColor: '#007bff',
-  }
-
   return (
-    <footer style={styles}>
+    <footer>
       <Container fluid>
         <Row>
           <Col className="pt-2 pb-0">
@@ -53,10 +49,9 @@ const Footer = () => {
             </a>
           </Col>
           <Col className="d-flex justify-content-end pt-2 pb-0">
-            <a target="_blank" rel="noreferrer" href="https://rs.school/js/">
+            <a className="rsschool" target="_blank" rel="noreferrer" href="https://rs.school/js/">
               <Image
                 src={RSLogo}
-                style={{width: '40px'}}
               />
             </a>
           </Col>
