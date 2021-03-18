@@ -75,11 +75,11 @@ const Country = () => {
         <Spinner classNames="main-spinner" />
       ) : (
         <>
-          <div className="country-image col-lg-4 col-md-3">
+          <div className="country-image col-lg-4 col-md-6">
             <img src={currentCountry?.photo} alt={currentCountry?.nameEN} />
           </div>
 
-          <div className="country-info col-lg-2 col-md-3">
+          <div className="country-info col-lg-3 col-md-6">
             <h1>
               {
                 language === 'en'
@@ -109,7 +109,7 @@ const Country = () => {
             </div>
           </div>
 
-          <div className="country-widgets col-md-6">
+          <div className="country-widgets col-lg-5 col-md-12">
             <Widget
               timeZone={currentCountry?.capitalTimezone}
               language={language}
