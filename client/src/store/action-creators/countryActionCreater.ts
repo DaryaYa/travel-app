@@ -57,11 +57,25 @@ export const getCountryAction = (id: string) => {
 
 export const UpdateStarsAction = (
   countryId: string,
-  updatedData: AttractionResponseInterface,
   attractId: string,
+  data: { user: string; countStar: number },
 ) => {
-  return {
-    type: CountryActionTypes.UPDATE_STARS,
-    payload: { countryId, attractId, updatedData },
-  } as UpdateStarsActionInterface;
+  return async (dispatch: Dispatch<CountryActionInterface>) => {
+    try {
+      const response = await axios.put(`/api/attractions/${attractId}`, data);
+      const response2: AxiosResponse<CountryResponseInterface> = await axios.get(
+        `/api/country/${countryId}`,
+      );
+      dispatch({
+        type: CountryActionTypes.UPDATE_STARS,
+        payload: { countryId: countryId, updatedCountry: response2.data },
+      });
+    } catch (e) {
+      toast.error(e.resoinse.data.message);
+    }
+  };
+  //  {
+  //   type: CountryActionTypes.UPDATE_STARS,
+  //   payload: { countryId, attractId, updatedData },
+  // } as UpdateStarsActionInterface;
 };

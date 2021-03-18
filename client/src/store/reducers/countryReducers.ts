@@ -41,23 +41,16 @@ export const countryReducer = (
       return { ...state, loading: false, error: action.payload };
 
     case CountryActionTypes.UPDATE_STARS: {
-      const { attractId, countryId, updatedData } = action.payload;
+      const { countryId, updatedCountry } = action.payload;
       const myStore = { ...state };
       let countries = [...myStore.countries];
-      let country = myStore.countries.find(el => el._id === countryId);
+      countries.splice(
+        countries.findIndex(el => el._id == countryId),
+        1,
+        updatedCountry,
+      );
 
-      if (country) {
-        let attractions = [...country?.attractions];
-        let attrIdx = attractions.findIndex(el => el._id === attractId);
-        let countIdx = countries.findIndex(el => el._id === countryId);
-        attractions.splice(attrIdx, 1, updatedData);
-        country = { ...country, attractions: attractions };
-        countries.splice(countIdx, 1, country);
-
-        return { ...state, countries: countries };
-      }
-
-      return state;
+      return { ...state, countries: countries };
     }
 
     default:

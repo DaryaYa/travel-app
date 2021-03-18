@@ -66,7 +66,17 @@ const Header = () => {
   const RenderUserGreeting = () => {
     if (user?.username) {
       return (
-        <p style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0' }}>
+        <p
+          style={{
+            fontSize: '1.2rem',
+            color: 'white',
+            marginBottom: '0',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            maxWidth: '20ch',
+          }}
+        >
           {t('Hello.1')}, {user.username}!
         </p>
       );
@@ -127,7 +137,7 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <RenderUserGreeting />
 
-          {!location.pathname.includes('country') && (
+          {location.pathname.includes('main') && (
             <Form inline className="m-2 search" autoComplete="off">
               <FormControl
                 value={searchValue}
@@ -143,7 +153,10 @@ const Header = () => {
             </Form>
           )}
           <Form inline className="m-2">
-            <Form.Group className="language-selector" controlId="exampleForm.SelectCustom">
+            <Form.Group
+              className="language-selector"
+              controlId="exampleForm.SelectCustom"
+            >
               <Form.Control
                 as="select"
                 custom
