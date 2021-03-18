@@ -30,6 +30,7 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
     "mongoose": "^5.11.19",
+    "react-router-scroll-to-top": "^1.1.2",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
