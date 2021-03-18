@@ -21,6 +21,8 @@ const addStars = async (
     await attraction.stars.push(updateStarData);
   }
 
+  console.log(attraction);
+
   await attraction.save();
   return attraction;
 };

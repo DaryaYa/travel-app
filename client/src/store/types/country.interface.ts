@@ -44,8 +44,7 @@ export interface UpdateStarsActionInterface {
   type: CountryActionTypes.UPDATE_STARS;
   payload: {
     countryId: string;
-    updatedData: AttractionResponseInterface;
-    attractId: string;
+    updatedCountry: CountryResponseInterface;
   };
 }
 

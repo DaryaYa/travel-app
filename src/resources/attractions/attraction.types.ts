@@ -18,6 +18,11 @@ export interface AttractionInterface {
 }
 
 export interface UpdateStarsInterface {
-  user: Types.ObjectId;
+  user: {
+    email: string;
+    username: string;
+    imgSrc?: string;
+    _id: string;
+  };
   countStar: number;
 }
