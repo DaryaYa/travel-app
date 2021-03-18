@@ -27,6 +27,7 @@ footer {
 
     &,
     &:focus {
+      box-shadow: none;
       background: #0563af;
       color: #fff;
     }
@@ -82,6 +83,10 @@ footer {
   font-size: 17px;
   outline: none;
   cursor: pointer;
+
+  &:focus {
+    box-shadow: none;
+  }
 }
 
 main.main {
