@@ -14,7 +14,7 @@ import YandexMap from '../../components/YandexMap/YandexMap';
 import { getCountryAction } from '../../store/action-creators/countryActionCreater';
 import { AttractionResponseInterface } from '../../types/atraction.interface';
 import { ChangeLanguageAction } from '../../store/action-creators/other.ActionCreate';
-import { OtherStateInterface } from '../../store/types/other.interface'
+import { OtherStateInterface } from '../../store/types/other.interface';
 
 import './Country.scss';
 import { CountryResponseInterface } from '../../types/country.interface';
@@ -57,7 +57,7 @@ const Country = () => {
         return {
           original: el.photo,
           thumbnail: el.photo,
-          description: 
+          description:
             language === 'en'
               ? el.attractionNameEN
               : language === 'ru'
@@ -81,23 +81,19 @@ const Country = () => {
 
           <div className="country-info col-lg-3 col-md-6">
             <h1>
-              {
-                language === 'en'
+              {language === 'en'
                 ? currentCountry?.nameEN
-                : language === 'ru' 
+                : language === 'ru'
                 ? currentCountry?.nameRU
-                : currentCountry?.nameAM
-              }
+                : currentCountry?.nameAM}
             </h1>
 
             <div className="country-capital">
-              {
-                language === 'en'
+              {language === 'en'
                 ? currentCountry?.capitalEN
                 : language === 'ru'
                 ? currentCountry?.capitalRU
-                : currentCountry?.capitalAM
-              }
+                : currentCountry?.capitalAM}
             </div>
 
             <div className="country-flag">
@@ -121,73 +117,78 @@ const Country = () => {
           <div className="country-description col-xs-12">
             <div className="description-table">
               <div className="table-row dt-region">
-                <div className="dt-parameter">{t('CountryDescriptionTable.1')}</div>
+                <div className="dt-parameter">
+                  {t('CountryDescriptionTable.1')}
+                </div>
                 <div className="dt-value">
-                  {
-                    language === 'en'
+                  {language === 'en'
                     ? currentCountry?.regionEN
                     : language === 'ru'
                     ? currentCountry?.regionRU
-                    : currentCountry?.regionAM
-                  }
+                    : currentCountry?.regionAM}
                 </div>
               </div>
 
               <div className="table-row dt-language">
-                <div className="dt-parameter">{t('CountryDescriptionTable.2')}</div>
+                <div className="dt-parameter">
+                  {t('CountryDescriptionTable.2')}
+                </div>
                 <div className="dt-value">
-                  {
-                    language === 'en'
+                  {language === 'en'
                     ? currentCountry?.languages[0].nameEN
                     : language === 'ru'
                     ? currentCountry?.languages[0].nameRU
-                    : currentCountry?.languages[0].nameAM
-                  }
+                    : currentCountry?.languages[0].nameAM}
                 </div>
               </div>
 
               <div className="table-row dt-population">
-                <div className="dt-parameter">{t('CountryDescriptionTable.3')}</div>
+                <div className="dt-parameter">
+                  {t('CountryDescriptionTable.3')}
+                </div>
                 <div className="dt-value">
-                  {`${currentCountry?.population} ${t('CountryDescriptionTable.7')}`}
+                  {`${currentCountry?.population} ${t(
+                    'CountryDescriptionTable.7',
+                  )}`}
                 </div>
               </div>
 
               <div className="table-row dt-area">
-                <div className="dt-parameter">{t('CountryDescriptionTable.4')}</div>
+                <div className="dt-parameter">
+                  {t('CountryDescriptionTable.4')}
+                </div>
                 <div className="dt-value">{`${currentCountry?.area} km²`}</div>
               </div>
 
               <div className="table-row dt-currency">
-                <div className="dt-parameter">{t('CountryDescriptionTable.5')}</div>
+                <div className="dt-parameter">
+                  {t('CountryDescriptionTable.5')}
+                </div>
                 <div className="dt-value">
-                  {
-                    language === 'en'
+                  {language === 'en'
                     ? currentCountry?.currencies[0].nameEN
                     : language === 'ru'
                     ? currentCountry?.currencies[0].nameRU
-                    : currentCountry?.currencies[0].nameAM
-                  }
+                    : currentCountry?.currencies[0].nameAM}
                 </div>
               </div>
 
               <div className="table-row dt-borders">
-                <div className="dt-parameter">{t('CountryDescriptionTable.6')}</div>
+                <div className="dt-parameter">
+                  {t('CountryDescriptionTable.6')}
+                </div>
                 <div className="dt-value">
-                  {
-                    language === 'en'
-                    ? currentCountry?.bordersEN?.map((el) => {
-                      return <span>{el}</span>
-                    })
+                  {language === 'en'
+                    ? currentCountry?.bordersEN?.map((el, idx) => {
+                        return <span key={idx}>{el}</span>;
+                      })
                     : language === 'ru'
-                    ? currentCountry?.bordersRU?.map((el) => {
-                      return <span>{el}</span>
-                    })
-                    : currentCountry?.bordersAM?.map((el) => {
-                      return <span>{el}</span>
-                    })
-                    
-                  }
+                    ? currentCountry?.bordersRU?.map((el, idx) => {
+                        return <span key={idx}>{el}</span>;
+                      })
+                    : currentCountry?.bordersAM?.map((el, idx) => {
+                        return <span key={idx}>{el}</span>;
+                      })}
                 </div>
               </div>
             </div>
@@ -211,14 +212,11 @@ const Country = () => {
 
                 <div className="coutry-sight-descr">
                   <p>
-                    {
-                      language === 'en'
+                    {language === 'en'
                       ? currentCountry.attractions[attractId].descriptionEN
                       : language === 'ru'
                       ? currentCountry.attractions[attractId].descriptionRU
-                      : currentCountry.attractions[attractId].descriptionAM
-                    
-                    }
+                      : currentCountry.attractions[attractId].descriptionAM}
                   </p>
                 </div>
               </div>
