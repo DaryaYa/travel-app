@@ -66,7 +66,17 @@ const Header = () => {
   const RenderUserGreeting = () => {
     if (user?.username) {
       return (
-        <p style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0' }}>
+        <p
+          style={{
+            fontSize: '1.2rem',
+            color: 'white',
+            marginBottom: '0',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            maxWidth: '20ch',
+          }}
+        >
           {t('Hello.1')}, {user.username}!
         </p>
       );

@@ -79,7 +79,7 @@ const Rating2 = ({
           {loading && <Spinner classNames="rating__spinner" />}
           <div className="rating__people">
             {arrStars
-              .slice(-5)
+              .slice(-7)
               .reverse()
               .map(el => (
                 <div className="rating__people-item" key={el.user._id}>
