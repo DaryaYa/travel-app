@@ -86,7 +86,7 @@ const Rating2 = ({
                   <div
                     className="rating__foto"
                     style={{
-                      backgroundImage: `url('http://localhost:5000${el.user.imgSrc}')`,
+                      backgroundImage: `url('${el.user.imgSrc}')`,
                     }}
                   ></div>
                   <div className="rating__username">{el.user.username}</div>
