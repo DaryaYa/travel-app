@@ -24,7 +24,6 @@ const App = () => {
 
     if (localStorage.getItem('lang')) {
       const lang: string = String(localStorage.getItem('lang'));
-      console.log(lang);
       dispatch(ChangeLanguageAction(lang));
     }
   }, [dispatch]);
@@ -38,11 +37,11 @@ const App = () => {
         <p>{t('Why.1')}</p>
     </nav> */}
       <Switch>
-          <Route path={'/main'} component={Main} exact />
-          <Route path={'/country/:id'} component={Country} exact />
-          <Route path={'/auth'} component={Auth} exact />
-          <Route path={'/quizz-game'} component={QuizzGame} exact />
-          <Redirect to={'/main'} />
+        <Route path={'/main'} component={Main} exact />
+        <Route path={'/country/:id'} component={Country} exact />
+        <Route path={'/auth'} component={Auth} exact />
+        <Route path={'/quizz-game'} component={QuizzGame} exact />
+        <Redirect to={'/main'} />
       </Switch>
 
       <ToastContainer />

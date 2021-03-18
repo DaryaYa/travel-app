@@ -39,7 +39,6 @@ const Header = () => {
   const { language } = useTypesSelector(state => state.other);
 
   const location = useLocation();
-  console.log(location.pathname);
 
   const logInBtnStyles = {
     fontSize: '2rem',
