@@ -127,7 +127,7 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <RenderUserGreeting />
 
-          {!location.pathname.includes('country') && (
+          {location.pathname.includes('main') && (
             <Form inline className="m-2 search" autoComplete="off">
               <FormControl
                 value={searchValue}
@@ -143,7 +143,10 @@ const Header = () => {
             </Form>
           )}
           <Form inline className="m-2">
-            <Form.Group className="language-selector" controlId="exampleForm.SelectCustom">
+            <Form.Group
+              className="language-selector"
+              controlId="exampleForm.SelectCustom"
+            >
               <Form.Control
                 as="select"
                 custom

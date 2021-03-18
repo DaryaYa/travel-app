@@ -6,6 +6,7 @@ import { UserResponseInterface } from '../../types/user.interface';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { UpdateStarsAction } from '../../store/action-creators/countryActionCreater';
+import Spinner from '../Spinner/Spinner';
 
 interface Rating2Interface {
   classNames?: string;
@@ -23,6 +24,7 @@ const Rating2 = ({
   countryId,
 }: Rating2Interface) => {
   const arrayRatingItem = [0, 0, 0, 0, 0];
+  const [loading, setLoading] = useState(false);
 
   const dispatch = useDispatch();
   const [ratingValue, setRatingValue] = useState(0);
@@ -49,42 +51,69 @@ const Rating2 = ({
   };
 
   const submitRating = async (e: React.MouseEvent<HTMLInputElement>) => {
-    const data = { user: user?._id, countStar: Number(e.currentTarget.value) };
-    try {
-      const response = await axios.put(`/api/attractions/${attrctId}`, data);
+    if (user) {
+      const data = {
+        user: user?._id,
+        countStar: Number(e.currentTarget.value),
+      };
+      try {
+        rating.current?.classList.remove('rating_disabled');
+        setLoading(true);
+        attrctId &&
+          (await dispatch(UpdateStarsAction(countryId, attrctId, data)));
 
-      rating.current?.classList.remove('rating_disabled');
-
-      attrctId &&
-        (await dispatch(UpdateStarsAction(countryId, response.data, attrctId)));
-    } catch (err) {}
+        setLoading(false);
+      } catch (err) {}
+    }
   };
 
   return (
     <div
       ref={rating}
-      className={cn('rating', classNames, { rating_disabled: !user })}
+      className={cn('rating', classNames, {
+        rating_disabled: !user || loading,
+      })}
     >
-      <div className="rating__body">
-        <div
-          className="rating__active"
-          style={{ width: `${ratingActiveWidth}%` }}
-        ></div>
-        <div className="rating__items">
-          {arrayRatingItem.map((ref, idx) => (
-            <input
-              key={arrayRatingItem.length - idx}
-              type="radio"
-              value={idx + 1}
-              name="rating"
-              className="rating__item"
-              onMouseEnter={setRating}
-              onMouseLeave={setRatingDefault}
-              onClick={submitRating}
-            />
-          ))}
+      {
+        <div className="rating__body">
+          {loading && <Spinner classNames="rating__spinner" />}
+          <div className="rating__people">
+            {arrStars
+              .slice(-5)
+              .reverse()
+              .map(el => (
+                <div className="rating__people-item" key={el.user._id}>
+                  <div
+                    className="rating__foto"
+                    style={{
+                      backgroundImage: `url('http://localhost:5000${el.user.imgSrc}')`,
+                    }}
+                  ></div>
+                  <div className="rating__username">{el.user.username}</div>
+                  <div className="rating__mark">{el.countStar}</div>
+                </div>
+              ))}
+          </div>
+          <div
+            className="rating__active"
+            style={{ width: `${ratingActiveWidth}%` }}
+          ></div>
+          <div className="rating__items">
+            {arrayRatingItem.map((ref, idx) => (
+              <input
+                key={arrayRatingItem.length - idx}
+                type="radio"
+                value={idx + 1}
+                name="rating"
+                className="rating__item"
+                onMouseEnter={setRating}
+                onMouseLeave={setRatingDefault}
+                onClick={submitRating}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      }
       <div className="rating__value">{ratingValue.toFixed(1)}</div>
     </div>
   );
