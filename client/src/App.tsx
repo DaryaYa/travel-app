@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import { useScrollToTop } from 'react-router-scroll-to-top';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Auth from './pages/Auth/Auth';
@@ -13,6 +14,7 @@ import { getUserAction } from './store/action-creators/userActionCreater';
 import { UserResponseInterface } from './types/user.interface';
 
 const App = () => {
+  useScrollToTop();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -36,11 +38,11 @@ const App = () => {
         <p>{t('Why.1')}</p>
     </nav> */}
       <Switch>
-        <Route path={'/main'} component={Main} exact />
-        <Route path={'/country/:id'} component={Country} exact />
-        <Route path={'/auth'} component={Auth} exact />
-        <Route path={'/quizz-game'} component={QuizzGame} exact />
-        <Redirect to={'/main'} />
+          <Route path={'/main'} component={Main} exact />
+          <Route path={'/country/:id'} component={Country} exact />
+          <Route path={'/auth'} component={Auth} exact />
+          <Route path={'/quizz-game'} component={QuizzGame} exact />
+          <Redirect to={'/main'} />
       </Switch>
 
       <ToastContainer />
