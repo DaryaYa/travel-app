@@ -12,12 +12,14 @@ const addStars = async (
   updateStarData: UpdateStarsInterface,
 ) => {
   const attraction = await Attraction.findById(attractionId);
+  // @ts-ignore
   const user = await attraction.stars.find(
     el => el.user == updateStarData.user,
   );
   if (user) {
     user.countStar = updateStarData.countStar;
   } else {
+    // @ts-ignore
     await attraction.stars.push(updateStarData);
   }
 

@@ -23,6 +23,13 @@ app.use('/api/user', userRouter);
 app.use('/api/country', counryRouter);
 app.use('/api/attractions', attractionRouter);
 
+if (process.env.NODE_ENV === 'production') {
+  app.use('/', express.static(path.join(__dirname, '..', 'client', 'build')));
+  app.use('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+  });
+}
+
 async function start() {
   try {
     await mongoose.connect(process.env.mongoUri, {

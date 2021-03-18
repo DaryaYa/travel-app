@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server:watch": "ts-node-dev --respawn --transpile-only src/app.ts",
-    "dev": "concurrently \"npm run server:watch\" \"npm run start --prefix client\""
+    "dev": "concurrently \"npm run server:watch\" \"npm run start --prefix client\"",
+    "start": "node dist/app.js",
+    "postinstall": "tsc && npm install --prefix client && npm  run build --prefix client",
+    "client:build": "npm run build --prefix client",
+    "backend:build": "tsc"
   },
   "repository": {
     "type": "git",
