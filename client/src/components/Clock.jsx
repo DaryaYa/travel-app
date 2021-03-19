@@ -12,9 +12,12 @@ export const Clock = ({ timeZone, language }) => {
   : locale = 'hy-AM'
 
   const [time, setTime] = useState(Date().toLocaleString().slice(16, 25));
+   const [day, setDay] = useState(new Date().getDay());
+   const [date, setDate] = useState(new Date().getDate());
+   const [month, setMonth] = useState(new Date().getMonth());
 
   const options = {
-    weekday: 'long',
+    weekday: 'short',
     month: 'short',
     day: 'numeric',
     hour: 'numeric',
@@ -26,7 +29,7 @@ export const Clock = ({ timeZone, language }) => {
 
   const nowTime = () => {
     if(language && options) {
-      return today.toLocaleString(locale, options);
+      return today.toLocaleString(language, options).slice(12, 21);
     }
     return []
   };
@@ -36,20 +39,21 @@ export const Clock = ({ timeZone, language }) => {
       setTime(nowTime);
     }, 1000);
 
+     setDay(TimeTransl.weekDay[new Date().getDay()][language]);
+     setMonth(TimeTransl.monthDay[new Date().getMonth()][language]);
+
     return () => {
       clearTimeout(timer);
     };
   }, [time]);  
 
-// TimeTransl.weekDay[time.split(',')[0]][language];
-//console.log(time.split(',')[2].slice(0,9));
   return (
     <div className="time">
       <div className="time-icon">
         <GiWatch />
       </div>
       <div className="time-value">
-        {time}
+        {day}, {date} {month}, {time}
       </div>
     </div>
   );

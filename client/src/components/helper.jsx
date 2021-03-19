@@ -1,0 +1,25 @@
+export const TimeTransl = {
+  weekDay: {
+    1: { en: 'Monday', hy: 'Երկուշաբթի', ru: 'Понедельник' },
+    2: { en: 'Tuesday', hy: 'Երեքշաբթի', ru: 'Вторник' },
+    3: { en: 'Wednesday', hy: 'Չորեքշաբթի', ru: 'Среда' },
+    4: { en: 'Thursday', hy: 'Հինգշաբթի', ru: 'Четверг' },
+    5: { en: 'Friday', hy: 'Ուրբաթ', ru: 'Пятница' },
+    6: { en: 'Saturday', hy: 'Շաբաթ', ru: 'Суббота' },
+    0: { en: 'Sunday', hy: 'Կիրակի', ru: 'Воскресенье' },
+  },
+  monthDay: {
+    0: { en: 'January', hy: ' Հունվար', ru: ' Января' },
+    1: { en: 'February', hy: ' Փետրվար', ru: ' Февраля' },
+    2: { en: 'March', hy: ' Մարտ', ru: ' Марта' },
+    3: { en: 'April', hy: ' Ապրիլ', ru: ' Апреля' },
+    4: { en: 'May', hy: ' Մայիս', ru: ' Марта' },
+    5: { en: 'June', hy: ' Հունիս', ru: ' Июня' },
+    6: { en: 'July', hy: ' Հուլիս', ru: ' Июля' },
+    7: { en: 'August', hy: ' Օգոստոս', ru: ' Августа' },
+    8: { en: 'September', hy: ' Սեպտեմբեր', ru: ' Сентября' },
+    9: { en: 'October', hy: ' Հոկտեմբեր', ru: ' Октября' },
+    10: { en: 'November', hy: ' Նոյեմբեր', ru: ' Ноября' },
+    11: { en: 'December', hy: ' Դեկտեմբեր', ru: ' Декабря' },
+  },
+};

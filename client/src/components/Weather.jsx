@@ -56,27 +56,27 @@ export const Weather = ({ city, language }) => {
         className="mx-auto d-block"
         src={`${url}${weather.iconCode}@2x.png`}
       />
-
-      <div className="weather-parameter description">{weather.description}</div>
-
+      {(language !== 'hy') ? <div className="weather-parameter description">
+          {weather.description}
+        </div> : <div className="weather-parameter description"></div>}
       <div className="weather-parameter temperature">
         <FaTemperatureHigh />
         <span className="text">{Math.round(weather.temp)}°C</span>
       </div>
-
       <div className="weather-parameter humidity">
         <BsDropletHalf />
         <span className="text">{weather.humidity}%</span>
       </div>
-
       <div className="weather-parameter feels-like">
         <GiPerson />
         <span className="text">{Math.round(weather.feels_like)}°C</span>
       </div>
-
       <div className="weather-parameter wind-speed">
         <GiWindsock />
-        <span className="text">{Math.round(weather.wind)}{t('Weather.1')}</span>
+        <span className="text">
+          {Math.round(weather.wind)}
+          {t('Weather.1')}
+        </span>
       </div>
     </div>
   );
