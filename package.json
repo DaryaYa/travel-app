@@ -1,0 +1,52 @@
+{
+  "name": "travel-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:watch": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "dev": "concurrently \"npm run server:watch\" \"npm run start --prefix client\"",
+    "start": "node dist/app.js",
+    "postinstall": "tsc && npm install --prefix client && npm  run build --prefix client",
+    "client:build": "npm run build --prefix client",
+    "backend:build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaryaYa/travel-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaryaYa/travel-app/issues"
+  },
+  "homepage": "https://github.com/DaryaYa/travel-app#readme",
+  "dependencies": {
+    "@types/express-fileupload": "^1.1.6",
+    "@types/styled-components": "^5.1.9",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "http-status-codes": "^2.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.19",
+    "react-router-scroll-to-top": "^1.1.2",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.11",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/node": "^14.14.32",
+    "concurrently": "^6.0.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.3"
+  }
+}

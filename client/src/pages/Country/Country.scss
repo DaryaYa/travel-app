@@ -1,0 +1,314 @@
+header,
+footer {
+  background: #014c9c;
+}
+
+footer {
+  padding: 10px 0;
+  color: #fff;
+
+  .rsschool {
+    line-height: 0;
+
+    img {
+      width: 70px;
+    }
+  }
+}
+
+.logo {
+  width: 80px;
+}
+
+.search {
+  input {
+    border: none;
+    border-radius: 0;
+
+    &,
+    &:focus {
+      box-shadow: none;
+      background: #0563af;
+      color: #fff;
+    }
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  button {
+    border-color: #1e73b7;
+    border-radius: 0;
+    background: #1e73b7;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: #3782bf !important;
+      background: #3782bf !important;
+      outline: none;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.language-selector {
+  position: relative;
+}
+
+.language-selector::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 100%;
+  background: url('../../assets/images/chevron-circle-down.svg') 50% 50%
+    no-repeat;
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.language-selector:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-select {
+  padding: 6px 32px 6px 12px;
+  border: none;
+  border-radius: 0;
+  background-color: #0563af;
+  color: white;
+  font-size: 17px;
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+main.main {
+  padding: 40px 0;
+}
+
+.country-image img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 32px;
+  word-wrap: break-word;
+}
+
+.country-capital {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.country-flag {
+  margin-top: 15px;
+}
+
+.country-widgets {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.weather {
+  .description {
+    text-transform: capitalize;
+  }
+
+  .weather-parameter {
+    min-width: 115px;
+    text-align: center;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+    fill: #607d8b;
+  }
+
+  .text {
+    margin-left: 10px;
+  }
+}
+
+.main-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 180px);
+}
+
+.weather-parameter + .weather-parameter {
+  margin-top: 6px;
+}
+
+.time-currency {
+  margin-left: 30px;
+  padding-left: 30px;
+  border-left: 1px solid #d8d8d8;
+}
+
+.time-icon,
+.currency-icon {
+  margin-bottom: 20px;
+  line-height: 0;
+  text-align: center;
+
+  svg {
+    width: 50px;
+    height: 50px;
+    fill: #48484a;
+  }
+}
+
+.currency {
+  margin-top: 30px;
+}
+
+.currency-ratio {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 8px;
+  }
+}
+
+.country-description {
+  margin-top: 40px;
+}
+
+.description-table {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.87);
+
+  .table-row {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .table-row:nth-child(2n + 1) {
+    background: rgba(73, 72, 74, 0.7);
+    color: #fff;
+  }
+}
+
+.dt-parameter,
+.dt-value {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px;
+}
+
+.dt-borders {
+  .dt-value {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .description-table {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.country-media {
+  margin-top: 40px;
+}
+
+.country-gallery-info {
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+
+  .rating-star {
+    line-height: 0;
+  }
+
+  .rating-star + .rating-star {
+    margin-left: 3px;
+  }
+
+  .total-votes {
+    margin-left: 8px;
+  }
+
+  h5 {
+    margin-top: 10px;
+  }
+
+  form {
+    margin-top: 5px;
+  }
+   h1 {
+    font-size: 26px;
+  }
+}
+
+.coutry-sight-descr {
+  margin-top: 15px;
+}
+
+.country-video {
+  margin-top: 40px;
+  line-height: 0;
+  text-align: center;
+}
+
+@media all and (max-width: 991px) {
+  .country-gallery-info {
+    margin-top: 25px;
+  }
+
+  .country-widgets {
+    margin-top: 30px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .country-video iframe {
+    height: 350px !important;
+  }
+
+  .map-wrapper {
+    height: 350px;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .country-video iframe {
+    height: 300px !important;
+  }
+
+  .map-wrapper {
+    height: 300px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #48484a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #373739;
+}

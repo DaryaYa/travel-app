@@ -1,0 +1,33 @@
+{
+    "Hello": {
+        "1": "Hello"
+    },
+    "Why": {
+        "1": "to you"
+    },
+    "Form": {
+        "1": "Required field",
+        "2": "Enter correct email",
+        "3": "Email",
+        "4": "Login",
+        "5": "Password",
+        "6": "User name",
+        "7": "Password missmatch",
+        "8": "Repeat password",
+        "9": "Select your photo",
+        "10": "Register",
+        "11": "Search"
+    },
+    "CountryDescriptionTable": {
+        "1": "Region",
+        "2": "Language",
+        "3": "Population",
+        "4": "Area",
+        "5": "Currency",
+        "6": "Neighbors",
+        "7": "people"
+    },
+    "Weather": {
+        "1": "m/s"
+    }
+}

@@ -1,0 +1,13 @@
+.map-wrapper {
+  width: 100%;
+  height: 450px;
+  margin-top: 40px;
+}
+
+ymaps[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+ymaps[class*="copyrights-pane"] {
+  display: none;
+}

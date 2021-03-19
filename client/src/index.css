@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+}
+/* .form-control {
+  width: 60vw;
+} */
+
+.main{
+  padding: 20px 0;
+}
