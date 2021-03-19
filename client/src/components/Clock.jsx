@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GiWatch } from 'react-icons/gi';
+import { TimeTransl } from './helper';
 
 export const Clock = ({ timeZone, language }) => {
 
@@ -38,15 +39,18 @@ export const Clock = ({ timeZone, language }) => {
     return () => {
       clearTimeout(timer);
     };
-  }, [time]);
+  }, [time]);  
 
+// TimeTransl.weekDay[time.split(',')[0]][language];
+//console.log(time.split(',')[2].slice(0,9));
   return (
     <div className="time">
       <div className="time-icon">
         <GiWatch />
       </div>
-      
-      <div className="time-value">{time}</div>
+      <div className="time-value">
+        {time}
+      </div>
     </div>
   );
 };

@@ -43784,7 +43784,7 @@ export const countries = [
     regionRU: 'Европа',
     regionAM: 'Եվրոպա',
     population: '9498700',
-    latlng: ['55.776952', '37.389405'],
+    latlng: ['53.9015', '27.566'],
     area: '207600.0',
     geoData: [
       [
