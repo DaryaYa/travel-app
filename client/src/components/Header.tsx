@@ -119,7 +119,11 @@ const Header = () => {
   return (
     <header>
       <Navbar expand="lg">
-        <Link to="/main" style={{ color: 'black' }}>
+        <Link
+          to="/main"
+          style={{ color: 'black' }}
+          onClick={() => dispatch(ChangeSearchValueAction(''))}
+        >
           <img className="logo" src={logo} alt="Logo" />
         </Link>
         <Link to="/quizz-game">
